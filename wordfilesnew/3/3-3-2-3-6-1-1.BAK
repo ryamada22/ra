@@ -1,0 +1,869 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-3-2-3-6-1-1.files/filelist.xml">
+<link rel=Edit-Time-Data href="3-3-2-3-6-1-1.files/editdata.mso">
+<link rel=OLE-Object-Data href="3-3-2-3-6-1-1.files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Linkage Disequilibrium Indicesの挙動</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>山田　亮</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>98</o:TotalTime>
+  <o:LastPrinted>2001-03-28T05:25:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:24:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:24:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>229</o:Words>
+  <o:Characters>1307</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>10</o:Lines>
+  <o:Paragraphs>3</o:Paragraphs>
+  <o:CharactersWithSpaces>1533</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>10.5 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-3-2-3-6-1-1.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:42.55pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal style='mso-line-height-alt:0pt'><span lang=EN-US
+style='font-size:8.0pt;mso-bidi-font-size:10.0pt;font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-3-2-3-6-1 参考 いろいろなLinkage
+Disequilibrium 指標とその挙動<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Reference：Devlin
+B and Risch N，A comparison of linkage disequilibrium measures for fine-scale
+mapping．Genomics 29：311-322，(1995)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>連鎖不平衡の程度を表現する指標として複数のものが提案されており、同一の<span
+lang=EN-US>2 SNPデータ間の関係を表現する場合にも、用いる指標により異なる値が得られる。主なものとしては、以下のように5つのLDの指標(Δ、D<span
+style='letter-spacing:-2.0pt'>’</span>、δ、d、Q )及び、d<sup>２</sup>を加えた計6つの指標が用いられる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>それぞれの指標の特徴をつかむために挙動を視覚化する。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>要点としては、各指標の値が、<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>(1)完全連鎖のときにいつも１をとるか、否かの点、<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>(2)Allele
+frequencyの影響をどのように受けるかという点、<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>(3)ローカス間の対称性があるか、否かの点、<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>の３点が主な相違点となる。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Haplotype
+frequencyを以下のように表記する<o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 align=left
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-table-lspace:7.1pt;margin-left:4.85pt;mso-table-rspace:7.1pt;margin-right:
+ 4.85pt;mso-table-anchor-vertical:paragraph;mso-table-anchor-horizontal:margin;
+ mso-table-left:left;mso-table-top:.9pt;mso-padding-alt:0mm 4.95pt 0mm 4.95pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr>
+  <td width=141 style='width:105.95pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Haplotype<o:p></o:p></span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Frequency<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=141 style='width:105.95pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>AB<o:p></o:p></span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>P<sub>ＡＢ</sub><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=141 style='width:105.95pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Ab<o:p></o:p></span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>P<sub>Ａｂ</sub><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=141 style='width:105.95pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>aB<o:p></o:p></span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>P<sub>ａＢ</sub><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-lastrow:yes'>
+  <td width=141 style='width:105.95pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>ab<o:p></o:p></span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-element:frame;
+  mso-element-frame-hspace:7.1pt;mso-element-wrap:around;mso-element-anchor-vertical:
+  paragraph;mso-element-anchor-horizontal:margin;mso-element-top:.9pt;
+  mso-height-rule:exactly'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>P<sub>ａｂ</sub><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>P<sub>ｘｘ</sub>の条件としては<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:17.95pt;mso-char-indent-count:1.71'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>P<sub>ＡＢ</sub>+P<sub>ａｂ</sub>+P<sub>ａＢ</sub>+P<sub>ａｂ</sub>＝1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:17.95pt;mso-char-indent-count:1.71'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Min(P<sub>ｘｘ</sub>)＝P<sub>ａＢ</sub><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>とすることで、あらゆるパターンを網羅することとする。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>全ての指標の計算式の分子<span
+lang=EN-US>(N：Numerator)は共通しており、それは<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:17.95pt;mso-char-indent-count:1.71'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>N＝P<sub>ＡＢ</sub>×P<sub>ａｂ</sub>-P<sub>Ａｂ</sub>×P<sub>ａＢ</sub><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>と書ける<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>この<span lang=EN-US>Nを用いてそれぞれの指標を書き下すと<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:26.25pt;mso-para-margin-left:2.5gd;
+text-indent:5.4pt;mso-char-indent-count:.54'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1030" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:4.05pt;margin-top:.35pt;width:29.25pt;
+ height:113.25pt;text-indent:0;z-index:4' filled="f" stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:4;left:0px;margin-left:5px;margin-top:0px;width:43px;
+height:155px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=43 height=155 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:4'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1030" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝";mso-hansi-font-family:
+    Century'>△<span lang=EN-US><o:p></o:p></span></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝";
+    mso-hansi-font-family:Century'>D<span style='letter-spacing:-2.0pt'>’</span><o:p></o:p></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝";mso-hansi-font-family:
+    Century'>δ<span lang=EN-US><o:p></o:p></span></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝";
+    mso-hansi-font-family:Century'>d<o:p></o:p></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝";
+    mso-hansi-font-family:Century'>Q<o:p></o:p></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝";
+    mso-hansi-font-family:Century'>d<sup>２</sup><o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:"ＭＳ 明朝"'>＝<span lang=EN-US>N/SQRT((P<sub>ＡＢ</sub>+P<sub>Ａｂ</sub>)×(P<sub>ａＢ</sub>+P<sub>ａｂ</sub>)×(P<sub>ＡＢ</sub>+P<sub>ａＢ</sub>)×(P<sub>Ａｂ</sub>+P<sub>ａｂ</sub>))<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:26.25pt;mso-para-margin-left:2.5gd;
+text-indent:5.65pt;mso-char-indent-count:.54'><span style='font-family:"ＭＳ 明朝"'>＝<span
+lang=EN-US>N/Minimum((P<sub>ＡＢ</sub>+P<sub>ａＢ</sub>)×(P<sub>ａＢ</sub>+P<sub>ａｂ</sub>),((P<sub>ＡＢ</sub>+P<sub>Ａｂ</sub>)×(P<sub>Ａｂ</sub>+P<sub>ａｂ</sub>))<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:26.25pt;mso-para-margin-left:2.5gd;
+text-indent:5.65pt;mso-char-indent-count:.54'><span style='font-family:"ＭＳ 明朝"'>＝<span
+lang=EN-US>N/((P<sub>ＡＢ</sub>+P<sub>ａＢ</sub>)×P<sub>ａｂ</sub>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:26.25pt;mso-para-margin-left:2.5gd;
+text-indent:5.65pt;mso-char-indent-count:.54'><span style='font-family:"ＭＳ 明朝"'>＝<span
+lang=EN-US>N/((P<sub>ＡＢ</sub>+P<sub>ａＢ</sub>)×(P<sub>Ａｂ</sub>+P<sub>ａｂ</sub>))<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:26.25pt;mso-para-margin-left:2.5gd;
+text-indent:5.65pt;mso-char-indent-count:.54'><span style='font-family:"ＭＳ 明朝"'>＝<span
+lang=EN-US>N/(P<sub>ＡＢ</sub>×P<sub>ａｂ</sub>+P<sub>Ａｂ</sub>×P<sub>ａＢ</sub>)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:26.25pt;mso-para-margin-left:2.5gd;
+text-indent:5.65pt;mso-char-indent-count:.54'><span style='font-family:"ＭＳ 明朝"'>＝<span
+lang=EN-US>(N/((P<sub>ＡＢ</sub>+P<sub>ａＢ</sub>)×(P<sub>Ａｂ</sub>+P<sub>ａｂ</sub>)))<sup>２<o:p></o:p></sup></span></span></p>
+
+<p class=MsoHeader style='mso-line-height-alt:0pt;tab-stops:42.55pt;layout-grid-mode:
+both'><span style='font-family:"ＭＳ 明朝"'>となる。<span lang=EN-US><br clear=all
+style='mso-special-character:line-break;page-break-before:always'>
+</span></span><span lang=EN-US style='font-size:8.0pt;mso-bidi-font-size:10.0pt;
+font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>また、組換え率θとの関係で、世代数<span
+lang=EN-US>nを用いておのおのの指標を書き表すと<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:30.0pt;mso-char-indent-count:3.0'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1032" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:11.55pt;margin-top:.35pt;width:29.25pt;height:95.25pt;
+ text-indent:0;z-index:5' filled="f" stroked="f">
+ <v:textbox inset="0,0,0,0"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:5;left:0px;margin-left:15px;margin-top:0px;width:43px;
+height:131px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=43 height=131 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:5'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1032" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝";mso-hansi-font-family:
+    Century'>△<span lang=EN-US><o:p></o:p></span></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝";
+    mso-hansi-font-family:Century'>D<span style='letter-spacing:-2.0pt'>’</span><o:p></o:p></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝";mso-hansi-font-family:
+    Century'>δ<span lang=EN-US><o:p></o:p></span></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝";
+    mso-hansi-font-family:Century'>d<o:p></o:p></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝";
+    mso-hansi-font-family:Century'>Q<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:"ＭＳ 明朝"'>×<span lang=EN-US>(1/P<sub>ａｂ</sub>)×SQRT((P<sub>Ａｘ</sub>/P<sub>ｘＢ</sub>)×(1-P<sub>Ａｘ</sub>)×(1-P<sub>ｘＢ</sub>))＝(1-θ)<sup>ｎ</sup><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:31.5pt;mso-char-indent-count:3.0'><span
+style='font-family:"ＭＳ 明朝"'>×<span lang=EN-US>(1+P<sub>ａｂ</sub>/P<sub>ＡＢ</sub>)×(1+P<sub>ａＢ</sub>/P<sub>ａｂ</sub>)/(1+P<sub>ａＢ</sub>/P<sub>ＡＢ</sub>)＝(1-θ)<sup>ｎ</sup><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:31.5pt;mso-char-indent-count:3.0'><span
+style='font-family:"ＭＳ 明朝"'>＝<span lang=EN-US>(1-θ)<sup>ｎ</sup><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:31.5pt;mso-char-indent-count:3.0'><span
+style='font-family:"ＭＳ 明朝"'>×<span lang=EN-US>P<sub>ｘｂ</sub>/P<sub>ａｂ</sub>＝(1-θ)<sup>ｎ</sup><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:31.5pt;mso-char-indent-count:3.0'><span
+style='font-family:"ＭＳ 明朝"'>×<span lang=EN-US>(1+(P<sub>ａｂ</sub>/P<sub>ａｂ</sub>-1)/(P<sub>ＡＢ</sub>/P<sub>ａＢ</sub>+1))＝(1-θ)<sup>ｎ</sup><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>という関係にあり、<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>δのみが、アレル頻度に関係なくθのみの関数となっている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>挙動描図１<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>完全連鎖の場合の挙動<span
+lang=EN-US>(１) <o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>条件：<span lang=EN-US>P<sub>ａＢ</sub>＝0,
+P<sub>ＡＢ</sub>＋P<sub>Ａｂ</sub>＝0.8, P<sub>ａｂ</sub>＝0.2, 0＜P<sub>Ａｂ</sub>，P<sub>ＡＢ</sub>＜0.8<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>として、<span lang=EN-US>P<sub>ＡＢ</sub>＝w
+を変動範囲[0,0.8]としてLD指標をw の関数としてグラフ化すると以下のようになる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:right 481.9pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:378pt;margin-top:63pt;width:54pt;height:117pt;
+ z-index:1' filled="f" stroked="f"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:1;left:0px;margin-left:
+504px;margin-top:84px;width:76px;height:160px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=76 height=160 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:1'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1026" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y1＝Δ<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y2＝D’<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y3＝δ<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y4＝d<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y5＝Q<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y6＝d<sup>２</sup><o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:396pt;
+ height:245.25pt' o:ole="">
+ <v:imagedata src="3-3-2-3-6-1-1.files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=528 height=327
+src="3-3-2-3-6-1-1.files/image002.jpg" v:shapes="_x0000_i1025"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="" ShapeID="_x0000_i1025" DrawAspect="Content"
+  ObjectID="_1194279117">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoHeader style='mso-line-height-alt:0pt;tab-stops:42.55pt;layout-grid-mode:
+both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoHeader style='mso-line-height-alt:0pt;tab-stops:42.55pt;layout-grid-mode:
+both'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoHeader style='mso-line-height-alt:0pt;tab-stops:329.25pt;
+layout-grid-mode:both'><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+
+<span lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:10.0pt;font-family:
+Century;mso-fareast-font-family:"ＭＳ 明朝";mso-bidi-font-family:"Times New Roman";
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:JA;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoHeader style='mso-line-height-alt:0pt;tab-stops:42.55pt;layout-grid-mode:
+both'><span lang=EN-US style='font-size:8.0pt;mso-bidi-font-size:10.0pt;
+font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>挙動描図<span lang=EN-US>2<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>完全連鎖の場合の挙動<span
+lang=EN-US>(2)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>条件：<span lang=EN-US>P<sub>Ａｂ</sub>＝0,
+P<sub>ＡＢ</sub>＝0.8, P<sub>ａＢ</sub>＋P<sub>ａｂ</sub>＝0.2, 0＜P<sub>ａＢ</sub>＜0.2<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>として、<span lang=EN-US>P<sub>ａＢ</sub>＝w
+を変動範囲[0,0.2]としてLD指標をwの関数としてグラフ化すると以下のようになる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1042" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:-10.95pt;
+ margin-top:87.35pt;width:53.25pt;height:38.25pt;z-index:8' filled="f"
+ stroked="f">
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:8;left:0px;margin-left:-15px;margin-top:116px;width:75px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=75 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:8'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1042" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>LD<o:p></o:p></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>指標値<span
+    lang=EN-US><o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1041" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:201.3pt;
+ margin-top:223.85pt;width:24.75pt;height:24.75pt;z-index:7' filled="f"
+ stroked="f">
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:7;left:0px;margin-left:268px;margin-top:298px;width:37px;
+height:37px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=37 height=37 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:7'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1041" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoHeader style='tab-stops:42.55pt;layout-grid-mode:both'><span
+    lang=EN-US style='font-family:"ＭＳ 明朝"'>w<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1040" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:27.3pt;
+ margin-top:208.85pt;width:19.5pt;height:24.75pt;z-index:6' filled="f"
+ stroked="f">
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:6;left:0px;margin-left:36px;margin-top:278px;width:30px;
+height:37px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=30 height=37 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:6'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1040" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoHeader style='tab-stops:42.55pt;layout-grid-mode:both'><span
+    lang=EN-US style='font-family:"ＭＳ 明朝"'>0<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1027" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:369pt;
+ margin-top:45pt;width:54pt;height:117pt;z-index:2' filled="f" stroked="f"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:2;left:0px;margin-left:
+492px;margin-top:60px;width:76px;height:160px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=76 height=160 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:2'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1027" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y1＝Δ<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y2＝D’<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y3＝δ<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y4＝d<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y5＝Q<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y6＝d<sup>２</sup><o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:368.25pt;height:227.25pt'>
+ <v:imagedata src="3-3-2-3-6-1-1.files/image003.png" o:title="link2-2"/>
+</v:shape><![endif]--><![if !vml]><img width=491 height=303
+src="3-3-2-3-6-1-1.files/image004.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>挙動描図<span lang=EN-US>3<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>D<span
+style='letter-spacing:-2.0pt'>’＝</span> 0.5で固定している場合のその他の指標の挙動<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>条件：<span lang=EN-US>P<sub>ａＢ</sub>＝P<sub>ＡＢ</sub>/9,
+P<sub>Ａｘ</sub>＝0.8, D<span style='letter-spacing:-2.0pt'>’</span>＝0.5<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>として、<span lang=EN-US>P<sub>ＡＢ</sub>＝w
+を変動範囲[0,0.8]としてLD指標をw の関数としてグラフ化すると以下のようになる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1045" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:199.8pt;
+ margin-top:217.85pt;width:24.75pt;height:24.75pt;z-index:11' filled="f"
+ stroked="f">
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:11;left:0px;margin-left:266px;margin-top:290px;width:37px;
+height:37px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=37 height=37 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:11'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1045" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoHeader style='tab-stops:42.55pt;layout-grid-mode:both'><span
+    lang=EN-US style='font-family:"ＭＳ 明朝"'>w<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1044" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:27.3pt;
+ margin-top:205.85pt;width:19.5pt;height:24.75pt;z-index:10' filled="f"
+ stroked="f">
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:10;left:0px;margin-left:36px;margin-top:274px;width:30px;
+height:37px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=30 height=37 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:10'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1044" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoHeader style='tab-stops:42.55pt;layout-grid-mode:both'><span
+    lang=EN-US style='font-family:"ＭＳ 明朝"'>0<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1043" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:-13.95pt;
+ margin-top:66.35pt;width:53.25pt;height:38.25pt;z-index:9' filled="f"
+ stroked="f">
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:9;left:0px;margin-left:-19px;margin-top:88px;width:75px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=75 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:9'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1043" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>LD<o:p></o:p></span></p>
+    <p class=MsoHeader align=center style='text-align:center;tab-stops:42.55pt;
+    layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>指標値<span
+    lang=EN-US><o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1028" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:378pt;
+ margin-top:36pt;width:54pt;height:117pt;z-index:3' filled="f" stroked="f"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:absolute;z-index:3;left:0px;margin-left:
+504px;margin-top:48px;width:76px;height:160px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=76 height=160 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:3'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1028" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y1＝Δ<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y2＝D’<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y3＝δ<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y4＝d<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y5＝Q<o:p></o:p></span></p>
+    <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Y6＝d<sup>２</sup><o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:366.75pt;height:231.75pt'>
+ <v:imagedata src="3-3-2-3-6-1-1.files/image005.png" o:title="link3-3"/>
+</v:shape><![endif]--><![if !vml]><img width=489 height=309
+src="3-3-2-3-6-1-1.files/image006.jpg" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

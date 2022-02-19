@@ -1,0 +1,3056 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-5-2-6.files/filelist.xml">
+<link rel=Edit-Time-Data href="3-5-2-6.files/editdata.mso">
+<link rel=OLE-Object-Data href="3-5-2-6.files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>EM-algorithmによるhaplotype頻度の推定</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="State"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="date"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>569</o:TotalTime>
+  <o:LastPrinted>2001-07-24T05:31:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:13:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:13:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>957</o:Words>
+  <o:Characters>5460</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Bytes>152064</o:Bytes>
+  <o:Lines>45</o:Lines>
+  <o:Paragraphs>12</o:Paragraphs>
+  <o:CharactersWithSpaces>6405</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"MS Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h2
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h3
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h4
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+h5
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h6
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:12.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:12.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:1.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex4, li.MsoIndex4, div.MsoIndex4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:15.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:3.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex5, li.MsoIndex5, div.MsoIndex5
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex6, li.MsoIndex6, div.MsoIndex6
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:25.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:5.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex7, li.MsoIndex7, div.MsoIndex7
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:30.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex8, li.MsoIndex8, div.MsoIndex8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:35.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:7.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex9, li.MsoIndex9, div.MsoIndex9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:1.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:31.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:3.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:52.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:5.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:63.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:73.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:7.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
+	{mso-style-noshow:yes;
+	mso-style-next:"索引 1";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:6.0pt;
+	margin-right:0mm;
+	margin-bottom:12.0pt;
+	margin-left:0mm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoEnvelopeAddress, li.MsoEnvelopeAddress, div.MsoEnvelopeAddress
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:14.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	mso-element:frame;
+	mso-element-frame-width:120.0mm;
+	mso-element-frame-height:40.0mm;
+	mso-element-frame-hspace:7.1pt;
+	mso-element-wrap:auto;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:center;
+	mso-element-top:bottom;
+	mso-height-rule:exactly;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoEnvelopeReturn, li.MsoEnvelopeReturn, div.MsoEnvelopeReturn
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToa, li.MsoToa, div.MsoToa
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoMacroText, li.MsoMacroText, div.MsoMacroText
+	{mso-style-noshow:yes;
+	mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	tab-stops:21.25pt 42.55pt 63.8pt 30.0mm 106.3pt 127.55pt 148.8pt 60.0mm 191.35pt 212.6pt 233.85pt 255.1pt;
+	layout-grid-mode:char;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	mso-line-break-override:restrictions;
+	font-size:9.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoToaHeading, li.MsoToaHeading, div.MsoToaHeading
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:9.0pt;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-font-kerning:1.0pt;}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l9 level1 lfo5;
+	tab-stops:list 18.0pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l8 level1 lfo10;
+	tab-stops:list 18.0pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList3, li.MsoList3, div.MsoList3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList4, li.MsoList4, div.MsoList4
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList5, li.MsoList5, div.MsoList5
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:39.25pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l7 level1 lfo6;
+	tab-stops:list 39.25pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet3, li.MsoListBullet3, div.MsoListBullet3
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l6 level1 lfo7;
+	tab-stops:list 60.55pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet4, li.MsoListBullet4, div.MsoListBullet4
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:81.8pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l5 level1 lfo8;
+	tab-stops:list 81.8pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet5, li.MsoListBullet5, div.MsoListBullet5
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:103.05pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l4 level1 lfo9;
+	tab-stops:list 103.05pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber2, li.MsoListNumber2, div.MsoListNumber2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:39.25pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l3 level1 lfo11;
+	tab-stops:list 39.25pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber3, li.MsoListNumber3, div.MsoListNumber3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l2 level1 lfo12;
+	tab-stops:list 60.55pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber4, li.MsoListNumber4, div.MsoListNumber4
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:81.8pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l1 level1 lfo13;
+	tab-stops:list 81.8pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber5, li.MsoListNumber5, div.MsoListNumber5
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:103.05pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l0 level1 lfo14;
+	tab-stops:list 103.05pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0mm;
+	margin-bottom:6.0pt;
+	margin-left:0mm;
+	text-align:center;
+	mso-pagination:none;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-font-kerning:1.0pt;}
+p.MsoClosing, li.MsoClosing, div.MsoClosing
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoSignature, li.MsoSignature, div.MsoSignature
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue, li.MsoListContinue, div.MsoListContinue
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:21.25pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:2.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue2, li.MsoListContinue2, div.MsoListContinue2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:42.5pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:4.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue3, li.MsoListContinue3, div.MsoListContinue3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:63.75pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:6.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue4, li.MsoListContinue4, div.MsoListContinue4
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:85.0pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:8.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue5, li.MsoListContinue5, div.MsoListContinue5
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:106.25pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:10.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoMessageHeader, li.MsoMessageHeader, div.MsoMessageHeader
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-48.0pt;
+	mso-char-indent-count:-4.0;
+	mso-pagination:none;
+	background:#CCCCCC;
+	mso-shading:windowtext;
+	mso-pattern:gray-20 auto;
+	border:none;
+	mso-border-alt:solid windowtext .75pt;
+	padding:0mm;
+	mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-font-kerning:1.0pt;}
+p.MsoSalutation, li.MsoSalutation, div.MsoSalutation
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{mso-style-parent:本文;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	mso-char-indent-count:1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{mso-style-parent:本文インデント;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	mso-char-indent-count:1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoNoteHeading, li.MsoNoteHeading, div.MsoNoteHeading
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:200%;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:8.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:200%;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:8.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0mm;
+	margin-right:72.0pt;
+	margin-bottom:0mm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:7.0gd;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:7.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	background:navy;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	font-family:"ＭＳ 明朝";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";
+	mso-font-kerning:1.0pt;}
+p.MsoAutoSig, li.MsoAutoSig, div.MsoAutoSig
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+address
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-font-kerning:1.0pt;
+	font-style:italic;}
+pre
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:42.0pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-5-2-6.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:-1012214060;}
+@list l0:level1
+	{mso-level-style-link:"段落番号 5";
+	mso-level-tab-stop:103.05pt;
+	mso-level-number-position:left;
+	margin-left:103.05pt;
+	mso-para-margin-left:8.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:-886158586;}
+@list l1:level1
+	{mso-level-style-link:"段落番号 4";
+	mso-level-tab-stop:81.8pt;
+	mso-level-number-position:left;
+	margin-left:81.8pt;
+	mso-para-margin-left:6.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:-1593377292;}
+@list l2:level1
+	{mso-level-style-link:"段落番号 3";
+	mso-level-tab-stop:60.55pt;
+	mso-level-number-position:left;
+	margin-left:60.55pt;
+	mso-para-margin-left:4.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:721042488;}
+@list l3:level1
+	{mso-level-style-link:"段落番号 2";
+	mso-level-tab-stop:39.25pt;
+	mso-level-number-position:left;
+	margin-left:39.25pt;
+	mso-para-margin-left:2.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:-1528002998;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 5";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:103.05pt;
+	mso-level-number-position:left;
+	margin-left:103.05pt;
+	mso-para-margin-left:8.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:-2097922942;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 4";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:81.8pt;
+	mso-level-number-position:left;
+	margin-left:81.8pt;
+	mso-para-margin-left:6.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:-1029780864;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 3";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:60.55pt;
+	mso-level-number-position:left;
+	margin-left:60.55pt;
+	mso-para-margin-left:4.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:-1751725754;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 2";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:39.25pt;
+	mso-level-number-position:left;
+	margin-left:39.25pt;
+	mso-para-margin-left:2.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:-535416760;}
+@list l8:level1
+	{mso-level-style-link:段落番号;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-794502808;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:箇条書き;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l10
+	{mso-list-id:581720849;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-833194422 8576922 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l10:level1
+	{mso-level-number-format:iroha-full-width;
+	mso-level-text:（%1）;
+	mso-level-tab-stop:78.0pt;
+	mso-level-number-position:left;
+	margin-left:78.0pt;
+	text-indent:-36.0pt;}
+@list l11
+	{mso-list-id:1363363672;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-151740280 -225441264 66482142 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l11:level1
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%1;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l11:level2
+	{mso-level-number-format:decimal-full-width;
+	mso-level-text:（%2）;
+	mso-level-tab-stop:57.0pt;
+	mso-level-number-position:left;
+	margin-left:46.8pt;
+	text-indent:-25.8pt;}
+@list l11:level3
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%3;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l11:level4
+	{mso-level-tab-stop:84.0pt;
+	mso-level-number-position:left;
+	margin-left:84.0pt;
+	text-indent:-21.0pt;}
+@list l11:level5
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%5\)";
+	mso-level-tab-stop:105.0pt;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l12
+	{mso-list-id:1737774022;
+	mso-list-type:hybrid;
+	mso-list-template-ids:837830218 -801757370 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l12:level1
+	{mso-level-number-format:iroha-full-width;
+	mso-level-text:（%1）;
+	mso-level-tab-stop:120.0pt;
+	mso-level-number-position:left;
+	margin-left:120.0pt;
+	text-indent:-36.0pt;}
+@list l13
+	{mso-list-id:1822501394;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-698996896 -380316286 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l13:level1
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:（%1）;
+	mso-level-tab-stop:78.0pt;
+	mso-level-number-position:left;
+	margin-left:78.0pt;
+	text-indent:-36.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA link=blue vlink=purple style='tab-interval:42.0pt;text-justify-trim:
+punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-5-2-6 ハプロタイプ解析のバックグラウンド
+--- 多型・diversityの評価法・表記法を含めて<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:"ＭＳ 明朝"'>－ 文献を読みながら理解しよう －<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><u><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Haplotype解析<o:p></o:p></span></u></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>参考文献など<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='margin-left:18.0pt;text-align:left;
+text-indent:-18.0pt;mso-list:l11 level1 lfo1;tab-stops:list 18.0pt;mso-layout-grid-align:
+none;text-autospace:none'><![if !supportLists]><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>①<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-size:24.0pt;
+font-family:"ＭＳ 明朝";mso-bidi-font-family:Arial;mso-font-kerning:0pt'><a
+href="http://133.11.196.190/ra/wordfiles/3/DNAsequence.pdf">DNA sequence
+diversity in a 9.7-kb region of the human lipoprotein lipase gene,Nat Genet 19
+233-<span style='mso-bidi-font-size:12.0pt;mso-bidi-font-family:"Times New Roman";
+mso-font-kerning:1.0pt'>240,1998 D.A.Nickerson et al</span></a></span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:18.0pt;text-align:left;
+text-indent:-18.0pt;mso-list:l11 level1 lfo1;tab-stops:list 18.0pt;mso-layout-grid-align:
+none;text-autospace:none'><![if !supportLists]><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>②<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-size:16.0pt;
+font-family:"ＭＳ 明朝";mso-font-kerning:0pt'><a
+href="http://133.11.196.190/ra/wordfiles/3/haplotypestructure.pdf">Haplotype
+Structure and Population Genetic Inferences from Nucleotide-Sequence Variation
+in Human Lipoprotein Lipase,Am J Hum Genet 63 595-612,1998 <span
+style='mso-bidi-font-size:12.0pt'>A.G.Clark et al</span></a></span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:18.0pt;text-align:left;
+text-indent:-18.0pt;mso-list:l11 level1 lfo1;tab-stops:list 18.0pt;mso-layout-grid-align:
+none;text-autospace:none'><![if !supportLists]><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>③<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝";
+mso-font-kerning:0pt'>The Haplotype Map Meeting on </span><st1:date Year="2001"
+Day="18" Month="7"><span lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:
+ 0pt'>July 18-19,2001</span></st1:date><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-font-kerning:0pt'>,in </span><st1:place><st1:City><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Washington</span></st1:City><span lang=EN-US
+ style='font-family:"ＭＳ 明朝"'> </span><st1:State><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>D.C.</span></st1:State><span lang=EN-US
+ style='font-family:"ＭＳ 明朝"'> </span><st1:country-region><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>U.S.A.</span></st1:country-region></st1:place><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
+none;text-autospace:none'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>&lt;“多型学”に出現するいろいろな用語など&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（１）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>Heterozygosity</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span style='font-family:"ＭＳ 明朝"'>ある多型に着目したとき、その多型がヘテロである個体が集団に占める割合。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>HWE下では(SNPの場合)　2p(1-p)：但しpはアレル頻度　すなわち 12/(11+12+22)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（２）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>Heterozygosityのとりうる範囲</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>Diallelic多型がHWEを満たしているとき<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span>0≦</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>Heterozygosity≦0.5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>h=</span><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>2p(1-p) をpについて解くと、p=<sub><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:53.25pt;
+ height:30.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=71 height=41
+src="3-5-2-6.files/image002.gif" v:shapes="_x0000_i1025"><![endif]></sub><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>h=0：p=0
+or 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'><span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>h=0.5：p=0.5</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（３）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>HWEからのズレの表現</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span style='font-family:"ＭＳ 明朝"'>χ<sup>２</sup>検定、</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>Homozygosity excess　“資料集
+<a href="http://133.11.196.190/ra/wordfiles/3/3-4-1-2.doc">3-4-1-2 Hardy-Weinberg不平衡の程度の評価法とその原因解明の手順</a>”参照<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>(観測Heterozygosity)-(HWE期待Heterozygosity)の差
+－　文献① Fig3 a</span><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（４）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>Linkage
+disequilibriumに</span><span lang=EN-US style='font-family:"ＭＳ 明朝"'>2つの表現(文献② p604)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>Absolute</span><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-font-kerning:0pt'> disequilibrium(4 haplotypesのうち2 haplotypesのみが存在する)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝";mso-font-kerning:0pt'>Complete disequilibrium(4
+haplotypesのうち3 haplotypesのみが存在する)</span><span lang=EN-US style='font-family:
+"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（５）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>使用多型数を増やすと集団特有のハプロタイプの割合が増し、全ての個人を個別の集団の<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:21.0pt'><span
+style='font-family:"ＭＳ 明朝"'>代表とみなせば、<span lang=EN-US>1(2)ハプロタイプということになる。(言われてみれば当然)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>88多型のつくる88ハプロタイプのうち81ハプロタイプは3群のいずれか1群にしか認められなかった。(文献
+②)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（６）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Nucleotide Variationの指標(πとθ)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:42.0pt'><span style='font-family:"ＭＳ 明朝"'>（ア）π：<span
+lang=EN-US>average heterozygosity per site<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>randomに選んだ2本の相同染色体上のある塩基siteが相互に異なる塩基を持っている<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>確率。多型がゲノム上に存在する密度とその多型の<span lang=EN-US>heterozygosityに依存する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:135.75pt;height:45pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image003.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=181 height=60
+src="3-5-2-6.files/image004.gif" v:shapes="_x0000_i1026"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1194278384">
+ </o:OLEObject>
+</xml><![endif]-->　<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>s：多型の個数、N：評価している範囲の塩基数<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>ある個人の塩基配列を<span lang=EN-US>K塩基対にわたって調べたときに、P塩基でヘテロであったとす<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>る。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:71.4pt;mso-para-margin-left:6.8gd;
+text-indent:.3pt;mso-char-indent-count:.03'><span lang=EN-US style='font-family:
+"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:93pt;height:30.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image005.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=124 height=41
+src="3-5-2-6.files/image006.gif" v:shapes="_x0000_i1027"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1194278385">
+ </o:OLEObject>
+</xml><![endif]-->　という関係がある。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>(イ)<sub><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:9pt;height:12.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image007.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=17
+src="3-5-2-6.files/image008.gif" v:shapes="_x0000_i1028"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1194278386">
+ </o:OLEObject>
+</xml><![endif]-->：多型生起モデルによって仮定されるパラメーター<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>mutationの発生率<!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1194278382">
+ </o:OLEObject>
+</xml><![endif]-->/site、及びgenotype driftの複合結果<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>集団中に発生し、維持される多型の量を規定する<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1029"
+ type="#_x0000_t75" style='width:188.25pt;height:33.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image009.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=251 height=45
+src="3-5-2-6.files/image010.gif" v:shapes="_x0000_i1029"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1029"
+  DrawAspect="Content" ObjectID="_1194278392">
+ </o:OLEObject>
+</xml><![endif]-->　<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Infinite site model(後述)に基づいて表現されている。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>今、<span lang=EN-US>n本の染色体の塩基配列を調べて、S箇所のsegregating
+sites(多型箇所)が検出さ<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>れたとする。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:9pt;height:12.75pt' o:ole="" o:bullet="t">
+ <v:imagedata src="3-5-2-6.files/image007.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=17
+src="3-5-2-6.files/image008.gif" alt="*" v:shapes="_x0000_i1030"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1030"
+  DrawAspect="Content" ObjectID="_1194278393">
+ </o:OLEObject>
+</xml><![endif]-->は測定不可能なパラメーターであるが、その推定値 <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:9pt;height:13.5pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image011.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=18
+src="3-5-2-6.files/image012.gif" v:shapes="_x0000_i1031"><![endif]></sub><span
+style='mso-spacerun:yes'>&nbsp;</span>は<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1032"
+ type="#_x0000_t75" style='width:51pt;height:57.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image013.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=68 height=77
+src="3-5-2-6.files/image014.gif" v:shapes="_x0000_i1032"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1032"
+  DrawAspect="Content" ObjectID="_1194278397">
+ </o:OLEObject>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1031"
+  DrawAspect="Content" ObjectID="_1194278395">
+ </o:OLEObject>
+</xml><![endif]-->　で得られることが、モデルの設定から知られている。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>n染色体を調べたときに、singleton(後述)が観測される塩基site数の期待値が<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:9pt;height:12.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image007.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=17
+src="3-5-2-6.files/image008.gif" v:shapes="_x0000_i1033"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1033"
+  DrawAspect="Content" ObjectID="_1194278400">
+ </o:OLEObject>
+</xml><![endif]-->とな<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>る。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:42.0pt'><span style='font-family:"ＭＳ 明朝"'>（ウ）<span
+lang=EN-US>Infinite site modelでは、<sub><!--[if gte vml 1]><v:shape id="_x0000_i1034"
+ type="#_x0000_t75" style='width:25.5pt;height:13.5pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image015.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=34 height=18
+src="3-5-2-6.files/image016.gif" v:shapes="_x0000_i1034"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1034"
+  DrawAspect="Content" ObjectID="_1194278401">
+ </o:OLEObject>
+</xml><![endif]-->　となる<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>（エ）観測データから<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:9.75pt;height:9.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image017.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=13 height=13
+src="3-5-2-6.files/image018.gif" v:shapes="_x0000_i1035"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1035"
+  DrawAspect="Content" ObjectID="_1194278402">
+ </o:OLEObject>
+</xml><![endif]-->、<sub><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75"
+ style='width:9pt;height:12.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image007.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=17
+src="3-5-2-6.files/image008.gif" v:shapes="_x0000_i1036"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1036"
+  DrawAspect="Content" ObjectID="_1194278403">
+ </o:OLEObject>
+</xml><![endif]-->を計算してみる。(文献② p599)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>i) <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1037" type="#_x0000_t75" style='width:168pt;height:44.25pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image019.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=224 height=59
+src="3-5-2-6.files/image020.gif" v:shapes="_x0000_i1037"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1037"
+  DrawAspect="Content" ObjectID="_1194278404">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span>多型は88箇所<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>ii)<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1038" type="#_x0000_t75" style='width:101.25pt;height:45pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image021.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=135 height=60
+src="3-5-2-6.files/image022.gif" v:shapes="_x0000_i1038"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1038"
+  DrawAspect="Content" ObjectID="_1194278405">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:98.9pt;mso-para-margin-left:9.42gd;
+line-height:12.0pt'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1039" type="#_x0000_t75" style='width:56.25pt;height:41.25pt'
+ o:ole="">
+ <v:imagedata src="3-5-2-6.files/image023.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=75 height=55
+src="3-5-2-6.files/image024.gif" v:shapes="_x0000_i1039"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1039"
+  DrawAspect="Content" ObjectID="_1194278406">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:105.3pt;mso-para-margin-left:10.03gd;
+text-indent:11.65pt;mso-char-indent-count:1.11;line-height:12.0pt'><span
+style='font-family:"ＭＳ 明朝"'>以上はモデルが観測データの背後で成立したとしたときの<span lang=EN-US><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1040" type="#_x0000_t75" style='width:9.75pt;height:9.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image017.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=13 height=13
+src="3-5-2-6.files/image018.gif" v:shapes="_x0000_i1040"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1040"
+  DrawAspect="Content" ObjectID="_1194278407">
+ </o:OLEObject>
+</xml><![endif]-->と<sub><!--[if gte vml 1]><v:shape id="_x0000_i1041" type="#_x0000_t75"
+ style='width:9pt;height:12.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image007.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=17
+src="3-5-2-6.files/image008.gif" v:shapes="_x0000_i1041"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1041"
+  DrawAspect="Content" ObjectID="_1194278408">
+ </o:OLEObject>
+</xml><![endif]-->の値<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:105.3pt;mso-para-margin-left:10.03gd;
+text-indent:11.65pt;mso-char-indent-count:1.11;line-height:12.0pt'><span
+style='font-family:"ＭＳ 明朝"'>さらにモデルが成立していれば －。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>i)’ <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1042" type="#_x0000_t75" style='width:9.75pt;height:12pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image025.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=13 height=16
+src="3-5-2-6.files/image026.gif" v:shapes="_x0000_i1042"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1042"
+  DrawAspect="Content" ObjectID="_1194278409">
+ </o:OLEObject>
+</xml><![endif]-->= (個人が持つヘテロ塩基sitesの数の平均値)　である。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;text-indent:42.0pt'><span
+style='font-family:"ＭＳ 明朝"'>実測データから求めると　<u><span lang=EN-US>17<o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>ii)’<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1043" type="#_x0000_t75" style='width:9pt;height:13.5pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image027.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=18
+src="3-5-2-6.files/image012.gif" v:shapes="_x0000_i1043"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1043"
+  DrawAspect="Content" ObjectID="_1194278410">
+ </o:OLEObject>
+</xml><![endif]-->= (singletonsの箇所数)　である。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;text-indent:42.0pt'><span
+style='font-family:"ＭＳ 明朝"'>実測データから　<u><span lang=EN-US>10<o:p></o:p></span></u></span></p>
+
+<p class=MsoNormal style='line-height:12.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>（オ）Recombinationを考慮に入れる(文献①
+Table1,p603)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1044"
+ type="#_x0000_t75" style='width:47.25pt;height:15.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image028.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=63 height=21
+src="3-5-2-6.files/image029.gif" v:shapes="_x0000_i1044"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1044"
+  DrawAspect="Content" ObjectID="_1194278411">
+ </o:OLEObject>
+</xml><![endif]-->　と同様に<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1045"
+ type="#_x0000_t75" style='width:47.25pt;height:15.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image030.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=63 height=21
+src="3-5-2-6.files/image031.gif" v:shapes="_x0000_i1045"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1045"
+  DrawAspect="Content" ObjectID="_1194278412">
+ </o:OLEObject>
+</xml><![endif]-->　というパラメーターを導入する。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1046"
+ type="#_x0000_t75" style='width:9.75pt;height:12pt' o:ole="" o:bullet="t">
+ <v:imagedata src="3-5-2-6.files/image032.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=13 height=16
+src="3-5-2-6.files/image033.gif" alt="*" v:shapes="_x0000_i1046"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1046"
+  DrawAspect="Content" ObjectID="_1194278413">
+ </o:OLEObject>
+</xml><![endif]-->:mutation rate<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1047"
+ type="#_x0000_t75" style='width:8.25pt;height:9.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image034.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=11 height=13
+src="3-5-2-6.files/image035.gif" v:shapes="_x0000_i1047"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1047"
+  DrawAspect="Content" ObjectID="_1194278414">
+ </o:OLEObject>
+</xml><![endif]-->:recombination rate<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>2多型間のアレルの組み合わせの偏りは、recombinationが多く起きる方が、小さくなる<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+style='font-family:"ＭＳ 明朝"'>ことを利用して計算する。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1048"
+ type="#_x0000_t75" style='width:12.75pt;height:32.25pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image036.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=17 height=43
+src="3-5-2-6.files/image037.gif" v:shapes="_x0000_i1048"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1048"
+  DrawAspect="Content" ObjectID="_1194278415">
+ </o:OLEObject>
+</xml><![endif]-->　を求めることで<sub><!--[if gte vml 1]><v:shape id="_x0000_i1049"
+ type="#_x0000_t75" style='width:24.75pt;height:15.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image038.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=33 height=21
+src="3-5-2-6.files/image039.gif" v:shapes="_x0000_i1049"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1049"
+  DrawAspect="Content" ObjectID="_1194278416">
+ </o:OLEObject>
+</xml><![endif]-->の比が求まる。→　<sub><!--[if gte vml 1]><v:shape id="_x0000_i1050"
+ type="#_x0000_t75" style='width:87pt;height:27.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image040.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=116 height=37
+src="3-5-2-6.files/image041.gif" v:shapes="_x0000_i1050"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1050"
+  DrawAspect="Content" ObjectID="_1194278417">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>“c is within a factor of 2 of mutation rate”<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（７）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Infinite site model(無限座位モデル)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:-36.0pt;mso-list:l13 level1 lfo3;
+tab-stops:list 78.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（ア）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>突然変異を起こす<span lang=EN-US>siteの総数が非常に大きく、突然変異率は非常に低く、変異可能site数が<u>無限大</u>であると近似できる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:-36.0pt;mso-list:l13 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>（イ）<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>ある<span
+lang=EN-US>siteに突然変異が起こるのは1回だけである。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:-36.0pt;mso-list:l13 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>（ウ）<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Recombination、conversionは発生しない。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:36.0pt'><span
+style='font-family:"ＭＳ 明朝"'>ことを仮定している。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>◎モデルで仮定された推定値同士の乖離を認めたとき、モデルの破綻を疑う。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>破綻の主な理由<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>i)
+<sub><!--[if gte vml 1]><v:shape id="_x0000_i1051" type="#_x0000_t75" style='width:243.75pt;
+ height:15.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image042.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=325 height=21
+src="3-5-2-6.files/image043.gif" v:shapes="_x0000_i1051"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1051"
+  DrawAspect="Content" ObjectID="_1194278418">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>bottleneckや急速な人口増加など<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ii)
+recombination/conversionの効果<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:42.0pt'><span
+style='font-family:"ＭＳ 明朝"'>を考慮すべきである<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>逆に、モデル下推定値同士の乖離をもとにeffective
+population sizeや<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>recombination/conversionについて検討を加えることが可能である。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:-36.0pt;mso-list:l13 level1 lfo3'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>（エ）<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Haplotypeの増加パターン<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt'><span style='font-family:"ＭＳ 明朝"'>多型<span
+lang=EN-US>site数　sヶ所　→　haplotype数　s＋1種類<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt'><span style='font-family:"ＭＳ 明朝"'>（<span
+lang=EN-US>recombinationを許せば　→　2<sup>ｓ</sup>）<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:72.0pt;mso-char-indent-count:7.2'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1035" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:70.8pt;margin-top:.35pt;width:264.05pt;height:156pt;
+ z-index:1'>
+ <v:imagedata src="3-5-2-6.files/image044.wmz" o:title=""/>
+ <w:wrap side="right"/>
+</v:shape><![if gte mso 9]><o:OLEObject Type="Embed" ProgID="Word.Picture.8"
+ ShapeID="_x0000_s1035" DrawAspect="Content" ObjectID="_1194278419">
+</o:OLEObject>
+<![endif]><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=94 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=352 height=208 src="3-5-2-6.files/image045.gif" v:shapes="_x0000_s1035"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal style='text-indent:342.0pt;mso-char-indent-count:32.57'><span
+style='font-family:"ＭＳ 明朝"'>同じ<span lang=EN-US>siteに2度目の<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:342.0pt;mso-char-indent-count:32.57'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>mutationは発生しない<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:342.0pt;mso-char-indent-count:32.57'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>recombinationはおこらない<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（８）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Singleton、doubleton<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span style='font-family:"ＭＳ 明朝"'>複数の<span
+lang=EN-US>diploid個体を調べているときに、稀な多型の場合、1人だけへテロで他全員がホモ(Major alleleのホモ)であることがある(1人が逆ホモ、残りがホモでも可?)。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:57.0pt'><span style='font-family:"ＭＳ 明朝"'>このような多型を、<u><span
+lang=EN-US>singleton</span></u>と呼ぶ。同様に<span lang=EN-US>2人だけへテロで全員がMajor alleleホモのような多型を<u>doubleton</u>と呼ぶ。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（９）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Haplotype解析の実際<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='font-family:"ＭＳ 明朝"'>（ア）実験的決定<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>i) Haploid化template → serial typing(Moleculer
+cloning法)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>ii)Allele specific typing/amplification<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>iii)Pedgree analysis<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='font-family:"ＭＳ 明朝"'>（イ）算術的推定<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>i)EM algorithm － “<a
+href="http://133.11.196.190/ra/wordfiles/3/3-5-2-2.doc">3-5-2-2 参考EM-algorithmによるHplotype頻度の推定</a>”<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>ii)その他のalgorithm<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>iii)Clark法(Mol.Biol.Erol
+7(2),111-122(1990))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>高頻度に存在するhaplotypeをホモで持つ個人は、相当高い確率で見つけ<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;text-indent:42.0pt'><span
+style='font-family:"ＭＳ 明朝"'>られる<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>↓<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;text-indent:30.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>このようなhaplotypeを集めてきて、それらによって、すべての個人の<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;text-indent:42.0pt'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>haplotype構成を説明してみる<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:42.0pt'><span
+style='font-family:"ＭＳ 明朝"'>↓<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:84.0pt;text-indent:42.0pt'><span
+style='font-family:"ＭＳ 明朝"'>説明のつかない部分が<span lang=EN-US>Minor haplotypeである <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt'><span style='font-family:"ＭＳ 明朝"'>※文献②<span
+lang=EN-US> p597では、Clark法及びallele specific amplificationを併用<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:11.95pt;mso-char-indent-count:
+1.14'><span style='font-family:"ＭＳ 明朝"'>して、<span lang=EN-US>haplotypeを推定している。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>※一般論として、とりうるハプロタイプ数が十分大きい場合はClark法で、<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:137.95pt;mso-char-indent-count:13.14'><span
+style='font-family:"ＭＳ 明朝"'>ハプロタイプを一部決定し、決まらないものに対して<span lang=EN-US>EM
+algorithmを適<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:137.95pt;mso-char-indent-count:13.14'><span
+style='font-family:"ＭＳ 明朝"'>用するのが効果的である。もし、いきなり<span lang=EN-US>EMを適用すると、全てのとり<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:137.95pt;mso-char-indent-count:13.14'><span
+style='font-family:"ＭＳ 明朝"'>うるハプロタイプに割当てられてしまう恐れがある。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:137.95pt;mso-char-indent-count:13.14'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Clark法/EM法併用の際、家系サンプルを用いれば、なお推定し易いであ<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:137.95pt;mso-char-indent-count:13.14'><span
+style='font-family:"ＭＳ 明朝"'>ろう。<span lang=EN-US>(参考：Science 293,489-493(2001))<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 66.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（１０）<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>集団間の多型分布の違いの評価<span lang=EN-US>(文献② p599)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='font-family:"ＭＳ 明朝"'>（ア）<span
+lang=EN-US>ANOVA/分散分析　「論文が読める早わかり統計学」(Geoffrey R.Norman David L.Streiner) <o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt;mso-para-margin-left:4.0gd;
+text-indent:31.5pt;mso-char-indent-count:3.0'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>MEDSi p56より<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>F：統計量=群間平均平方/郡内平均平方<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>95%
+CIの出し方<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>simulation-based
+method “Bootstrapping”<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>観測データから無作為抽出を繰り返して、その分布から信頼区間を得る方法<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>「統計モデル入門」(丹後俊郎)
+朝倉書店 p20 より<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:-36.0pt;mso-list:l10 level1 lfo4;
+tab-stops:list 78.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（イ）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>permutation testsによるnull hypothesisの棄却の是非<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt'><span style='font-family:"ＭＳ 明朝"'>「数学いらずの医科統計学」<span
+lang=EN-US>(津崎晃一) MEDSi p220 より<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l11 level2 lfo1;
+tab-stops:list 66.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（１１）<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1044" style='position:absolute;left:0;text-align:left;
+ margin-left:-1.95pt;margin-top:.35pt;width:486pt;height:708pt;z-index:3;
+ mso-position-horizontal:absolute;mso-position-vertical:absolute' coordsize="9615,4920"
+ path="m,4920l,,9615,r,4920e" filled="f">
+ <v:path arrowok="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:3'><span style='left:0px;position:absolute;left:-4px;
+top:-1px;width:650px;height:946px'><img width=650 height=946
+src="3-5-2-6.files/image046.gif" v:shapes="_x0000_s1044"></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>参考文献①、②の図表の読み方<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='font-family:"ＭＳ 明朝"'>（ア）<span
+lang=EN-US>Nature Genetics ①<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fig3
+a　実測heterozygosity-期待heterozygosity差のプロット<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fig3
+b　HWEズレ検定のP値分布<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>randomなバラツキが観測されただけでHWE
+OK<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fig4　　3群別及び3群統合における、各多型のheterozygosity<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>“0”の多型は“多型ではない”<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>縦軸が
+&gt;0.5は、理論的におかしい<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fig5　　Genotype列の視覚的表現<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span style='font-family:"ＭＳ 明朝"'>（イ）<span
+lang=EN-US>Am J Hum Genet②<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Table1　θ、π<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:42.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Tajima<span
+style='letter-spacing:-2.5pt'>’s　　</span><sub><!--[if gte vml 1]><v:shape id="_x0000_i1052"
+ type="#_x0000_t75" style='width:15.75pt;height:15pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image047.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=21 height=20
+src="3-5-2-6.files/image048.gif" v:shapes="_x0000_i1052"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1052"
+  DrawAspect="Content" ObjectID="_1194278421">
+ </o:OLEObject>
+</xml><![endif]-->　－　excess heterozygosity(<sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1053" type="#_x0000_t75" style='width:24.75pt;height:15.75pt'
+ o:ole="">
+ <v:imagedata src="3-5-2-6.files/image049.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=33 height=21
+src="3-5-2-6.files/image050.gif" v:shapes="_x0000_i1053"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1053"
+  DrawAspect="Content" ObjectID="_1194278422">
+ </o:OLEObject>
+</xml><![endif]-->のこと)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:220.5pt;mso-para-margin-left:21.0gd'><!--[if gte vml 1]><v:line
+ id="_x0000_s1039" style='position:absolute;left:0;text-align:left;z-index:2'
+ from="150.3pt,3.35pt" to="150.3pt,53.6pt">
+ <v:stroke endarrow="open" endarrowwidth="narrow" endarrowlength="short"/>
+ <w:wrap side="right"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;left:0px;margin-left:194px;margin-top:3px;width:13px;
+height:70px'><img width=13 height=70 src="3-5-2-6.files/image051.gif" v:shapes="_x0000_s1039"></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>これが<span lang=EN-US>randomな変動範囲か真にπとθに差があるためかを検証する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:220.5pt;mso-para-margin-left:21.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>(SDで割っているから、偏差値みたいなもの)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Infinite
+site modelでは<sub><!--[if gte vml 1]><v:shape id="_x0000_i1054" type="#_x0000_t75"
+ style='width:15.75pt;height:15pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image047.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=21 height=20
+src="3-5-2-6.files/image048.gif" v:shapes="_x0000_i1054"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1054"
+  DrawAspect="Content" ObjectID="_1194278423">
+ </o:OLEObject>
+</xml><![endif]-->の値は<sub><!--[if gte vml 1]><v:shape id="_x0000_i1055" type="#_x0000_t75"
+ style='width:72.75pt;height:17.25pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image052.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=97 height=23
+src="3-5-2-6.files/image053.gif" v:shapes="_x0000_i1055"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1055"
+  DrawAspect="Content" ObjectID="_1194278424">
+ </o:OLEObject>
+</xml><![endif]-->の正規分布となるはず<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1056" type="#_x0000_t75" style='width:23.25pt;height:15.75pt'
+ o:ole="">
+ <v:imagedata src="3-5-2-6.files/image054.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=31 height=21
+src="3-5-2-6.files/image055.gif" v:shapes="_x0000_i1056"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1056"
+  DrawAspect="Content" ObjectID="_1194278425">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fig1
+a　観測された多型のマイナーアレル頻度を高い順にプロット<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Infinite
+site modelでの理論値±SEと対比 － 適合性よい<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;tab-stops:42.0pt;layout-grid-mode:
+both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Fig1 b　観測されたhaplotypeの数(実測データより観測個人数(Bootstrap)を<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:42.0pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>simulateしている)とInfinite
+site modelでの理論値を対比<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:126.0pt;tab-stops:42.0pt;layout-grid-mode:
+both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-spacerun:yes'>&nbsp;</span>－ 明らかに実測値が大きい<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>↓<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>recombination、Gene
+conversionの存在が示唆される。<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;tab-stops:42.0pt;layout-grid-mode:
+both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Fig2　横軸(多型)物理的並び順<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>縦軸<span lang=EN-US>(ハプロタイプ＋チンパンジーハプロタイプ)
+－ clustering後<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:1'>&nbsp; </span>3<span style='letter-spacing:-2.5pt'>’</span>側
+半分の多型群が尾にclusteringに効いている。<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:1'>&nbsp; </span>マイナーalleleはマイナーallele同士で並ぶべきだが、反転しているとこ<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:42.0pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>ろがある。<span lang=EN-US>(70番目の多型付近、80＋α番目の多型付近)
+<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>clustering基礎の基礎<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:1'>&nbsp; </span>近似の度合をパラメーターを用いて“距離”に変換し、距離を図示したもの。<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fig3　“s個の多型はs＋1個のhaplotypeを形成する”という仮定からのズレを解析<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>範囲の全多型について<span
+lang=EN-US>tandemに評価<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:1'>&nbsp; </span>s=5の場合 － 理論上haplotype数　6<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:42.0pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>s=10の場合 － 理論上haplotype数　11<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>上に凸の領域は“何らかの原因”で<span
+lang=EN-US>haplotype数が↑[20-30]<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>下に凸の領域は“何らかの原因”で<span
+lang=EN-US>haplotype数が↓[45-60]<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:42.0pt;text-indent:42.0pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Fig4　A-B、A-b、a-B、a-bの4タイプがあれば黒
+－ <sub><!--[if gte vml 1]><v:shape id="_x0000_i1057" type="#_x0000_t75"
+ style='width:29.25pt;height:15pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image056.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=39 height=20
+src="3-5-2-6.files/image057.gif" v:shapes="_x0000_i1057"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1057"
+  DrawAspect="Content" ObjectID="_1194278426">
+ </o:OLEObject>
+</xml><![endif]-->、なければ白 － <sub><!--[if gte vml 1]><v:shape id="_x0000_i1058"
+ type="#_x0000_t75" style='width:29.25pt;height:15pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image058.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=39 height=20
+src="3-5-2-6.files/image059.gif" v:shapes="_x0000_i1058"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1058"
+  DrawAspect="Content" ObjectID="_1194278427">
+ </o:OLEObject>
+</xml><![endif]--><span style='mso-spacerun:yes'>&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:42.0pt;text-indent:42.0pt;tab-stops:42.0pt;
+layout-grid-mode:both'><!--[if gte vml 1]><v:shape id="_x0000_s1047" style='position:absolute;
+ left:0;text-align:left;margin-left:-2.7pt;margin-top:1.85pt;width:486.75pt;
+ height:315.75pt;flip:y;z-index:4;mso-position-horizontal:absolute;
+ mso-position-vertical:absolute' coordsize="9615,4920" path="m,4920l,,9615,r,4920e"
+ filled="f">
+ <v:path arrowok="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:4;left:0px;margin-left:-5px;margin-top:1px;width:651px;
+height:423px'><img width=651 height=423 src="3-5-2-6.files/image060.gif"
+v:shapes="_x0000_s1047"></span><![endif]><span lang=EN-US style='font-family:
+"ＭＳ 明朝"'>Fig5　黒－LD<sub><!--[if gte vml 1]><v:shape id="_x0000_i1059" type="#_x0000_t75"
+ style='width:12pt;height:12.75pt' o:ole="">
+ <v:imagedata src="3-5-2-6.files/image061.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=16 height=17
+src="3-5-2-6.files/image062.gif" v:shapes="_x0000_i1059"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1059"
+  DrawAspect="Content" ObjectID="_1194278428">
+ </o:OLEObject>
+</xml><![endif]-->　(Fisher<span style='letter-spacing:-2.0pt'>’</span>s exact
+probability testでP&lt;0.01)<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>白＋ドット－<span
+lang=EN-US>P不充分<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:1'>&nbsp; </span>Fig4-5は白は白、黒は黒の基本的関係<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Fig6　142染色体がつくる2染色体ペア(142×141/2)について、何ヶ所の塩基が異な<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>るかを数え上げ、ヒストグラム化した。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-tab-count:1'>&nbsp; </span>－度数総計が(142×141/2)になっていない・・・<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>2峰性＝類似ペアと非類似ペアとの存在を意味する。<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>　↓<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>2群に分かれているという結論がどのくらい確からしいかを検定したい。<o:p></o:p></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:42.0pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>（文献② <span lang=EN-US>p605）<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>シミュレーションにより<span
+lang=EN-US>2群の染色体グループ(各群の染色体数は実測データ<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>の群分け結果に同じ<span
+lang=EN-US>)をつくる。<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>その<span lang=EN-US>2群について、群内シスマッチ指数と群間シスマッチ指数を計算し、その<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>比を統計量とする。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>その統計量の帰無仮説における分布が得られたので、実測データの“統計量”<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='margin-left:84.0pt;text-indent:32.4pt;tab-stops:42.0pt;
+layout-grid-mode:both'><span style='font-family:"ＭＳ 明朝"'>が帰無仮説のもとで得られる確率が得られる。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Table2　2×3Tableのχ<sup>２</sup><span
+style='mso-tab-count:1'> </span>検定<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

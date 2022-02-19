@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta name="keywords" content="R">
+<meta http-equiv="Content-Type" content="text/html;CHARSET=EUC-JP">
+<title>MutationString チュートリアル</title>
+</head>
+
+<body bgcolor="#ffffff">
+<img src="../../../img/cat2.gif"  alt="logo">　
+<font size="+2"><b>MutationString 実行手順</b></font>　　　　　
+<br />Last modified: Jan 6, 2006
+<div align="right"><a href="../../index.html"><img src="../../../img/home_y.gif" border="0"></a>
+<font size=-1>&nbsp;TopPage </font></div>
+<hr size = "30" color = "#ff9900" noshade><p>
+<ol>
+<li>jarファイルからアプリケーションを起動(ファイルのダブルクリック)する</li>
+<br />
+<li>"MutationString Menu"ウィンドウ
+				<ul>
+					<li>2つのボタン
+					<ul>
+						<li>Startボタン
+						<ul>
+							<li>MutationStringを実行するボタン
+							<ul>
+								<li>実行に際し、入力ファイルを指定するための"Select a haplotype file"ウィンドウが立ち上がる</li>
+							</ul>
+							</li>
+
+						</ul>
+						</li>
+						<li>Demonstrationボタン
+					<ul>
+							<li>サンプル入力ファイルを用いてMutationStringシミュレーションを小規模に行う</li>
+								<ul>
+								<li>入力ファイルは指定しないが、それ以外はStartボタンを押した場合と同じ</li>
+								</ul>
+						</ul>
+						</li>
+					</ul>
+					</li>
+				</ul>
+				</li>
+<br />
+<li>"Select a haplotype file"ウインドウ
+<ul>入力するハプロタイプファイルを指定します
+	<li><strong>入力ファイルフォーマット</strong>
+		<ul>
+			<li>ヘッダーなしのテキストファイルであること</li>
+			<li>１ハプロタイプデータごとに改行すること</li>
+			<li>数値の[0][1]のみで構成すること</li>
+			<li>空白は含めないこと</li>
+				<ul>（例）
+					<ul>100110000100001000001</ul>
+					<ul>100110100000001000000</ul>
+					<ul>100110001000001101000</ul>
+					<ul>100110000000000000000</ul>
+					<ul>100110001000001101010</ul>
+					<ul>100000100000001000000</ul>
+					<ul>100000100000001000010</ul>
+					<ul>100000100000001000001</ul>
+					<ul>以下略</ul>
+				</ul>
+		</ul>
+	</li>
+</ul>
+</li>
+<br />
+<li>"Controller"ウィンドウ"
+<ul>
+					<li>ラジオボタンで出力オプションを選択（"Base Position"または"Number [01...]"。サンプル図参照)</li>
+					<li>"Start &amp; Restart"ボタンで開始</li>
+					<li>"Hold"ボタンで一時停止</li>
+					<li>"Start &amp; Restart"ボタンでプロセス再開</li>
+					<li>"Exit"ボタンで途中終了</li>
+					<br />
+						<ul><strong>サンプル図</strong>
+							<table>
+								<tr>
+									<td><font size="2">&nbsp;Base Position (塩基位置) で表示&nbsp;</font></td>
+									<td><font size="2">&nbsp;Number [01...] で表示&nbsp;</font></td>
+								</tr>
+								<tr>
+									<td><img src="../../../img/baseposition.jpg" border="0">
+									</td>
+									<td><img src="../../../img/numberdp.jpg"  width="300" border="0">
+									</td>
+								</tr>
+							</table>
+						</ul>
+</ul>
+</li>
+</ol>
+
+</body>
+</html>

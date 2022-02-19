@@ -1,0 +1,490 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-3-2-3-8.files/filelist.xml">
+<title>最もよく使われる連鎖不平衡係数D’とΔ2の特徴と関係について</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="State"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2005-11-23T10:20:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:20:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>183</o:Words>
+  <o:Characters>1045</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Lines>8</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1226</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-3-2-3-8.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA link=blue vlink=purple style='tab-interval:42.0pt;text-justify-trim:
+punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-3-2-3-8 最もよく使われる連鎖不平衡係数D’とΔ<sup>2</sup>の特徴と関係について<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>Δ<sup><span lang=EN-US>2</span></sup>は<span
+lang=EN-US>R<sup>2</sup>とも表記されることがある<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>連鎖平衡･連鎖不平衡の最も特徴的な状態は以下のように３つである。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+style='font-family:"ＭＳ 明朝"'>１　連鎖平衡にて　０<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+style='font-family:"ＭＳ 明朝"'>２つの<span lang=EN-US>biallelic markersが作る「完全連鎖」には大きく2種類ある。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+style='font-family:"ＭＳ 明朝"'>存在し得る<span lang=EN-US>4つのhaplotypesのうち、<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+style='font-family:"ＭＳ 明朝"'>２　<span lang=EN-US>2つのhaplotypesしか存在しない場合と、<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+style='font-family:"ＭＳ 明朝"'>３　<span lang=EN-US>3つのhaplotypesが存在する場合<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+style='font-family:"ＭＳ 明朝"'>前者を<span lang=EN-US>absolute disequilibrium、後者をcomplete
+disequilibriumと分けて表現することもある<o:p></o:p></span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0mm 4.95pt 0mm 4.95pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr>
+  <td width=116 valign=top style='width:87.0pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><st1:place><st1:City><span
+    lang=EN-US style='font-family:"ＭＳ 明朝"'>Haplotype</span></st1:City><span
+   lang=EN-US style='font-family:"ＭＳ 明朝"'> </span><st1:State><span lang=EN-US
+    style='font-family:"ＭＳ 明朝"'>AB</span></st1:State></st1:place><span
+  lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Haplotype Ab<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Haplotype aB<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Haplotype ab<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.0pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"ＭＳ 明朝"'>連鎖平衡<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>P(A)xP(B)<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>P(A)x(1-P(B))<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>(1-P(A))xP(B)<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>(1-P(A)x(1-P(B))<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=116 valign=top style='width:87.0pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Absolute disequilibrium<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>P(A)<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>0<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>0<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>1-P(A)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-lastrow:yes'>
+  <td width=116 valign=top style='width:87.0pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Complete disequilibrium<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>P(A)<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>0<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>P(B)-P(A)<o:p></o:p></span></p>
+  </td>
+  <td width=116 valign=top style='width:87.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>1-P(B)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>但し<span lang=EN-US>P(A)はSNP
+A のアレル頻度、P(B)はSNP Bのアレル頻度、AB、Ab、aB、abはそれぞれhaplotypeを表し､P(A), P(B)を用いた数式で表されたセル内の式は、連鎖の状態別のハプロタイプ頻度を表す。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>この特徴的な３状態における<span
+lang=EN-US>D’とΔ<sup>2</sup>の値は<o:p></o:p></span></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0mm 4.95pt 0mm 4.95pt;mso-border-insideh:.5pt solid windowtext;
+ mso-border-insidev:.5pt solid windowtext'>
+ <tr>
+  <td width=193 valign=top style='width:145.0pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>D’<o:p></o:p></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"ＭＳ 明朝"'>Δ<sup><span lang=EN-US>2</span></sup><span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=193 valign=top style='width:145.0pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"ＭＳ 明朝"'>連鎖平衡<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>0<o:p></o:p></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>0<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=193 valign=top style='width:145.0pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Absolute disequilibrium<o:p></o:p></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>1<o:p></o:p></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>1<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-lastrow:yes'>
+  <td width=193 valign=top style='width:145.0pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>Complete disequilibrium<o:p></o:p></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>1<o:p></o:p></span></p>
+  </td>
+  <td width=193 valign=top style='width:145.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0mm 4.95pt 0mm 4.95pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"ＭＳ 明朝"'>0より大、1未満<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>このことからわかるように、<span
+lang=EN-US>Absolute disequilibriumとComplete disequilibriumとの連鎖不平衡係数を区別したいときにはΔ<sup>2</sup>が適切であり､どちらも「完全連鎖」しているとして一まとめにして扱いたい場合にはD’が適当である。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>一般的にΔ<sup><span
+lang=EN-US>2</span></sup>の減衰は<span lang=EN-US>D’のそれよりも急峻であることが知られている。参考となる文献は<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><a
+href="http://133.11.196.190/ra/wordfiles/3/LD-review.pdf">Linkage
+Disequilibrium in Humans: Models and Data. JK Prichard and M Przeworski, Am J
+Hum Genet. 69:1-14,2001</a><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>その他の事情として次のような関係が知られている。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>多型の発生と消長を決定しているのは、変異の発生率<span
+lang=EN-US>(μ)と組替え率(θ)、及びrandom driftであるとするのが、一般的であるが、そのような立場にたつとき、Δ<sup>2</sup>はμ及びθと以下のような関係にある。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>E(Δ<sup>2</sup>)=(4N(μ+θ))<sup>-1</sup><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>ここで<span lang=EN-US>E(Δ<sup>2</sup>)はΔ<sup>2</sup>の期待値である。<o:p></o:p></span></span></p>
+
+</div>
+
+</body>
+
+</html>

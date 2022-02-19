@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<project>
+<project_id>200501181948_5538</project_id>
+<project_name>Sankyo_090</project_name>
+<addition>copy</addition>
+<pattern_ld>copy</pattern_ld>
+<pattern_block>original</pattern_block>
+<pattern_haplotype>original</pattern_haplotype>
+<pattern_tag>original</pattern_tag>
+<pattern_test>original</pattern_test>
+<!-- na=Not Applicable=該当無し(N/A) -->
+
+<ld>
+<project_id>200501181104_7131</project_id>
+<disease>ra</disease>
+<ld_parameter_file
+
+xmlns:xlink="http://www.w3.org/1999/xlink"
+    xlink:type="simple"
+    xlink:href="http://134.160.84.101/ra/ra_wgld_6.txt">
+ra_wgld6.txt
+  
+</ld_parameter_file>
+<ld_parameter_file_text>ra /home/ra/pg_snps2/pair_ld 0.8 0 100 1 TOTAL_PAT_LIST.txt RA_SPECIFIC_CHRID_BY_GENE_AB.txt m_ptgt_1st_fill.txt</ld_parameter_file_text>
+<wg_parameter_file>ra_3_wgld_6_physic.txt</wg_parameter_file>
+<wg_parameter_file_text>ra_specific_chrid_by_gene_ab wg_block_physic6 percent 35.9297929 percent 100 -100 -100 percent 100 percent 0 RA dbname=wg_ra_ptgt dbname=wg_ra_snps dbname=wg_ra_hapblock dbname=ra m_chr_snp_location m_exp_result_1st ra_pat_list m_haplotyper_twt_unknown_1st m_ptgt_1st_fill ra_oku_ptgt 105128 1027</wg_parameter_file_text>
+<build>34</build>
+<output>/home/wg_ra/home/snps/project/ld/200501181104_7131</output>
+</ld>
+
+<block>
+<project_id>200501181948_5538</project_id>
+<build>34</build>
+<method_id>3</method_id>
+<ld_index>delta</ld_index>
+<threshold>0.9</threshold>
+<input>/home/wg_ra/home/snps/project/ld/200501181104_7131</input>
+<output>/home/wg_ra/home/snps/project/block/200501181948_5538</output>
+<output_file>/home/wg_ra/home/snps/project/block/200501181948_5538/output_34_3_delta_0.9.txt</output_file>
+<disease>ra</disease>
+</block>
+
+<haplotype>
+<project_id>200501181948_5538</project_id>
+<pat_file>TOTAL_PAT_LIST.txt</pat_file>
+<pat_table>total_pat_list</pat_table>
+<twt_file>RA_SPECIFIC_CHRID_BY_GENE_AB.txt</twt_file>
+<twt_table>ra_specific_chrid_by_gene_ab</twt_table>
+<wg_parameter_file>ra_3_wgld_6_physic.txt</wg_parameter_file>
+<wg_parameter_file_text>ra_specific_chrid_by_gene_ab wg_bl_200501181948_5538 percent 35.9297929 percent 100 -100 -100 percent 100 percent 0 RA dbname=wg_ra_ptgt dbname=wg_ra_snps dbname=wg_ra_hapblock dbname=ra m_chr_snp_location m_exp_result_1st total_pat_list m_haplotyper_twt_unknown_1st m_ptgt_1st_fill ra_oku_ptgt 105128 1027</wg_parameter_file_text>
+<input_file>/home/wg_ra/home/snps/project/block/200501181948_5538/output_34_3_delta_0.9.txt</input_file>
+<input_table>wg_bl_200501181948_5538</input_table>
+<output>/home/wg_ra/home/snps/project/haplotype/200501181948_5538</output>
+<output_sikkan>/home/wg_ra/home/ra/project/haplotype/200501181948_5538</output_sikkan>
+</haplotype>
+
+<tag>
+<project_id>200501181948_5538</project_id>
+<pat_file>TOTAL_PAT_LIST.txt</pat_file>
+<pat_table>total_pat_list</pat_table>
+<twt_file>RA_SPECIFIC_CHRID_BY_GENE_AB.txt</twt_file>
+<twt_table>ra_specific_chrid_by_gene_ab</twt_table>
+<wg_parameter_file>ra_3_wgld_6_physic.txt</wg_parameter_file>
+<wg_parameter_file_text>ra_specific_chrid_by_gene_ab wg_bl_200501181948_5538 percent 35.9297929 percent 100 -100 -100 percent 100 percent 0 RA dbname=wg_ra_ptgt dbname=wg_ra_snps dbname=wg_ra_hapblock dbname=ra m_chr_snp_location m_exp_result_1st total_pat_list m_haplotyper_twt_unknown_1st m_ptgt_1st_fill ra_oku_ptgt 105128 1027</wg_parameter_file_text>
+<threshold>5</threshold>
+<input>200501181948_5538</input>
+<output>/home/wg_ra/home/snps/project/tag/200501181948_5538</output>
+<output_sikkan>/home/wg_ra/home/ra/project/tag/200501181948_5538</output_sikkan>
+</tag>
+
+<test>
+<project_id>200501181948_5538</project_id>
+<pat_file>TOTAL_PAT_LIST.txt</pat_file>
+<pat_table>total_pat_list</pat_table>
+<twt_file>RA_SPECIFIC_CHRID_BY_GENE_AB.txt</twt_file>
+<twt_table>ra_specific_chrid_by_gene_ab</twt_table>
+<wg_parameter_file>ra_3_wgld_6_physic.txt</wg_parameter_file>
+<wg_parameter_file_text>ra_specific_chrid_by_gene_ab wg_bl_200501181948_5538 percent 35.9297929 percent 100 -100 -100 percent 100 percent 0 RA dbname=wg_ra_ptgt dbname=wg_ra_snps dbname=wg_ra_hapblock dbname=ra m_chr_snp_location m_exp_result_1st total_pat_list m_haplotyper_twt_unknown_1st m_ptgt_1st_fill ra_oku_ptgt 105128 1027</wg_parameter_file_text>
+<case_directory>200501181948_5538</case_directory>
+<case_file>m_haplotyper_result_case.txt</case_file>
+<control_directory>200501181948_5538</control_directory>
+<control_file>m_haplotyper_result_cont.txt</control_file>
+<test_name>chi</test_name>
+<maxn>100</maxn>
+<minaf>5</minaf>
+<output>/home/wg_ra/home/snps/project/test/200501181948_5538</output>
+<output_sikkan>/home/wg_ra/home/ra/project/test/200501181948_5538</output_sikkan>
+</test>
+
+</project>

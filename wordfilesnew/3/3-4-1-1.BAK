@@ -1,0 +1,385 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-4-1-1.files/filelist.xml">
+<title>Hardy-Weinberg 平衡検定</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>山田　亮</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>12</o:TotalTime>
+  <o:LastPrinted>2001-04-09T10:50:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:16:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:16:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>157</o:Words>
+  <o:Characters>897</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>7</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1052</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:31.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:3.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-4-1-1.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:163279482;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-18596106 -1133621444 67698689 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l0:level1
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:319047360;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-500644640 1171303510 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l1:level1
+	{mso-level-text:%1;
+	mso-level-tab-stop:35.0pt;
+	mso-level-number-position:left;
+	margin-left:34.0pt;
+	text-indent:-17.0pt;}
+@list l2
+	{mso-list-id:1441680199;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1292647392 67698703 67698711 67698705 67698703 67698703 67698705 67698703 67698711 67698705;}
+@list l2:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l2:level2
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%2\)";
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l2:level3
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%3;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:84.0pt;
+	mso-level-number-position:left;
+	margin-left:84.0pt;
+	text-indent:-21.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:105.0pt;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l2:level6
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%6;
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;}
+@list l3
+	{mso-list-id:1663697755;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1563781866 1623652504 67698711 67698705 -558084036 67698711 67698705 67698703 67698711 67698705;}
+@list l3:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%2\)";
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l3:level3
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%3;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l3:level4
+	{mso-level-text:"\(%4\)";
+	mso-level-tab-stop:81.0pt;
+	mso-level-number-position:left;
+	margin-left:81.0pt;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:1704984922;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1991225204 -1950603160 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l4:level1
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:39.0pt;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:42.55pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoDate><span lang=EN-US>3-4-1 Hardy-Weinberg 平衡検定</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-4-1-1
+Hardy-Weinberg 平衡（HWE）とは<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>ヒトを含む多くの生物は<span lang=EN-US>2倍体である(2本の相同染色体を持つ)。したがってある多型において、遺伝子型(genotype)はホモとヘテロとからなる。2アレル多型のSNPではホモが2種類、ヘテロが1種類の計3種類のgenotypeが作られる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>今、ある集団内で、このアレルおよび<span lang=EN-US>genotypeが生物学的に中立であり、この集団内でランダムな交配が行われているとする。このような場合、この集団におけるgenotypeの頻度分布はそのアレルの頻度依存性に一定となる。このような状態をHardy-Weinberg平衡に達しているという。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>しかしながら、何らかの原因でこの平衡状態に達していないことがある。考えられる原因には以下のようなものが挙げられる。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:34.0pt;text-indent:-17.0pt;mso-list:l1 level1 lfo5;
+tab-stops:list 35.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>SNPは中立でランダムな交配も行われているが、平衡状態に達するだけの世代が経過していない。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:34.0pt;text-indent:-17.0pt;mso-list:l1 level1 lfo5;
+tab-stops:list 35.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>SNPは中立だが、ランダムな交配が行われていない。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:34.0pt;text-indent:-17.0pt;mso-list:l1 level1 lfo5;
+tab-stops:list 35.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>SNPが中立でなく、特定のgenotypeもしくはアレルの存在が生存･生殖などに有利・不利に働く。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:34.0pt;text-indent:-17.0pt;mso-list:l1 level1 lfo5;
+tab-stops:list 35.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>SNPは生存･生殖などに関しては中立で、適切な集団であれば平衡に達しているが、その内部のある集団(疾患罹患者集団など)において特定のgenotypeが高頻度もしくは低頻度になる要因がある。(例えばminor
+allele homozygoteが、ある疾患の罹患リスクである場合には、集団全体ではHWEが満たされていても、罹患亜集団においてはminor allele
+homozygoteが高率に占める。ただし、このように疾患などの特定の条件とgenotypeとが関連していても、必ずしもHWEから外れるわけではない。疾患と関連しているSNPのHWEが保持されるのは、heterozygoteの相対危険度がhomozygoteの相対危険度の平方根の場合である。このような場合、罹患者集団のアレル頻度と母集団のアレル頻度とは異なるが、各々の集団のなかではHWEに達している。)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>例えば<span lang=EN-US>2アレルのSNPでマイナーアレル頻度がpのときを考える。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>HWEに達している集団では<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>minor allele homozygote frequency：p<sup>２<o:p></o:p></sup></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>heterozygote frequency：2p(1-p)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>major allele homozygote frequency：(1-p)<sup>２<o:p></o:p></sup></span></p>
+
+<p class=MsoDate>となっている。</p>
+
+</div>
+
+</body>
+
+</html>

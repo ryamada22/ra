@@ -1,0 +1,69 @@
+<html lang="ja">
+
+<head>
+<title>snptagger</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+</head>
+
+
+<body bgcolor="ffcccc">
+
+<h1>ハプロタイプを弁別するSNPを選択します<hr></h1>
+
+
+<blockquote>
+
+
+
+<form method=post action="../../../cgi-bin/ra/haplotype/snptagger_alibada.cgi">
+
+ハプロタイプ型は0/1で表記してください。<br>
+ハプロタイプ型の長さはそろえてください。<br>
+ボックス内のサンプルは、SNP数が8個のハプロタイプが5種類記入された例です。<br>
+SNP名のボックスはブランクのままでも構いません。<br>
+SNP名を入力する場合は、必ず、SNP数の数だけ入力してください。<br>
+ハプロタイプ型・SNP名に空白は使用できません。<br>
+<br>
+<br>
+<a href="snptaggerout.html">出力ファイルの見方</a><br>
+<br>
+ハプロタイプ型---------SNP名<br>
+
+<textarea name="haplotype" cols=20 rows=20>
+00101000
+11010111
+11111110
+10010010
+01111100
+</textarea>
+
+
+<textarea name="frequency" cols=12 rows=20>
+#012345
+#023456
+#012952
+snpRA1
+snpRA2
+snpRA3
+padi91
+padi104
+</textarea>
+
+<br>
+<input type=submit value="SnpTagger実行!">
+</form>
+</blockquote>
+<p>
+<hr>
+<p>
+
+<ADDRESS>
+	理化学研究所横浜研究所　SRC関節リウマチ関連遺伝子研究チーム　山田　亮<p>
+	e-mail to 
+	<A HREF = "mailto:ryamada@src.riken.go.jp">ryamada@src.riken.go.jp</A>
+</ADDRESS>
+
+<p>
+</body>
+
+</html>

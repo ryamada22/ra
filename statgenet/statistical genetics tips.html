@@ -1,0 +1,337 @@
+<html>
+<head>
+<meta name="keywords" content="R">
+<meta http-equiv="Content-Type" content="text/html;CHARSET=EUC-JP">
+<title>疾患遺伝子解析における統計・解析Tips</title>
+</head>
+
+<body bgcolor="#ffffff">
+<img src="kame_tukimi.gif" width=101 height=77 alt="logo">　　<font size="+2"><b>疾患遺伝子解析における統計・解析Tips</b></font>　　　　　Last modified: Dec 06, 2004<hr noshade><p>
+<font size="+1"><b>はじめに</b></font>
+<ul>
+	<li> <a href="begin.html">R を使うためにはどうしたらいいの？</a>
+	<li> <a href="io/index.html">データなどの読み書き</a>
+	<li> <a href="joseki/joseki.html">R の定石（R に限らずプログラミングの定石も）</a>
+</ul>
+
+<hr>
+<font size="+1"><b>ちょっとした便利な小物</b></font>
+<ol>
+	<li> <a href="printf.html">書式付き print</a>
+	<li> <a href="excel.html">エクセルからデータをカット＆ペースト</a>
+	<li> <a href="data-list.html">行列やデータフレームをタブ区切りで出力</a>
+	<li> <a href="tenkai.html">分割表データから元データを再現</a>
+	<li> <a href="tri-mat.html">三角行列の要素を与えて対称行列を作る</a>
+	<li> <a href="qq.html">確認なしの終了</a>
+</ol>
+
+<hr>
+<font size="+1"><b>新たに定義した関数</b></font>　<a href="src/all.R">定義したすべての関数をダウンロード</a> （<a href="history.html">更新情報：Dec 13, 2004</a>）
+<p>警告：以下に示すプログラムは，完全なものでない場合があります。ユーザが自由に書き換えて使うための下書きとして提供するものです。
+<ol type="I">
+	<li> グラフィック関連
+		<ol>
+			<li> <a href="map.html">日本地図を描く（白地図のみ）</a>
+			<li> <a href="color-map.html">塗り分け地図を描く</a>
+			<li> <a href="npp.html">正規確率紙（度数分布表に基づく場合）</a>
+			<li> <a href="npp2.html">正規確率紙（測定値そのものを用いる場合）</a>
+			<li> <a href="lnpp.html">対数正規確率紙（測定値そのものを用いる場合）</a>
+			<li> <a href="weibull.html">ワイブル確率紙（測定値そのものを用いる場合）</a>
+			<li> <a href="log-plot.html">対数軸でのプロット</a>
+			<li> <a href="dot_plot.html">群別データ分布図</a>
+			<li> <a href="Andrews.html">三角多項式グラフ</a>
+			<li> <a href="Constellation.html">星座グラフ</a>
+			<li> <a href="face.html">チャーノフの顔グラフ</a>
+			<li> <a href="ROC.html">ROC 曲線と ROC 曲線下面積</a>
+			<li> <a href="plot-design.html">S の plot.design 関数</a>
+			<li> <a href="scatter.html">散布図，確率楕円，回帰直線，信頼限界帯，MA regression，RMA regression</a>
+			<li> <a href="resistant-line.html">抵抗直線</a>
+			<li> <a href="stem.html">ステム・アンド・リーフ</a>
+			<li> <a href="Gini-index.html">ローレンツ曲線（ジニ係数）</a>
+			<li> <a href="plot.html">プロット関数群</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 分布など
+		<ol>
+			<li> <a href="multinomial.html">多項分布</a>
+			<li> <a href="negative-geometric.html">負の超幾何分布</a>
+			<li> <a href="PolyaEggenberger.html">ポリヤ・エッゲンベルガー分布</a>
+			<li> <a href="weibull-par.html">ワイブル分布のパラメータ（最尤推定）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> データ生成・変数変換など
+		<ol>
+			<li> <a href="gendat1.html">指定された平均値と標準偏差を持つデータの生成</a>
+			<li> <a href="gendat2.html">特定の相関係数を持つ二変量データの生成</a>
+			<li> <a href="gendat.html">特定の相関係数行列を持つ多変量データの生成</a>
+			<li> <a href="Box-Cox-transformation.html">Box-Cox 変換の，最適のλ（図を描く）</a>
+			<li> <a href="Box-Cox-transformation2.html">Box-Cox 変換の，最適のλ（数値で求める）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 一変量統計
+		<ol>
+			<li> <a href="univariate.html">Excel にある一変量統計関数</a>
+			<li> <a href="dosuu-bunpu.html">度数分布表</a>
+			<li> <a href="unbiased-sd.html">標準偏差の不偏推定値</a>
+			<li> <a href="basic-stat.html">度数分布表から基礎統計量</a>
+			<li> <a href="median2.html">度数分布表から中央値</a>
+			<li> <a href="median.html">同値のある場合の中央値</a>
+			<li> <a href="HLe.html">ホッジス・レーマン推定量</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 二変量統計
+		<ol>
+			<li> <a href="bivariate.html">Excel にある二変量統計関数</a>
+			<li> <a href="zokusei-soukan.html">属性相関係数</a>
+			<li> <a href="ic.html">級内相関係数</a>
+			<li> <a href="jk.html">相関係数のジャックナイフ推定</a>
+			<li> <a href="my-cor.html">単相関係数，偏相関係数，重相関係数</a>
+			<li> <a href="tau-b.html">ケンドールのτ<sub>b</sub></a>
+			<li> <a href="gamma.html">グッドマン・クラスカルのガンマγ</a>
+			<li> <a href="correlation-ratio.html">相関比</a>
+			<li> <a href="kappa.html">κ統計量</a>
+			<li> <a href="kendall-w.html">ケンドールの一致度係数</a>
+			<li> <a href="BTm.html">ブラッドリー・テリーのモデル（準対称性の検定）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 多変量統計
+		<ol>
+			<li> <a href="my-cor.html">単相関係数，偏相関係数，重相関係数</a>
+			<li> <a href="kbh.html">共分散比</a>
+			<li> <a href="multiple-cor.html">重相関係数</a>
+			<li> <a href="partial-cor.html">偏相関係数</a>
+			<li> <a href="spearman.html">スピアマンの順位相関係数行列</a>
+			<li> <a href="kendall.html">ケンドールの順位相関係数行列</a>
+		</ol>
+<hr align=left width="50%">
+	<li> パワーアナリシス
+		<ol>
+			<li> <a href="finite.html">有限母集団からの標本サイズ</a>
+			<li> <a href="pospt.html">母比率の差の検定に必要なサンプルサイズ・検出力</a>
+			<li> <a href="postt.html">母平均値の差の検定に必要なサンプルサイズ・検出力</a>
+			<li> <a href="power-cor-test.html">母相関係数の差の検定に必要なサンプルサイズ・検出力</a>
+			<li> <a href="sample-size2.html">平均値の差の検定に必要なサンプルサイズ</a>
+			<li> <a href="power_t_test2.html">サンプルサイズが異なる t 検定の検出力</a>
+			<li> <a href="power-cor-test.html">相関係数の差の検定に必要なサンプルサイズ・検出力</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 信頼区間
+		<ol>
+			<li> <a href="p-conf.html">母比率の区間推定（二次データ）</a>
+			<li> <a href="boheikin2.html">母平均の区間推定（二次データ）</a>
+			<li> <a href="CI4median.html">中央値の（差の）信頼区間</a>
+			<li> <a href="clr.html">母相関係数の信頼限界値</a>
+			<li> <a href="odds-ratio.html">オッズ比と信頼限界値</a>
+			<li> <a href="relative-risk.html">相対危険度（対応のない場合）と信頼限界値</a>
+			<li> <a href="relative-risk2.html">相対危険度（対応のある場合）と信頼限界値</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 度数に関する検定
+		<ol>
+			<li> <a href="kappa.html">κ統計量</a>
+			<li> <a href="BTm.html">ブラッドリー・テリーのモデル（準対称性の検定）</a>
+			<li> <a href="my-chisq-test.html">カイ二乗分布を使用する独立性の検定と残差分析</a>
+			<li> <a href="g2.html">対数尤度比（G<sup>2</sup>）に基づく独立性の検定</a>
+			<li> <a href="my-fisher.html">2×2 分割表のフィッシャーの正確確率検定</a>
+			<li> <a href="AIC-independence.html">AIC による分割表の独立性の判定</a>
+			<li> <a href="McNemar.html">マクネマー検定（拡張を含む）</a>
+			<li> <a href="Cochran-Armitage.html">コクラン・アーミテージ検定</a>
+			<li> <a href="Cochran-Q-test.html">コクランの Q 検定</a>
+			<li> <a href="normaldist.html">正規分布への適合度の検定</a>
+			<li> <a href="poissondist.html">ポアソン分布への適合度の検定</a>
+			<li> <a href="Ridit.html">リジット分析</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 平均値・代表値に関する検定
+		<ol>
+			<li> <a href="boheikin.html">母平均の検定（二次データ）</a>
+			<li> <a href="ks1.html">一標本コルモゴロフ・スミルノフ検定</a>
+			<li> <a href="ks2.html">二標本コルモゴロフ・スミルノフ検定</a>
+			<li> <a href="my-t-test.html">二群の平均値の差の検定（二次データ）</a>
+			<li> <a href="my-var-test.html">二群の等分散性の検定（二次データ）</a>
+			<li> <a href="paired-t-test.html">対応のある平均値の差の検定（原データ，二次データ）</a>
+			<li> <a href="wilcox-paired.html">対応のある代表値の差の検定（ウィルコクソンの符号順位検定）</a>
+			<li> <a href="my-oneway-ANOVA.html">一元配置分散分析（三群以上の平均値の差の検定，二次データ）</a>
+			<li> <a href="my-bartlett-test.html">三群以上の等分散性の検定（二次データ）</a>
+			<li> <a href="u-test.html">マン・ホイットニーの U 検定</a>
+			<li> <a href="vdw-test.html">ファン・デル・ワーデン検定</a>
+			<li> <a href="Jonckheere.html">Jonckheere 検定</a>
+			<li> <a href="randblk.html">乱塊法</a>
+			<li> <a href="friedman.html">フリードマン検定（plus 多重比較）</a>
+			<li> <a href="kw3.html">クラスカル・ウォリス検定（分割表データから）</a>
+			<li> <a href="kruskal-wallis.html">クラスカル・ウォリス検定（plus 多重比較）</a>
+			<li> <a href="twoway-anova.html">二元配置分散分析</a>
+			<li> <a href="SAB.html">二要因の分散分析（SAB タイプ；RBFpq デザイン；被検者内計画）</a>
+			<li> <a href="ASB.html">二要因の分散分析（ASB タイプ；SPFp・q デザイン；混合計画）</a>
+			<li> <a href="wilks.html">多次元分布の平均値の差の検定（ウィルクスのΛ）</a>
+			<li> <a href="covar-test.html">共分散分析</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 相関に関する検定
+		<ol>
+			<li> <a href="cor2.html">相関係数の有意性検定</a>
+			<li> <a href="corr.html">母相関係数が 0 以外の特定の値であるかどうかの検定</a>
+			<li> <a href="eq-cor.html">標本相関係数の同等性の検定</a>
+			<li> <a href="kendall-w.html">ケンドールの一致度係数</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 多重比較
+		<ol>
+			<li> <a href="p_multi_comp.html">比率の差の多重比較（ライアンの方法，テューキーの方法）</a>
+			<li> <a href="tukey.html">テューキーの方法による対比較</a>
+			<li> <a href="dunnett.html">ダネットの方法による多重比較</a>
+			<li> <a href="Williams.html">ウィリアムズの方法による多重比較</a>
+			<li> <a href="Steel-Dwass.html">スティール・ドゥワスの方法による多重比較</a>
+			<li> <a href="Steel.html">スティールの方法による多重比較</a>
+			<li> <a href="Shirley-Williams.html">シャーリー・ウィリアムズの方法による多重比較</a>
+			<li> <a href="tukey2.html">テューキーの方法による線形比較</a>
+			<li> <a href="scheffe.html">シェッフェの方法による線形比較</a>
+			<li> <a href="kruskal-wallis.html">クラスカル・ウォリス検定（plus 多重比較）</a>
+			<li> <a href="Bonferroni.html">ボンフェローニの方法による多重比較</a>
+			<li> <a href="Bonferroni.html">ホルムの方法による多重比較</a>
+			<li> <a href="Bonferroni.html">シェイファーの方法による多重比較</a>
+			<li> <a href="Bonferroni.html">ホランド・コペンハーバーの方法による多重比較</a>
+			<li> <a href="friedman.html">フリードマン検定（plus 多重比較）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> その他の検定
+		<ol>
+			<li> <a href="levene-test.html">Levene 検定（三群以上の場合の等分散性の検定）</a>
+			<li> <a href="eq-cov.html">分散・共分散行列の同等性の検定</a>
+			<li> <a href="Chow.html">Chow 検定</a>
+			<li> <a href="BD-test.html">Breslow-Day 検定</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 多変量解析
+		<ol>
+			<li> <a href="alpha.html">クロンバックのα信頼性係数</a>
+			<li> <a href="likert.html">リッカート尺度</a>
+			<li> <a href="oresen.html">二本の直線による折れ線回帰</a>
+			<li> <a href="RMA.html">Reduced Major Axis regression</a>
+			<li> <a href="MA.html">Major Axis regression（主成分回帰）</a>
+			<li> <a href="mreg.html">重回帰分析</a>
+			<li> <a href="All_possible_subset_selection.html">総当たり法による重回帰分析</a>
+			<li> <a href="lr.html">多重ロジスティックモデル（ロジスティック回帰）</a>
+			<li> <a href="disc.html">判別分析（線形判別関数）</a>
+			<li> <a href="quad_disc.html">判別分析（二次の判別関数）</a>
+			<li> <a href="candis.html">正準判別分析</a>
+			<li> <a href="cancor.html">正準相関分析</a>
+			<li> <a href="pca.html">主成分分析</a>
+			<li> <a href="princomp2.html">princomp を援用する主成分分析</a>
+			<li> <a href="pfa.html">因子分析</a>
+			<li> <a href="factanal2.html">factanal を援用する因子分析</a>
+			<li> <a href="qt1.html">数量化 I 類</a>
+			<li> <a href="qt2.html">数量化 II 類</a>
+			<li> <a href="qt3.html">数量化 III 類</a>
+			<li> <a href="qt4.html">数量化 IV 類</a>
+			<li> <a href="dual.html">クロス集計表から双対尺度法</a>
+			<li> <a href="princo.html">主座標分析</a>
+			<li> <a href="maharanobis.html">マハラノビスの距離</a>
+			<li> <a href="kmo.html">サンプリング適切性基準</a>
+			<li> <a href="tolerance.html">多重共線性のチェック（トレランス）</a>
+			<li> <a href="find_multico.html">多重共線性のチェック（従属性）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 生存率解析
+		<ol>
+			<li> <a href="km-surv.html">Kaplan-Meyer 法による生命表</a>
+			<li> <a href="ce-surv.html">Cutler - Ederer 法による生命表</a>
+			<li> <a href="Cox-Mantel.html">Cox - Mantel 検定</a>
+			<li> <a href="Gen-Wil.html">一般化 Wilcoxon 検定</a>
+			<li> <a href="logrank.html">Log rank 検定</a>
+			<li> <a href="ed50.html">ED<sub>50</sub> や LD<sub>50</sub> の計算</a>
+		</ol>
+<hr align=left width="50%">
+	<li> その他
+		<ol>
+			<li> <a href="date.html">日付に関する関数</a>
+			<li> <a href="newton.html">ニュートン・ラフソン法による 1 変数方程式の解</a>
+			<li> <a href="bisection.html">二分法による 1 変数方程式の解</a>
+			<li> <a href="area.html">多角形の面積</a>
+		</ol>
+</ol>
+<hr>
+<font size="+1"><b>既に用意されている関数を使った解析例</b></font>
+<ol type="I">
+	<li> 度数に関する検定
+		<ol>
+			<li> <a href="../lecture/GoodnessOfFitness/nominalscale-r.html">適合度の検定−−名義尺度の場合；χ<sup>2</sup> 分布による検定；一様性の検定</a>
+			<li> <a href="../lecture/GoodnessOfFitness/nominalscale-r2.html">適合度の検定−−名義尺度の場合；χ<sup>2</sup> 分布による検定；理論比が与えられる場合</a>
+			<li> <a href="../lecture/Cross/differenceofdist-r.html">分布の差の検定（独立性の検定）</a>
+			<li> <a href="../lecture/Cross/cross-r.html">独立性の検定（K×M 分割表）</a>
+			<li> <a href="../lecture/Cross/cross-r2.html">独立性の検定（2×2 分割表）</a>
+			<li> <a href="../lecture/Cross/Fisher-r.html">フィッシャーの正確確率検定（直接確率）</a>
+			<li> <a href="../lecture/Cross/extended-fisher-r.html">フィッシャーの正確確率検定（直接確率）2×2 分割表より大きい分割表の場合</a>
+			<li> <a href="../lecture/Hiritu/Armitage-r.html">コクラン・アーミテージ検定</a>
+			<li> <a href="../lecture/Hiritu/diff-p-test-r.html">二群の比率の差の検定</a>
+			<li> <a href="../lecture/Hiritu/McNemar-test-r.html">マクネマー検定</a>
+			<li> <a href="../lecture/Hiritu/McNemar-test-r2.html">マクネマー検定（2×2分割表より大きい場合への拡張）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 平均値・代表値に関する検定
+		<ol>
+			<li> <a href="../lecture/Average/Mean1-r.html">母平均の検定と推定</a>
+			<li> <a href="../lecture/Average/t-test-r.html">二群の平均値の差の検定（t 検定）原データによる</a>
+			<li> <a href="../lecture/Average/U-test-r.html">二群の代表値の差の検定--マン・ホィットニーの U 検定</a>
+			<li> <a href="../lecture/Average/U-test-r2.html">二群の代表値の差の検定--マン・ホィットニーの U 検定（分割表で与えられている場合）</a>
+			<li> <a href="../lecture/Average/oneway-ANOVA-r.html">一元配置分散分析</a>
+			<li> <a href="../lecture/Average/kwtest-r.html">クラスカル・ウォリス検定</a>
+			<li> <a href="../lecture/Average/kwtest-r2.html">クラスカル・ウォリス検定＋多重比較</a>
+			<li> <a href="../lecture/TwoWayANOVA/friedman-r2.html">フリードマン検定　</a>
+			<li> <a href="../lecture/TwoWayANOVA/friedman-r3.html">フリードマン検定＋多重比較</a>
+			<li> <a href="../lecture/Average/paired-t-test-r.html">対応のある場合の平均値の差の検定　</a>
+			<li> <a href="../lecture/Average/sign-test-r.html">符号検定</a>
+			<li> <a href="../lecture/Average/mpsr-test-r.html">ウィルコクソンの符号順位検定</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 分散に関する検定
+		<ol>
+			<li> <a href="../lecture/Average/bunsan1-r.html">二群の等分散性の検定（原データによる）</a>
+			<li> <a href="../lecture/Average/Bartlett-r.html">分散の均一性の検定（バートレットの方法）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 相関係数に関する検定
+		<ol>
+			<li> <a href="../lecture/Corr/corr-r.html">ピアソンの積率相関係数の有意性検定と区間推定</a>
+			<li> <a href="../lecture/Corr/spearman-corr-r.html">スピアマンの順位相関係数の有意性検定</a>
+			<li> <a href="../lecture/Corr/kendall-corr-r.html">ケンドールの順位相関係数の有意性検定</a>
+		</ol>
+<hr align=left width="50%">
+	<li> 生存率解析
+		<ol>
+			<li> <a href="km-surv2.html">Kaplan-Meyer 法による生命表</a>
+			<li> <a href="lr2.html">多重ロジスティックモデル（ロジスティック回帰）</a>
+		</ol>
+<hr align=left width="50%">
+	<li> グラフィック関連
+		<ol>
+			<li> <a href="../lecture/Dosuu/bar-chart-ans.html">棒グラフの描画</a>
+			<li> <a href="../lecture/Dosuu/histogram2.html">ヒストグラムの描画</a>
+			<li> <a href="../lecture/Dosuu/box-and-whisker2.html">箱髭図の描画</a>
+		</ol>
+</ol>
+
+<hr>
+<font size="+1"><b>tips</b></font>
+<ol>
+	<li> <a href="../Hanasi/StatTalk/nls.html">非線形最小二乗法</a>
+	<li> <a href="geneig.html">一般化固有値問題</a>
+</ol>
+
+<hr noshade>
+<a href="link.html">リンク集（日本のもののみ）</a>
+
+<hr noshade>
+<a href="../lecture/iyoutoukei/index.html">日本サイトメトリー学会 技術講習会資料</a>
+<hr noshade>
+<img src="../gra/button3.png" width=9 height=9 alt="・"> <A HREF="javascript:history.go(-1)">直前のページへ戻る</A>　　<img src="../gra/button3.png" width=9 height=9 alt="・"> <a href="../mail.html">E-mail to Shigenobu AOKI</a>
+<p>
+<table border=0>
+<tr>
+<td><IMG SRC="../gra/ume5.png" width=121 height=37 ALT="Made with Macintosh"></td>
+<td nowrap align=center><font size="+2"><b>Counter: 189601 </b></font>
+<br>Since Feb 10, 2002</td>
+</tr>
+</table>
+</body>
+</html>

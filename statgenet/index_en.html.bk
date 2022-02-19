@@ -1,0 +1,184 @@
+<html>
+<head>
+<meta name="keywords" content="R">
+<meta http-equiv="Content-Type" content="text/html;CHARSET=EUC-JP">
+<title>Statistical genetics for research on disease-associated genes
+Unit of Human Disease Genomics, Kyoto University
+Ryo Yamada, M.D., Ph.D.</title>
+</head>
+
+<body bgcolor="#ffffff">
+<img src="KyotoU1.gif" width=435 height=90 alt="logo">
+<br>
+<br>
+<img src="kame_tukimi.gif" width=50.5 height=35 alt="logo">　　
+<div style="position:absolute;left:490;top:10;z-index:0;">
+<img src="NoBackPink.jpg" width=200 height=200 alt="logo">　　
+</div>
+<a href="http://www.genome.med.kyoto-u.ac.jp/cgi-bin/webpage/genome.cgi">Unit of Human Disease Genomics, Kyoto University</a><br>
+<font size="+3"><b>
+<div style="position:relative;z-index:1;">
+<br>Notes on Statistical Genetics for Research on Disease-associated Genes<br>
+</div>
+</b></font>
+
+<br>
+
+<li><a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/index.html"> Japanese page</a><br>
+<li><a href="mailto:ryamada@src.riken.go.jp""><img src="../img/mail4.gif" border="0"></a> &nbsp; Associate Professor Ryo Yamada, M.D., Ph.D.
+
+<hr color = "#000060">
+<font size="+1"><b>
+<a href="./references/Article.xml">List of publications</a></b></font>
+&nbsp; <a href="./references/yamada20050916.xml"></a>
+<font size="+1"><b>
+<br /><br />
+
+<!--
+<a href="./documents/tool_index_en.html">Applications available in English</a>
+-->
+Applications available in English
+<ol> SNP-Based Genetic Heterogeneity, &Psi;<br>
+<ol>
+SNP-based Genetic Heterogeneity, &Psi; was introduced by our lab and was published in Genetic Epidemiology. 
+<br>
+Briefly, &Psi; is a set of 2<sup>n</sup> variables that define frequency of 2<sup>n</sup>; haplotypes for n biallelic SNPs.
+Using &Psi;, we introduced a new method to define linkage disequilibrium among any number of multiple SNPs (Dg). Also &Psi; enables us to infer the global maximum of haplotype frequency for a small number of SNPs. Although the regular EM algorithm is known to give a good estimate in the majority of cases, it is known to return a local maximum in rare occasions. The &Psi;-based method to infer haplotype frequency is free from this mis-convergence to a local maximum.
+<br>
+Five applications on &Psi; and its related method, Dg, and &Psi;-based inference of haplotype frequency, are available.
+<br>
+The first is an MS Excel file to infer haplotype frequency with &Psi;-based method for SNP pairs, "SNPpairPsi.xls".
+<br>
+The second is an Java application to infer haplotype frequency with &Psi;-based method for SNP pairs, "DerivativeEM3ForWeb".
+<br>
+The third is a calculator of &Psi; and Dg, "PsiDgForWeb". It calculates &Psi; and Dg from haplotype frequency data (downward calculation) and also infer haplotype frequency from unphased genotype data with calculation of corresponding &Psi; and Dg (upward calculation).
+<br>
+The fourth is a perl program to draw a picture of representative Dg values, DgDrawer.pl.
+<br>
+The fifth is a CGI-version of the forth perl program, CGI for DgDrawer.
+<br>
+
+
+<br><br><br>
+	1. An MS Excel file to Infer Global Maximum of Haplotype Frequency for SNP Pairs:
+<br><ol>SNPpairPsi.xls
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/SNPpairPsi.xls"><img src="../img/pc_07.gif" border="0"></a>
+
+</ol>
+
+<ol>
+<ol>
+	Readme for SNPpairPsi.xls &nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/readme/readmeSNPpairPsi.txt"><img src="../img/text_02.gif" border="0"></a>
+</ol>
+</ol>
+	2. A Java Application to Infer Global Maximum of Haplotype Frequency for SNP Pairs:
+<br><ol>DerivativeEM3ForWeb
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DerivativeEM3ForWeb.zip"><img src="../img/pc_07.gif" border="0"></a>
+
+</ol>
+
+<ol>
+<ol>
+	Readme for DerivativeEM3ForWeb &nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DerivativeEM3ForWeb/ReadMeDerivativeEM3ForWeb.txt"><img src="../img/text_02.gif" border="0"></a>
+
+<br>
+	Sample Input File for DerivativeEM3ForWeb.java
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DerivativeEM3ForWeb/Inputtest.txt"><img src="../img/text_02.gif" border="0"></a>
+
+<br>
+	Sample Output File from DerivativeEM3ForWeb.java
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DerivativeEM3ForWeb/Outputtest.txt"><img src="../img/text_02.gif" border="0"></a>
+
+<br>
+</ol>
+</ol>
+	3. A Java Application to Calculate &Psi; and Dg:
+<br><ol>PsiDgForWeb
+	
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb.zip"><img src="../img/pc_07.gif" border="0"></a>
+
+<br>
+	
+<ol>
+	Readme for PsiDgForWeb
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/ReadMePsiDgForWeb.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+	Sample Input File for PsiDgForWeb (downward)
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/InForDown.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+	Sample Output File from PsiDgForWeb (downward)
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/OutForDown.txt"><img src="../img/text_02.gif" border="0"></a><br>
+	Sample Input File Type1 for PsiDgForWeb (upward)
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/InForUp1.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+
+	Sample Output File Type1 from PsiDgForWeb (upward)
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/OutForUp1.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+
+	Sample Input File Type2 for PsiDgForWeb (upward)
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/InForUp2.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+	Sample Output File Type2 from PsiDgForWeb (upward)
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/OutForUp2.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+
+</ol>
+</ol>
+	4. A Perl Program to draw a picture of representative Dg values:
+<br><ol>DgDrawer.pl
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DgDrawer.pl.zip"><img src="../img/pc_07.gif" border="0"></a>
+
+</ol>
+
+<ol>
+<ol>
+	Readme for DgDrawer.pl &nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/readme/readmeDgDrawer.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+	Sample Input File for DgDrawer.pl
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/InForDgDrawer.txt"><img src="../img/text_02.gif" border="0"></a><br>
+
+	Sample Output File from DgDrawer.pl
+
+&nbsp; <a href="http://www.genome.med.kyoto-u.ac.jp/ra/statgenet/tools/DNAseqEntropyForWeb/OutForDgDrawer.svg"><img src="../img/text_02.gif" border="0"></a><br>
+
+</ol>
+</ol>
+5. <a href="http://www.genome.med.kyoto-u.ac.jp/cgi-bin/ra/haplotype/DgDrawerMap.cgi">CGI for DgDrawer</a><br>
+
+
+
+</ol>
+</ol>
+
+
+<br><br><br>
+<div align ="right">
+
+	<a href="mailto:tool@genome.med.kyoto-u.ac.jp""><img src="../img/mail2.gif" border="0"></a> &nbsp;Comments or questions:
+ 
+
+</div>
+
+
+<hr color = "#000060" size = "15" noshade>
+
+<p>Counter
+<script type="text/javascript"><!--
+    hatena_counter_name = "ryamada22";
+    hatena_counter_id = "12";
+    hatena_counter_ref = document.referrer+"";
+    hatena_counter_screen = screen.width + "x" + screen.height+","+screen.colorDepth;
+//--></script>
+<script type="text/javascript" src="http://counter.hatena.ne.jp/js/counter.js"></script>
+<noscript><img src="http://counter.hatena.ne.jp/ryamada22/12" border="0" alt="counter"></noscript>
+</p>
+</body>
+</html>

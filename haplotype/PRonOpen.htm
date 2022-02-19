@@ -1,0 +1,418 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="PRonOpen.files/filelist.xml">
+<link rel=Edit-Time-Data href="PRonOpen.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>ハプロタイプデータ解析ツール</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Ryo Yamada  </o:Author>
+  <o:LastAuthor>山田　亮</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>42</o:TotalTime>
+  <o:Created>2004-07-26T07:41:00Z</o:Created>
+  <o:LastSaved>2004-07-28T00:50:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>304</o:Words>
+  <o:Characters>1736</o:Characters>
+  <o:Company> RA</o:Company>
+  <o:Lines>14</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2036</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>75</w:Zoom>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"MS Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+pre
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"ＭＳ ゴシック";
+	color:black;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 91.3pt 30.0mm 81.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1823690591;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1844596122 677555704 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:●;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="5122">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA link=blue vlink=purple style='tab-interval:42.0pt;text-justify-trim:
+punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>ハプロタイプデータ解析ツール</span><span lang=EN-US
+style='font-size:14.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>関節リウマチ関連遺伝子研究チーム</span><span lang=EN-US
+style='font-size:14.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-bidi-font-size:10.5pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:
+Century;mso-hansi-font-family:Century'>平成</span><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>16</span><span style='mso-bidi-font-size:
+10.5pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>年</span><span lang=EN-US style='mso-bidi-font-size:10.5pt'>7</span><span
+style='mso-bidi-font-size:10.5pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:
+Century;mso-hansi-font-family:Century'>月</span><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>30</span><span style='mso-bidi-font-size:
+10.5pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>日</span><span lang=EN-US style='mso-bidi-font-size:10.5pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>＜メニュー＞</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>１　ハプロタイプ型情報から</span><span lang=EN-US>tag SNP</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>を検出するページ→</span><span lang=EN-US><a href="snptaggerout.html"><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>出力サンプル</span></a></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>２　ハプロタイプ型をその型の類似度でソートするページ→</span><span
+lang=EN-US><a href="NJsortoutsample.txt"><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:Century;mso-hansi-font-family:Century'>出力サンプル</span></a></span></p>
+
+<p class=MsoNormal style='text-indent:42.0pt'><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:Century;mso-hansi-font-family:Century'>単純な系統図を描くための書式も同時に提供します</span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>３　遺伝子・</span><span lang=EN-US>SNP</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>・</span><span lang=EN-US>SNP</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:Century;mso-hansi-font-family:Century'>との関連強度・</span><span
+lang=EN-US>LD</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+Century;mso-hansi-font-family:Century'>・ハプロタイプ頻度を一括描図するページ</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>→</span><span lang=EN-US><a href="mapperoutsample.ppt"><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>出力サンプル</span></a></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.95pt;text-indent:-17.95pt;mso-char-indent-count:
+-1.71'><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>●　</span><span lang=EN-US>tag SNP</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>検出の方法は</span><span lang=EN-US>minimal haplotype tagging </span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>法（</span><span lang=EN-US>Paola Sebastiani et al. PNAS 100
+9900-9905,2003</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+Century;mso-hansi-font-family:Century'>）を用いました。最適解を求める方法ですので、ハプロタイプ数が多すぎると処理不能に陥ります。この</span><span
+lang=EN-US>tag SNP</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+Century;mso-hansi-font-family:Century'>検出プログラムは、ホールゲノムハプロタイプ解析　</span><span
+lang=EN-US>(<a href="http://10.64.230.16/">http://10.64.230.16/</a>)</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>においても動いており、算出されている疾患チーム別のブロック・ハプロタイプ解析データベースにおいて参照可能です。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>●<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>ハプロタイプ型の類似度ソートは、ハプロタイプをテーブル提示するときに、適当な並べ方をするために作製しました。提示にあたっては、頻度順に並べたい場合と、似通ったハプロタイプ同士を近く同士に並べたい場合があると思います。そのためのツールです。類似度で並べるにあたっては、進化系統樹作成の方法を利用しました。ハプロタイプ構成ＳＮＰアレルが合致するか否かのみを点数化し、ハプロタイプペアの差異を距離表現し、</span><span
+lang=EN-US>Neighbor-Joining</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+Century;mso-hansi-font-family:Century'>法によって、系統樹化する方法を採用しています。せっかく系統樹的な扱いをしたので、その系統樹も描けるようにしてあります。ただし、ハプロタイプの類似度は、組換えを考慮する必要があり、いわゆる進化系統樹作成とは異なる点があることに留意してください。出力の一部である、</span><span
+lang=EN-US><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:8.0pt'>((h3:0,h4:0):0.1875,((h1:0,h2:0):0.8125,((h5:0,h6:0):1.125,(h7:1.55,h8:0.2):1.125):0.8125):0);<span
+style='mso-spacerun:yes'>&nbsp; </span></span><span style='mso-bidi-font-size:
+10.5pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>という表記は、系統樹を描くための書式です。フリーのアプリケーション</span><span lang=EN-US
+style='mso-bidi-font-size:10.5pt'>TreeView <a
+href="http://taxonomy.zoology.gla.ac.uk/rod/treeview.html">http://taxonomy.zoology.gla.ac.uk/rod/treeview.html</a>
+</span><span style='mso-bidi-font-size:10.5pt;font-family:"ＭＳ 明朝";mso-ascii-font-family:
+Century;mso-hansi-font-family:Century'>などに読み込ませると、簡単に</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>絵に変換できます。以下はその表示例です。また、フリーの統計解析アプリケーション『Ｒ』（</span><span lang=EN-US><a
+href="http://www.r-project.org/">http://www.r-project.org/</a></span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>）を</span><span lang=EN-US>WINDOWS,Mac,LINUX,UNIX</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>等にインストールし、パッケージ「</span><span lang=EN-US>ape</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>」を付け加えることで同様の描図が可能です。</span><span lang=EN-US>R</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>は情報解析チーム・遺伝子多型解析チーム・統計解析チーム・</span><span lang=EN-US>RA</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>チームなどで利用可能だと思います。</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo2;
+tab-stops:list 18.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>●<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>遺伝子・ＳＮＰ・ハプロタイプ・ＬＤの描図ツールも疾患チーム別ブロック・ハプロタイプ解析データ</span><span lang=EN-US>(http://10.64.230.16/)</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>の表示ツールとしても実装準備中です。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>＜謝辞＞</span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>この諸ツールの公開にあたっては、解析・開発環境を使わせてくださっている情報解析チームの角田先生のご理解・ご協力に感謝いたします。</span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>また、情報解析チームの皆さん</span><span lang=EN-US>(</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>特にテクニカルスタッフの川上さん、川口さん</span><span lang=EN-US>)</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>から諸技術の多大な提供を受けました。また、遺伝子多型解析チームの石倉さん</span><span lang=EN-US>(</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>インテック・ウェブ・アンド・ゲノム・インフォマティクス</span><span lang=EN-US>(</span><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>株</span><span lang=EN-US>))</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:Century;mso-hansi-font-family:Century'>にも、非常に多くのことを教えていただいています。また、ＭＩチーム田中先生とテクニカルスタッフの山野辺さん、ＯＡチームの池川先生、ＧＩチームの尾内先生には、ブロック・ハプロタイプ解析関連の諸データを、ベータ版状態だった時期から、積極的に活用していただき、適切な助言をいただきますと同時に、いくつものバグを報告していただいておりますことをこの場を借りてお礼申し上げます。また、大規模にリウマチ関連遺伝子群を解析したい、そのためには作業のルーチン化・ツール化が望ましいという、ツール作製の動機付けをしてくれているリウマチチームのスタッフの皆さんにも感謝しております。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;
+mso-hansi-font-family:Century'>ＳＲＣをはじめとする世界のＳＮＰ解析が今後も実りあるものであるますように。</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+Century'>＜</span><span lang=EN-US>TreeView</span><span style='font-family:"ＭＳ 明朝";
+mso-ascii-font-family:Century;mso-hansi-font-family:Century'>による系統樹表示例＞</span></p>
+
+<p class=MsoNormal><span lang=EN-US><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:216.75pt;
+ height:162.75pt'>
+ <v:imagedata src="PRonOpen.files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=289 height=217
+src="PRonOpen.files/image002.jpg" v:shapes="_x0000_i1025"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:234pt;height:175.5pt'>
+ <v:imagedata src="PRonOpen.files/image003.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=312 height=234
+src="PRonOpen.files/image004.jpg" v:shapes="_x0000_i1026"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:234pt;height:175.5pt'>
+ <v:imagedata src="PRonOpen.files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=312 height=234
+src="PRonOpen.files/image006.jpg" v:shapes="_x0000_i1027"><![endif]></span></p>
+
+</div>
+
+</body>
+
+</html>

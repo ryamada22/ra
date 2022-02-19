@@ -1,0 +1,260 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="1-4.files/filelist.xml">
+<title>＜1-4 参考 シミュレーションで用いる疾患相関SNPのgenotype頻度の算出方法＞</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>東京大学医科学研究所</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:LastPrinted>2001-04-05T04:47:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T09:09:00Z</o:Created>
+  <o:LastSaved>2005-11-23T09:09:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>105</o:Words>
+  <o:Characters>604</o:Characters>
+  <o:Lines>5</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>708</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:42.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoHeader style='mso-line-height-alt:0pt;tab-stops:42.0pt center 212.6pt right 425.2pt;
+layout-grid-mode:both'><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>＜<span lang=EN-US>1-4 参考 シミュレーションで用いる疾患相関SNPのgenotype頻度の算出方法＞<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>この解析資料集の検定・シミュレーション・各種計算においては疾患と相関のある<span
+lang=EN-US>SNPのアレル頻度とgenotype別の相対危険度から一般集団・疾患集団・非疾患集団のgenotpype頻度を算出する機会が非常に多い。その基本方法を参考として以下に掲載する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>罹患率<span lang=EN-US>dを入力する （0＜d＜1）<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>（例）<span lang=EN-US>d＝0.01<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>SNPの疾患アレル頻度を入力する （0＜p＜1）<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>（例）<span lang=EN-US>p＝0.3<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>疾患アレルの遺伝形式を入力する<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>g：疾患アレルホモ接合体の相対危険度
+（g＞1）<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>ff：疾患アレルへテロ接合体の相対危険度を決める因子
+（0≦ff≦1）<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>ff＝0のとき、ヘテロ接合体の相対危険度は1、つまり危険度の上昇はなし<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>ff＝1のとき、ヘテロ接合体の相対危険度はgに等しい、つまりホモ接合体と危険度は等しく、このアレルは優性形式<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>0＜ff＜1のときは両者の中間、一般的な中間型モデルを調べたいときは0.5を入力する。<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>以下に計算式を示す。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>s：集団全体のgenotype頻度<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>u：ケース集団のgenotype頻度<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>e：非ケース集団のgenotype頻度<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>DD：疾患アレルホモ<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>DN：ヘテロ<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:10.5pt;mso-para-margin-left:
+1.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>NN：非疾患アレルホモ<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>s<sub>ＤＤ</sub>＝p<sup>２</sup><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>s<sub>ＤＮ</sub>＝2p(1-p)<sup><o:p></o:p></sup></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>s<sub>ＮＮ</sub>＝(1-p)<sup>２<o:p></o:p></sup></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>U＝gp<sup>２</sup>+g<sup>ｆｆ</sup>×2p(1-p)+(1-p)<sup>２<o:p></o:p></sup></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>u<sub>ＤＤ</sub>＝gp<sup>２</sup>/U<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>u<sub>ＤＮ</sub>＝g<sup>ｆｆ</sup>×2p(1-p)/U<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>u<sub>ＮＮ</sub>＝(1-p)<sup>２</sup>/U<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>e<sub>ＤＤ</sub>＝(s<sub>ＤＤ</sub>-d×u<sub>ＤＤ</sub>)/(1-d)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>e<sub>ＤＮ</sub>＝(s<sub>ＤＮ</sub>-d×u<sub>ＤＮ</sub>)/(1-d)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;mso-para-margin-left:
+2.0gd;text-align:left'><span lang=EN-US style='font-family:"ＭＳ 明朝"'>e<sub>ＮＮ</sub>＝(s<sub>ＮＮ</sub>-d×u<sub>ＮＮ</sub>)/(1-d)<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

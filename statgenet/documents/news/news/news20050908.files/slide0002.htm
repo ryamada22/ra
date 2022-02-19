@@ -1,0 +1,576 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 11">
+<link id=Main-File rel=Main-File href="../news20050908.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>&#32113;&#35336;&#36986;&#20253;&#23398;&#12288;&#38598;&#20013;&#35611;&#32681;&#26085;&#31243;
+&#21307;&#23398;&#30740;&#31350;&#31185;&#20184;&#23646;&#12466;&#12494;&#12512;&#21307;&#23398;&#12475;&#12531;&#12479;&#12540;
+&#24179;&#25104;17&#24180;9&#26376;26&#26085;-28&#26085;</title>
+<meta name=Description
+content="2005/9/8: &#32113;&#35336;&#36986;&#20253;&#23398;&#12288;&#38598;&#20013;&#35611;&#32681;&#26085;&#31243; &#21307;&#23398;&#30740;&#31350;&#31185;&#20184;&#23646;&#12466;&#12494;&#12512;&#21307;&#23398;&#12475;&#12531;&#12479;&#12540; &#24179;&#25104;17&#24180;9&#26376;26&#26085;-28&#26085; &#20250;&#22580;&#12288;&#20140;&#37117;&#22823;&#23398;&#21513;&#30000;&#12461;&#12515;&#12531;&#12497;&#12473;(&#21307;&#23398;&#30740;&#31350;&#31185;) &#36861;&#12387;&#12390;&#35443;&#32048;&#27770;&#23450;&#20104;&#23450;">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:103% !important;}
+-->
+</style>
+<script><!--
+function LoadSld()
+{
+	var sld=GetObj("SlideObj")
+	if( !g_supportsPPTHTML ) {		
+		sld.style.visibility="visible"
+		return
+	}
+
+	if( MakeNotesVis() ) return
+
+	runAnimations = _InitAnimations();
+	
+	if( IsWin("PPTSld") )
+		parent.SldUpdated(GetSldId())
+	g_origSz=parseInt(SlideObj.style.fontSize)
+	g_origH=sld.style.posHeight
+	g_origW=sld.style.posWidth
+	g_scaleHyperlinks=(document.all.tags("AREA").length>0)
+	if( g_scaleHyperlinks )
+		InitHLinkArray()
+	if( g_scaleInFrame||(IsWin("PPTSld") && parent.IsFullScrMode() ) )
+		document.body.scroll="no"
+	_RSW()
+	if( IsWin("PPTSld") && parent.IsFullScrMode() )
+		FullScrInit();
+	
+	MakeSldVis();
+	
+	if( runAnimations )
+	{
+		if( document.all("NSPlay") )
+			document.all("NSPlay").autoStart = false;
+
+		if( sld.filters && sld.filters.revealtrans )
+			setTimeout( "document.body.start()", sld.filters.revealtrans.duration * 1000 );
+		else
+			document.body.start();
+	}
+}
+
+function MakeSldVis() 
+{
+	var fTrans=g_showAnimation && SldHasTrans()
+	if( fTrans )	
+	{
+		if( g_bgSound ) {
+			idx=g_bgSound.indexOf(",");
+			pptSound.src=g_bgSound.substr( 0, idx );
+			pptSound.loop= -(parseInt(g_bgSound.substr(idx+1)));
+		}
+		SlideObj.filters.revealtrans.Apply()	
+    }
+	SlideObj.style.visibility="visible"
+	if( fTrans )
+		SlideObj.filters.revealtrans.Play()
+}
+function MakeNotesVis() 
+{
+	if( !IsNts() ) return false 
+	SlideObj.style.display="none"
+	nObj = document.all.item("NotesObj")
+	parent.SetHasNts(0)
+	if( nObj ) { 
+		nObj.style.display=""
+		parent.SetHasNts(1)
+	}
+	return 1
+}
+function ChkAutoAdv()
+{
+	if(SldHasTrans())
+		SlideObj.onfilterchange=AutoAdv
+	else
+		AutoAdv()
+}
+function AutoAdv()
+{
+	if(!IsWin("PPTSld") || !gUseSldTimings )return
+	var sld=GetCurSld()
+	if( (sld.mAdvDelay>0) && !parent.IsFramesMode() )
+		setTimeout("parent.GoToNextSld()",sld.mAdvDelay)
+}
+function GetObj(id)
+{
+	if(g_supportsPPTHTML) return document.all(id);
+	else return document.getElementById(id);
+}
+function SldHasTrans() { return SlideObj.style.filter != ""; }
+function GetSldId() { return sId=location.href.substring(location.href.lastIndexOf('/')+1) }
+function HideMenu() { if( frames["PPTSld"] && PPTSld.document.all.item("ctxtmenu") && PPTSld.ctxtmenu.style.display!="none" ) { PPTSld.ctxtmenu.style.display='none'; return true } return false }
+function IsWin( name ) { return window.name == name }
+function IsNts() { return IsWin("PPTNts") }
+function IsSldOrNts() { return( IsWin("PPTSld")||IsWin("PPTNts") ) }
+function SupportsPPTAnimation() { return( navigator.platform == "Win32" && navigator.appVersion.indexOf("Windows")>0 ) }
+function SupportsPPTHTML()
+{
+	var appVer=navigator.appVersion, msie=appVer.indexOf("MSIE "), ver=0
+	if( msie >= 0 )
+		ver=parseFloat( appVer.substring( msie+5, appVer.indexOf(";",msie) ) )
+	else
+		ver=parseInt(appVer)
+
+	return( ver >= 4 && msie >= 0 )
+}
+function _RSW()
+{
+	if( !g_supportsPPTHTML || IsNts() ||
+	  ( !g_scaleInFrame && (!IsWin("PPTSld") || !parent.IsFullScrMode()) ) )
+		return
+
+        var padding=0;
+        if( IsWin("PPTSld") && parent.IsFramesMode() ) padding=6
+
+	cltWidth=document.body.clientWidth-padding
+	cltHeight=document.body.clientHeight-padding
+	factor=(1.0*cltWidth)/g_origW
+	if( cltHeight < g_origH*factor )
+		factor=(1.0*cltHeight)/g_origH
+
+	newSize = g_origSz * factor
+	if( newSize < 1 ) newSize=1
+
+	s=SlideObj.style
+	s.fontSize=newSize+"px"
+	s.posWidth=g_origW*factor
+	s.posHeight=g_origH*factor
+	s.posLeft=(cltWidth-s.posWidth+padding)/2
+	s.posTop=(cltHeight-s.posHeight+padding)/2
+
+	if( g_scaleHyperlinks )
+		ScaleHyperlinks( factor )
+}
+function _InitAnimations()
+{
+	animRuntimeInstalled = ''+document.body.localTime != 'undefined';
+	isFullScreen = (window.name == "PPTSld") && !parent.IsFramesMode();
+	g_animUseRuntime = g_showAnimation && animRuntimeInstalled && !(isFullScreen && parent.IsSldVisited());
+	if( g_animUseRuntime ) {
+		collSeq = document.all.tags("seq");
+		if( collSeq != null ) {
+			for(ii=0;ii<collSeq.length;ii++) {
+				if( collSeq[ii].getAttribute( "p:nodeType" ) == "mainSeq" ) {
+					g_animMainSequence = collSeq[ii];
+					break;
+				}
+			}
+		}
+	
+		if( g_animItemsToHide && document.body.playAnimations != false ) {
+			for(jj = 0; jj < g_animItemsToHide.length; jj++) {
+				if( hideObj = GetObj(g_animItemsToHide[jj]) )
+					hideObj.runtimeStyle.visibility="hidden";
+			}
+		}
+
+		if( g_animInteractiveItems ){
+			for(jj = 0; jj < g_animInteractiveItems.length; jj++) {
+				if( triggerObj = GetObj(g_animInteractiveItems[jj]) )
+					triggerObj.runtimeStyle.cursor="hand";
+			}
+		}
+		
+		if( gUseSldTimings && ''+g_animSlideTime != 'undefined' ) {
+			adjustedTime = document.body.calculateAutoAdvanceTimes( g_animSlideTime, g_animEffectTimings );
+			if( IsWin("PPTSld") && adjustedTime != g_animSlideTime ) {
+			   var sld = GetCurSld();
+			   sld.mAdvDelay = adjustedTime * 1000;
+			}
+		}
+	}
+
+	return g_animUseRuntime;
+}
+
+
+var g_supportsPPTHTML = SupportsPPTHTML(), g_scaleInFrame = 1, gId="", g_bgSound="",
+    g_scaleHyperlinks = false, g_allowAdvOnClick = 1, g_showInBrowser = 0, gLoopCont = 0, gUseSldTimings = 1;
+var g_showAnimation = g_supportsPPTHTML && SupportsPPTAnimation() && g_showInBrowser;
+var g_animManager = null;
+var g_animUseRuntime = false;
+var g_animItemsToHide, g_animInteractiveItems, g_animSlideTime;
+var g_animMainSequence = null;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="3"/>
+</o:shapelayout>
+</head>
+
+<body lang=JA style='margin:0px;background-color:white' onresize="_RSW()"
+onload="LoadSld()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:554px;height:415px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#ffffff,#000000,#808080,#000000,#bbe0e3,#333399,#009999,#99cc00"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><v:shapetype id="_x0000_t75"
+  coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+  filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s3074" type="#_x0000_t75" style='position:absolute;
+  left:36.875pt;top:116.875pt;width:708.625pt;height:396.875pt'>
+  <v:imagedata src="slide0002_image001.png" o:title="logo" blacklevel="27525f"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s3074"
+ src="slide0002_image002.jpg" style='position:absolute;top:21.68%;left:5.05%;
+ width:98.37%;height:73.49%'><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s3075" type="#_x0000_m1026"
+  style='position:absolute;left:36pt;top:21.625pt;width:652.875pt;height:135pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s3076" type="#_x0000_m1027"
+  style='position:absolute;left:36.875pt;top:185pt;width:9in;height:328.75pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s3075" class=T><span style='position:absolute;top:3.61%;
+ left:5.95%;width:88.8%;height:7.71%'><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:91%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#32113;&#35336;&#36986;&#20253;&#23398;&#12288;&#38598;&#20013;&#35611;&#32681;&#26085;&#31243;</span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:91%;mso-ansi-language:EN-US'><br>
+  </span></span><span style='position:absolute;top:12.04%;left:5.95%;
+ width:88.8%;height:5.3%'><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:64%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#21307;&#23398;&#30740;&#31350;&#31185;&#20184;&#23646;&#12466;&#12494;&#12512;&#21307;&#23398;&#12475;&#12531;&#12479;&#12540;</span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:64%;mso-ansi-language:EN-US'><br>
+  </span></span><span style='position:absolute;top:17.83%;left:5.95%;
+ width:88.8%;height:6.02%'><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:64%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#24179;&#25104;</span><span style='font-size:64%;
+ mso-fareast-hint:yes'>17</span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:64%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#24180;</span><span style='font-size:64%;mso-fareast-hint:
+ yes'>9</span><span lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:
+ "MS PGothic";font-size:64%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#26376;</span><span
+ style='font-size:64%;mso-fareast-hint:yes'>26</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:64%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#26085;</span><span
+ style='font-size:64%;mso-fareast-hint:yes'>-28</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:64%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#26085;</span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:64%;mso-ansi-language:EN-US'><br>
+  </span></span><span style='position:absolute;top:23.85%;left:5.95%;
+ width:88.8%;height:3.61%'><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:36%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#20250;&#22580;&#12288;&#20140;&#37117;&#22823;&#23398;&#21513;&#30000;&#12461;&#12515;&#12531;&#12497;&#12473;</span><span
+ style='font-size:36%;mso-fareast-hint:yes'>(</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:36%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#21307;&#23398;&#30740;&#31350;&#31185;</span><span
+ style='font-size:36%;mso-fareast-hint:yes'>)</span><span style='font-family:
+ "MS PGothic";mso-fareast-font-family:"MS PGothic";font-size:36%'><br>
+  </span></span><span style='position:absolute;top:27.71%;left:5.95%;
+ width:88.8%;height:3.13%'><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:36%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#36861;&#12387;&#12390;&#35443;&#32048;&#27770;&#23450;&#20104;&#23450;</span></span></div>
+ <div v:shape="_x0000_s3076">
+ <div class=B1 style='mso-margin-left-alt:624'></div>
+ <div class=B2 style='mso-margin-left-alt:864'></div>
+ <div class=B3 style='mso-margin-left-alt:1104'></div>
+ <div class=B4 style='mso-margin-left-alt:1392'></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:34.69%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>9</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#26376;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>26</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#26085;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>(</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#26376;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>)</span><span style='font-size:
+ 44%'>14:00-16:00</span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#12288;&#26412;&#38598;&#20013;&#35611;&#32681;&#12398;&#20869;&#23481;&#12398;&#26085;&#26412;&#35486;&#12395;&#12424;&#12427;&#12458;&#12540;&#12496;&#12540;&#12499;&#12517;&#12540;&#12288;&#23665;&#30000;&#12288;&#20142;</span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-ansi-language:EN-US;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:37.59%;left:6.13%;width:104.15%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=JA
+ style='font-size:44%;mso-ansi-language:EN-US'><span style='mso-tab-count:1;
+ width:6.4%'> </span></span><span style='font-size:44%;mso-fareast-hint:yes'>(a)
+ </span><span lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:
+ "MS PGothic";font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#32113;&#35336;&#36986;&#20253;&#23398;&#12398;&#21462;&#12426;&#25201;&#12356;&#31684;&#22258;</span><span
+ lang=JA style='font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>
+ (b) </span><span style='font-size:44%'>Dr. Ott</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12395;&#12424;&#12427;&#32113;&#35336;&#23398;&#30340;&#24605;&#32771;&#12395;&#38306;&#12377;&#12427;&#35611;&#32681;&#12398;&#12383;&#12417;&#12398;&#12452;&#12531;&#12488;&#12525;&#12480;&#12463;</span></span><span
+ style='position:absolute;top:40.24%;left:12.81%;width:97.65%;height:3.13%'><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12471;&#12519;&#12531;</span><span
+ lang=JA style='font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>
+ (c) </span><span lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:
+ "MS PGothic";font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#30142;&#24739;&#36986;&#20253;&#23376;&#25506;&#32034;&#12392;&#32113;&#35336;&#36986;&#20253;&#23398;</span><span
+ lang=JA style='font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>
+ (d) </span><span lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:
+ "MS PGothic";font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#32113;&#35336;&#36986;&#20253;&#23398;&#35611;&#32681;&#12434;&#32884;&#12367;&#12383;&#12417;&#12398;&#33521;&#26085;&#29992;&#35486;&#35299;&#35500;</span><span
+ lang=JA style='font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>
+ (e) </span><span lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:
+ "MS PGothic";font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#36899;&#37782;&#19981;</span></span><span
+ style='position:absolute;top:42.65%;left:12.81%;width:81.4%;height:3.13%'><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#24179;&#34913;&#12510;&#12483;&#12500;&#12531;&#12464;&#12398;&#38598;&#22243;&#36986;&#20253;&#23398;&#30340;&#20596;&#38754;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>.</span><span style='font-family:
+ "MS PGothic";mso-fareast-font-family:"MS PGothic";font-size:44%;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:46.02%;left:6.13%;width:88.08%;height:2.89%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:48.91%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'><b>9</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#26376;</b></span><span
+ style='font-size:44%;mso-fareast-hint:yes'><b>27</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#26085;</b></span><span
+ style='font-size:44%;mso-fareast-hint:yes'><b>(</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#28779;</b></span><span
+ style='font-size:44%;mso-fareast-hint:yes'><b>)</b></span><span
+ style='font-size:44%'><b>13:00-15:00</b></span><span lang=JA style='font-family:
+ "MS PGothic";mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:
+ yes;mso-ansi-language:EN-US'><b>&#12288;&#36986;&#20253;&#32113;&#35336;&#23398;&#12398;&#22522;&#30990;&#12288;</b></span><span
+ style='font-size:44%'><b>Jurg Ott</b></span><span style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ display:none'><b>&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:52.04%;left:6.13%;width:102.7%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%'><span style='mso-tab-count:1;width:6.49%'> </span></span><span
+ style='font-size:44%;mso-fareast-hint:yes'>(a) </span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#32113;&#35336;&#23398;&#30340;&#24605;&#32771;&#65294;&#12521;&#12531;&#12480;&#12512;&#24615;&#12392;&#32113;&#35336;&#30340;&#25512;&#23450;&#12392;&#26908;&#23450;&#65294;&#23588;&#24230;&#12539;&#12505;&#12452;&#12474;&#12450;&#12503;&#12525;&#12540;&#12481;&#65294;&#12510;&#12523;&#12481;&#12503;&#12523;&#12486;&#12473;&#12488;&#35036;</span></span><span
+ style='position:absolute;top:54.45%;left:12.81%;width:96.2%;height:3.13%'><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#27491;&#65294;</span><span
+ lang=JA style='font-size:44%;mso-ansi-language:EN-US'>&#8221;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>This is all very basic, so don</span><span
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes'>&#8217;</span><span style='font-size:44%;
+ mso-fareast-hint:yes'>t get frightened!</span><span style='font-size:44%'>&#8221;
+ &#8230;Jurg</span><span style='font-size:44%;mso-fareast-hint:yes'> (b) </span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12513;&#12531;&#12487;&#12523;&#36986;&#20253;&#65294;&#36074;&#30340;&#24418;&#36074;&#12392;&#37327;&#30340;&#24418;</span></span><span
+ style='position:absolute;top:57.1%;left:12.81%;width:81.4%;height:2.89%'><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#36074;&#65294;&#36986;&#20253;&#24615;&#12398;&#35413;&#20385;</span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-ansi-language:EN-US;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:60.0%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'><b>9</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#26376;</b></span><span
+ style='font-size:44%'><b>27</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#26085;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>(</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#28779;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>) 15:00-17:00</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#12288;&#36986;&#20253;&#23376;&#22810;&#22411;&#35299;&#26512;</b></span><span
+ style='font-size:44%;mso-fareast-hint:yes'><b>(1)</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#12288;</b></span><span
+ style='font-size:44%'><b>Jurg Ott&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:63.13%;left:6.13%;width:105.59%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%'><span style='mso-tab-count:1;width:6.31%'> </span></span><span
+ style='font-size:44%;mso-fareast-hint:yes'> (</span><span style='font-size:
+ 44%'>a</span><span style='font-size:44%;mso-fareast-hint:yes'>) </span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#36899;&#37782;&#35299;&#26512;&#65294;&#23478;&#31995;&#35299;&#26512;&#65294;&#32633;&#24739;&#21516;&#32990;&#23550;&#35299;&#26512;</span><span
+ lang=JA style='font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'> </span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12392;&#12381;&#12398;&#35576;&#30456;</span><span
+ style='font-size:44%'>(</span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#32633;&#24739;&#32773;&#20998;&#24067;&#12497;&#12479;&#12540;&#12531;&#12289;&#24418;&#36074;&#12479;&#12452;&#12503;&#12289;&#30330;&#30151;&#24180;&#40802;</span></span><span
+ style='position:absolute;top:65.54%;left:12.81%;width:81.4%;height:3.13%'><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12381;&#12398;&#20182;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>)</span><span style='font-family:
+ "MS PGothic";mso-fareast-font-family:"MS PGothic";font-size:44%;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:68.91%;left:6.13%;width:88.08%;height:2.89%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:71.8%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%'><b>9</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#26376;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>28</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#26085;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>(</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#27700;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>) 13:00-15:00</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#12288;&#36986;&#20253;&#23376;&#22810;&#22411;&#35299;&#26512;</b></span><span
+ style='font-size:44%;mso-fareast-hint:yes'><b>(2) </b></span><span
+ style='font-size:44%'><b>Jurg Ott</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b> </b></span><span style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;display:none'><b>&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:74.93%;left:6.13%;width:105.77%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%'><span style='mso-tab-count:1;width:6.3%'> </span></span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#65288;</span><span
+ style='font-size:44%'>a)</span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#38306;&#36899;&#35299;&#26512;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>(</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#36899;&#37782;&#19981;&#24179;&#34913;&#35299;&#26512;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>)(</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12465;&#12540;&#12473;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>-</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12467;&#12531;&#12488;&#12525;&#12540;&#12523;&#35299;&#26512;&#12289;&#23478;&#31995;&#12469;&#12531;&#12503;&#12523;&#35299;&#26512;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>(TDT, FBAT). </span><span
+ style='font-size:44%'>(b) </span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#36899;&#37782;</span></span><span style='position:
+ absolute;top:77.34%;left:12.81%;width:89.53%;height:3.13%'><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#19981;&#24179;&#34913;&#35299;&#26512;&#12395;&#38306;&#36899;&#12377;&#12427;&#35576;&#30456;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>(</span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#24418;&#36074;&#22810;&#27096;&#24615;&#12392;&#36986;&#20253;&#30340;&#22810;&#27096;&#24615;&#12398;&#38306;&#20418;</span><span
+ style='font-size:44%'>. </span><span style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes'>&#8220;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>Common trait, common </span></span><span
+ style='position:absolute;top:79.75%;left:12.81%;width:81.4%;height:3.13%'><span
+ style='font-size:44%;mso-fareast-hint:yes'>variant</span><span
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes'>&#8221;</span><span style='font-size:44%;
+ mso-fareast-hint:yes'> hypothesis. </span><span style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ display:none'><b>&#13;</b></span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:82.89%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%'><b>9</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#26376;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>28</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#26085;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>(</b></span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'><b>&#27700;</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b>) 15:00-17:00</b></span><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>&#12288;&#32113;&#35336;&#36986;&#20253;&#23398;&#12398;&#23637;&#26395;</b></span><span
+ lang=JA style='font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'><b>
+ </b></span><span style='font-size:44%'><b>Jurg Ott</b></span><span
+ style='font-size:44%;mso-fareast-hint:yes'> </span><span style='font-family:
+ "MS PGothic";mso-fareast-font-family:"MS PGothic";font-size:44%;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:86.02%;left:6.13%;width:104.15%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%'><span style='mso-tab-count:1;width:6.4%'> </span>(a)</span><span
+ lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#29872;&#22659;&#35201;&#22240;&#12398;&#32068;&#12415;&#36796;&#12415;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>(</span><span style='font-size:
+ 44%'>b)</span><span lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:
+ "MS PGothic";font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#12473;&#12479;&#12487;&#12451;&#12398;&#20877;&#29694;&#24615;</span><span
+ lang=JA style='font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'> (</span><span
+ style='font-size:44%'>c)</span><span style='font-size:44%;mso-fareast-hint:
+ yes'> </span><span lang=JA style='font-family:"MS PGothic";mso-fareast-font-family:
+ "MS PGothic";font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#38306;&#36899;&#35299;&#26512;&#12524;&#12509;&#12540;&#12488;&#12395;&#21344;&#12417;&#12427;&#12300;&#30495;&#23455;&#12301;&#12398;&#21106;&#21512;</span><span
+ style='font-size:44%'>(d) </span><span lang=JA style='font-family:"MS PGothic";
+ mso-fareast-font-family:"MS PGothic";font-size:44%;mso-fareast-hint:yes;
+ mso-ansi-language:EN-US'>&#31185;&#23398;</span></span><span style='position:
+ absolute;top:88.43%;left:12.81%;width:81.4%;height:3.13%'><span lang=JA
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-fareast-hint:yes;mso-ansi-language:EN-US'>&#32773;&#12392;&#30123;&#23398;&#32773;&#12398;&#24441;&#21106;</span><span
+ style='font-size:44%;mso-fareast-hint:yes'>.</span><span style='font-family:
+ "MS PGothic";mso-fareast-font-family:"MS PGothic";font-size:44%;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:91.8%;left:6.13%;width:88.08%;height:2.89%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-family:"MS PGothic";mso-fareast-font-family:"MS PGothic";
+ font-size:44%;mso-special-format:lastCR;display:none'>&#13;</span></div>
+ </div>
+ <v:shape id="_x0000_s3077" type="#_x0000_t75" style='position:absolute;left:8.5pt;
+  top:14.875pt;width:109.375pt;height:139.625pt'>
+  <v:imagedata src="slide0002_image001.png" o:title="logo"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s3077"
+ src="slide0002_image003.jpg" style='position:absolute;top:2.65%;left:1.26%;
+ width:15.16%;height:25.78%'><![endif]><v:shape id="_x0000_s3078" type="#_x0000_t75"
+  style='position:absolute;left:626.5pt;top:14.875pt;width:81pt;height:78pt'>
+  <v:imagedata src="slide0002_image004.wmz" o:althref="slide0002_image005.pcz"
+   o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s3078"
+ src="slide0002_image006.gif" style='position:absolute;top:2.65%;left:87.0%;
+ width:11.19%;height:14.45%'><![endif]></p:slide></div>
+
+</body>
+
+</html>

@@ -1,0 +1,582 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../news050921J.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>統計遺伝学　集中講義日程 医学研究科付属ゲノム医学センター 平成17年9月26日-28日</title>
+<meta name=Description
+content="2005/9/21:  統計遺伝学　集中講義日程 医学研究科付属ゲノム医学センター 平成17年9月26日-28日 9月26日（月）：G棟2階セミナー室A 　　　　　   9月27日（火）28日（水）：G棟2階セミナー室B">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:103% !important;}
+-->
+</style>
+<script><!--
+function LoadSld()
+{
+	var sld=GetObj("SlideObj")
+	if( !g_supportsPPTHTML ) {
+		sld.style.visibility="visible"
+		return
+	}
+	if( MakeNotesVis() ) return
+	runAnimations = _InitAnimations();
+	if( IsWin("PPTSld") )
+		parent.SldUpdated(GetSldId())
+	g_origSz=parseInt(SlideObj.style.fontSize)
+	g_origH=sld.style.posHeight
+	g_origW=sld.style.posWidth
+	g_scaleHyperlinks=(document.all.tags("AREA").length>0)
+	if( g_scaleHyperlinks )
+		InitHLinkArray()
+	if( g_scaleInFrame||(IsWin("PPTSld") && parent.IsFullScrMode() ) )
+		document.body.scroll="no"
+	_RSW()
+	if( IsWin("PPTSld") && parent.IsFullScrMode() )
+		FullScrInit();
+	
+	MakeSldVis();
+	
+	if( runAnimations )
+	{
+		if( document.all("NSPlay") )
+			document.all("NSPlay").autoStart = false;
+		if( sld.filters && sld.filters.revealtrans )
+			setTimeout( "document.body.start()", sld.filters.revealtrans.duration * 1000 );
+		else
+			document.body.start();
+	}
+}
+function MakeSldVis()
+{
+	var fTrans=g_showAnimation && SldHasTrans()
+	if( fTrans )
+	{
+		if( g_bgSound ) {
+			idx=g_bgSound.indexOf(",");
+			pptSound.src=g_bgSound.substr( 0, idx );
+			pptSound.loop= -(parseInt(g_bgSound.substr(idx+1)));
+		}
+		SlideObj.filters.revealtrans.Apply()
+    }
+	SlideObj.style.visibility="visible"
+	if( fTrans )
+		SlideObj.filters.revealtrans.Play()
+}
+function MakeNotesVis()
+{
+	if( !IsNts() ) return false
+	SlideObj.style.display="none"
+	nObj = document.all.item("NotesObj")
+	parent.SetHasNts(0)
+	if( nObj ) {
+		nObj.style.display=""
+		parent.SetHasNts(1)
+	}
+	return 1
+}
+function ChkAutoAdv()
+{
+	if(SldHasTrans())
+		SlideObj.onfilterchange=AutoAdv
+	else
+		AutoAdv()
+}
+function AutoAdv()
+{
+	if(!IsWin("PPTSld") || !gUseSldTimings )return
+	var sld=GetCurSld()
+	if( (sld.mAdvDelay>0) && !parent.IsFramesMode() )
+		setTimeout("parent.GoToNextSld()",sld.mAdvDelay)
+}
+function GetObj(id)
+{
+	if(g_supportsPPTHTML) return document.all(id);
+	else return document.getElementById(id);
+}
+function SldHasTrans() { return SlideObj.style.getAttribute("filter")!="" }
+function GetSldId() { return sId=location.href.substring(location.href.lastIndexOf('/')+1) }
+function HideMenu() { if( frames["PPTSld"] && PPTSld.document.all.item("ctxtmenu") && PPTSld.ctxtmenu.style.display!="none" ) { PPTSld.ctxtmenu.style.display='none'; return true } return false }
+function IsWin( name ) { return window.name == name }
+function IsNts() { return IsWin("PPTNts") }
+function IsSldOrNts() { return( IsWin("PPTSld")||IsWin("PPTNts") ) }
+function SupportsPPTAnimation() { return( navigator.platform == "Win32" && navigator.appVersion.indexOf("Windows")>0 ) }
+function SupportsPPTHTML()
+{
+	var appVer=navigator.appVersion, msie=appVer.indexOf("MSIE "), ver=0
+	if( msie >= 0 )
+		ver=parseFloat( appVer.substring( msie+5, appVer.indexOf(";",msie) ) )
+	else
+		ver=parseInt(appVer)
+	return( ver >= 4 && msie >= 0 )
+}
+function _RSW()
+{
+	if( !g_supportsPPTHTML || IsNts() ||
+	  ( !g_scaleInFrame && (!IsWin("PPTSld") || !parent.IsFullScrMode()) ) )
+		return
+        var padding=0;
+        if( IsWin("PPTSld") && parent.IsFramesMode() ) padding=6
+	cltWidth=document.body.clientWidth-padding
+	cltHeight=document.body.clientHeight-padding
+	factor=(1.0*cltWidth)/g_origW
+	if( cltHeight < g_origH*factor )
+		factor=(1.0*cltHeight)/g_origH
+	newSize = g_origSz * factor
+	if( newSize < 1 ) newSize=1
+	s=SlideObj.style
+	s.fontSize=newSize+"px"
+	s.posWidth=g_origW*factor
+	s.posHeight=g_origH*factor
+	s.posLeft=(cltWidth-s.posWidth+padding)/2
+	s.posTop=(cltHeight-s.posHeight+padding)/2
+	if( g_scaleHyperlinks )
+		ScaleHyperlinks( factor )
+}
+function _InitAnimations()
+{
+	animRuntimeInstalled = ''+document.body.localTime != 'undefined';
+	isFullScreen = (window.name == "PPTSld") && !parent.IsFramesMode();
+	g_animUseRuntime = g_showAnimation && animRuntimeInstalled && !(isFullScreen && parent.IsSldVisited());
+	if( g_animUseRuntime ) {
+		collSeq = document.all.tags("seq");
+		if( collSeq != null ) {
+			for(ii=0;ii<collSeq.length;ii++) {
+				if( collSeq[ii].getAttribute( "p:nodeType" ) == "mainSeq" ) {
+					g_animMainSequence = collSeq[ii];
+					break;
+				}
+			}
+		}
+		if( g_animItemsToHide ) {
+			for(jj = 0; jj < g_animItemsToHide.length; jj++) {
+				if( hideObj = GetObj(g_animItemsToHide[jj]) )
+					hideObj.runtimeStyle.visibility="hidden";
+			}
+		}
+		if( g_animInteractiveItems ){
+			for(jj = 0; jj < g_animInteractiveItems.length; jj++) {
+				if( triggerObj = GetObj(g_animInteractiveItems[jj]) )
+					triggerObj.runtimeStyle.cursor="hand";
+			}
+		}
+		if( gUseSldTimings && ''+g_animSlideTime != 'undefined' ) {
+			adjustedTime = document.body.calculateAutoAdvanceTimes( g_animSlideTime, g_animEffectTimings );
+			if( IsWin("PPTSld") && adjustedTime != g_animSlideTime ) {
+			   var sld = GetCurSld();
+			   sld.mAdvDelay = adjustedTime * 1000;
+			}
+		}
+	}
+	return g_animUseRuntime;
+}
+
+var g_supportsPPTHTML = SupportsPPTHTML(), g_scaleInFrame = 1, gId="", g_bgSound="",
+    g_scaleHyperlinks = false, g_allowAdvOnClick = 1, g_showInBrowser = 0, gLoopCont = 0, gUseSldTimings = 1;
+var g_showAnimation = g_supportsPPTHTML && SupportsPPTAnimation() && g_showInBrowser;
+var g_animManager = null;
+var g_animUseRuntime = false;
+var g_animItemsToHide, g_animInteractiveItems, g_animSlideTime;
+var g_animMainSequence = null;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="3"/>
+</o:shapelayout>
+</head>
+
+<body lang=JA style='margin:0px;background-color:white' onresize="_RSW()"
+onload="LoadSld()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:554px;height:415px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><v:shapetype id="_x0000_t75"
+  coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+  filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s3074" type="#_x0000_t75" style='position:absolute;
+  left:31.125pt;top:116.875pt;width:708.625pt;height:396.875pt'>
+  <v:imagedata src="slide0002_image001.png" o:title="logo" blacklevel="27525f"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s3074"
+ src="slide0002_image002.jpg" style='position:absolute;top:21.68%;left:4.33%;
+ width:98.37%;height:73.49%'><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s3075" type="#_x0000_m1026"
+  style='position:absolute;left:36pt;top:21.625pt;width:9in;height:90pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s3076" type="#_x0000_m1027"
+  style='position:absolute;left:36.875pt;top:168pt;width:9in;height:328.75pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s3075" class=T><span style='position:absolute;top:-5.06%;
+ left:5.95%;width:88.08%;height:7.71%'><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:91%'><br>
+  </span></span><span style='position:absolute;top:3.85%;left:5.95%;width:88.08%;
+ height:7.71%'><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:91%;mso-fareast-hint:yes'>統計遺伝学　集中講義日程</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 91%'><br>
+  </span></span><span style='position:absolute;top:12.28%;left:5.95%;
+ width:88.08%;height:5.3%'><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:64%;mso-fareast-hint:yes'>医学研究科付属ゲノム医学センター</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 64%'><br>
+  </span></span><span style='position:absolute;top:18.07%;left:5.95%;
+ width:88.08%;height:6.02%'><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:64%;mso-fareast-hint:yes'>平成</span><span lang=EN-US
+ style='font-size:64%;mso-fareast-hint:yes;mso-fareast-language:JA'>17</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 64%;mso-fareast-hint:yes'>年</span><span lang=EN-US style='font-size:64%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'>9</span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:64%;mso-fareast-hint:
+ yes'>月</span><span lang=EN-US style='font-size:64%;mso-fareast-hint:yes;
+ mso-fareast-language:JA'>26</span><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:64%;mso-fareast-hint:yes'>日</span><span
+ lang=EN-US style='font-size:64%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>-28</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:64%;mso-fareast-hint:yes'>日</span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:64%'><br>
+  </span></span><span style='position:absolute;top:24.09%;left:5.95%;
+ width:88.08%;height:3.61%'><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>9</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:36%'>月</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>26</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:36%'>日（月）：</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>G</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:36%'>棟</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>2</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:36%'>階セミナー室</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>A<br>
+  </span></span><span style='position:absolute;top:27.71%;left:5.95%;
+ width:88.08%;height:3.61%'><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:36%'>　　　　　</span><span style='font-size:36%'><span
+ style='mso-spacerun:yes'>&nbsp;&nbsp; </span>9</span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:36%'>月</span><span
+ lang=EN-US style='font-size:36%;mso-fareast-language:JA'>27</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 36%'>日（火）</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>28</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:36%'>日（水）：</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>G</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:36%'>棟</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>2</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:36%'>階セミナー室</span><span lang=EN-US style='font-size:36%;mso-fareast-language:
+ JA'>B</span><span lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:36%;mso-fareast-hint:yes;color:#FF5050;mso-fareast-language:
+ JA;mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ <div v:shape="_x0000_s3076">
+ <div class=B1 style='mso-margin-left-alt:624'></div>
+ <div class=B2 style='mso-margin-left-alt:864'></div>
+ <div class=B3 style='mso-margin-left-alt:1104'></div>
+ <div class=B4 style='mso-margin-left-alt:1392'></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:31.8%;left:6.13%;width:88.08%;height:2.89%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:34.45%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'>9</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>月</span><span lang=EN-US style='font-size:44%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'>26</span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes'>日</span><span lang=EN-US style='font-size:44%;mso-fareast-hint:yes;
+ mso-fareast-language:JA'>(</span><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>月</span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>)</span><span lang=EN-US style='font-size:44%;mso-fareast-language:JA'>14:00-16:00</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>　本集中講義の内容の日本語によるオーバービュー　山田　亮</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:37.59%;left:6.13%;width:104.15%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-size:44%'><span style='mso-tab-count:1;width:6.4%'> </span></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>(a) </span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>統計遺伝学の取り扱い範囲</span><span
+ style='font-size:44%;mso-fareast-hint:yes'> (b) </span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'>Dr. Ott</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>による統計学的思考に関する講義のためのイントロダク</span></span><span
+ style='position:absolute;top:40.0%;left:12.81%;width:97.65%;height:3.13%'><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>ション</span><span style='font-size:44%;mso-fareast-hint:
+ yes'> (c) </span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>疾患遺伝子探索と統計遺伝学</span><span
+ style='font-size:44%;mso-fareast-hint:yes'> (d) </span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes'>統計遺伝学講義を聴くための英日用語解説</span><span style='font-size:44%;mso-fareast-hint:
+ yes'> (e) </span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>連鎖不</span></span><span
+ style='position:absolute;top:42.65%;left:12.81%;width:81.4%;height:3.13%'><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>平衡マッピングの集団遺伝学的側面</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'>.</span><span
+ lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:44%;mso-fareast-language:JA;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:46.02%;left:6.13%;width:88.08%;height:2.89%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-language:JA;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:48.91%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>9</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>月</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>27</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>日</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>(</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>火</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>)</b></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-language:JA'><b>13:00-15:00</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>　遺伝統計学の基礎　</b></span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'><b>Jurg Ott</b></span><span
+ lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA;display:none'><b>&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:51.8%;left:6.13%;width:102.7%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.49%'> </span></span><span lang=EN-US style='font-size:44%;mso-fareast-hint:
+ yes;mso-fareast-language:JA'>(a) </span><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>統計学的思考．ランダム性と統計的推定と検定．尤度・ベイズアプローチ．マルチプルテスト補</span></span><span
+ style='position:absolute;top:54.45%;left:12.81%;width:96.2%;height:3.13%'><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>正．</span><span style='font-size:44%'>”</span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>This is all very basic, so don</span><span lang=EN-US style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes;mso-fareast-language:JA'>’</span><span lang=EN-US style='font-size:44%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'>t get frightened!</span><span
+ lang=EN-US style='font-size:44%;mso-fareast-language:JA'>” …Jurg</span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'> (b) </span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>メンデル遺伝．質的形質と量的形</span></span><span
+ style='position:absolute;top:57.1%;left:12.81%;width:81.4%;height:2.89%'><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>質．遺伝性の評価</span><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:60.0%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>9</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>月</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-language:JA'><b>27</b></span><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'><b>日</b></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b>(</b></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'><b>火</b></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b>) 15:00-17:00</b></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'><b>　遺伝子多型解析</b></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b>(1)</b></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'><b>　</b></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-language:JA'><b>Jurg Ott&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:63.13%;left:6.13%;width:105.59%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.31%'> </span></span><span lang=EN-US style='font-size:44%;mso-fareast-hint:
+ yes;mso-fareast-language:JA'> (</span><span lang=EN-US style='font-size:44%;
+ mso-fareast-language:JA'>a</span><span lang=EN-US style='font-size:44%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'>) </span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes'>連鎖解析．家系解析．罹患同胞対解析</span><span style='font-size:44%;mso-fareast-hint:yes'>
+ </span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:44%;mso-fareast-hint:yes'>とその諸相</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'>(</span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes'>罹患者分布パターン、形質タイプ、発症年齢</span></span><span style='position:absolute;
+ top:65.54%;left:12.81%;width:81.4%;height:3.13%'><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes'>その他</span><span lang=EN-US style='font-size:44%;mso-fareast-hint:yes;
+ mso-fareast-language:JA'>)</span><span lang=EN-US style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-language:JA;
+ display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:68.91%;left:6.13%;width:88.08%;height:2.89%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:71.8%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'><b>9</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>月</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>28</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>日</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>(</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>水</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>) 13:00-15:00</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>　遺伝子多型解析</b></span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>(2) </b></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-language:JA'><b>Jurg Ott</b></span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b> </b></span><span lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-language:JA;display:none'><b>&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:74.93%;left:6.13%;width:105.77%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.3%'> </span></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>（</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'>a)</span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes'>関連解析</span><span lang=EN-US style='font-size:44%;mso-fareast-hint:yes;
+ mso-fareast-language:JA'>(</span><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>連鎖不平衡解析</span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>)(</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:44%;mso-fareast-hint:yes'>ケース</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'>-</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>コントロール解析、家系サンプル解析</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'>(TDT,
+ FBAT). </span><span lang=EN-US style='font-size:44%;mso-fareast-language:JA'>(b)
+ </span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:44%;mso-fareast-hint:yes'>連鎖</span></span><span style='position:
+ absolute;top:77.34%;left:12.81%;width:89.53%;height:3.13%'><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>不平衡解析に関連する諸相</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'>(</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>形質多様性と遺伝的多様性の関係</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'>. </span><span lang=EN-US
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'>“</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'>Common
+ trait, common </span></span><span style='position:absolute;top:79.75%;
+ left:12.81%;width:81.4%;height:3.13%'><span lang=EN-US style='font-size:44%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'>variant</span><span lang=EN-US
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'>”</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'>
+ hypothesis. </span><span lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA;
+ display:none'><b>&#13;</b></span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:82.89%;left:6.13%;width:88.08%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'><b>9</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>月</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>28</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>日</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>(</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>水</b></span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'><b>) 15:00-17:00</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'><b>　統計遺伝学の展望</b></span><span style='font-size:44%;
+ mso-fareast-hint:yes'><b> </b></span><span lang=EN-US style='font-size:44%;
+ mso-fareast-language:JA'><b>Jurg Ott</b></span><span lang=EN-US
+ style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:JA'> </span><span
+ lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:44%;mso-fareast-language:JA;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:86.02%;left:6.13%;width:104.15%;height:3.13%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:44%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.4%'> </span>(a)</span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>環境要因の組み込み</span><span
+ lang=EN-US style='font-size:44%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>(</span><span lang=EN-US style='font-size:44%;mso-fareast-language:JA'>b)</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>スタディの再現性</span><span style='font-size:44%;
+ mso-fareast-hint:yes'> (</span><span lang=EN-US style='font-size:44%;
+ mso-fareast-language:JA'>c)</span><span lang=EN-US style='font-size:44%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'> </span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:
+ yes'>関連解析レポートに占める「真実」の割合</span><span lang=EN-US style='font-size:44%;
+ mso-fareast-language:JA'>(d) </span><span style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:44%;mso-fareast-hint:yes'>科学</span></span><span
+ style='position:absolute;top:88.43%;left:12.81%;width:81.4%;height:3.13%'><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-hint:yes'>者と疫学者の役割</span><span lang=EN-US style='font-size:
+ 44%;mso-fareast-hint:yes;mso-fareast-language:JA'>.</span><span lang=EN-US
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-fareast-language:JA;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:91.8%;left:6.13%;width:88.08%;height:2.89%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 44%;mso-special-format:lastCR;display:none'>&#13;</span></div>
+ </div>
+ <v:shape id="_x0000_s3077" type="#_x0000_t75" style='position:absolute;left:8.5pt;
+  top:14.875pt;width:109.375pt;height:139.625pt'>
+  <v:imagedata src="slide0002_image001.png" o:title="logo"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s3077"
+ src="slide0002_image003.jpg" style='position:absolute;top:2.65%;left:1.26%;
+ width:15.16%;height:25.78%'><![endif]><v:shape id="_x0000_s3078" type="#_x0000_t75"
+  style='position:absolute;left:626.5pt;top:14.875pt;width:81pt;height:78pt'>
+  <v:imagedata src="slide0002_image004.wmz" o:althref="slide0002_image005.pcz"
+   o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s3078"
+ src="slide0002_image006.gif" style='position:absolute;top:2.65%;left:87.0%;
+ width:11.19%;height:14.45%'><![endif]></p:slide></div>
+
+</body>
+
+</html>

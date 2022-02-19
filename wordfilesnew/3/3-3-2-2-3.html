@@ -1,0 +1,2350 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<img src="../../img/kame_tukimi.gif" width="100" height="60">
+
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-3-2-2-3.files/filelist.xml">
+<link rel=Edit-Time-Data href="3-3-2-2-3.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>ケース・コントロール相関解析</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>432</o:TotalTime>
+  <o:LastPrinted>2001-03-28T02:44:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:26:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:26:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>231</o:Words>
+  <o:Characters>1323</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Lines>11</o:Lines>
+  <o:Paragraphs>3</o:Paragraphs>
+  <o:CharactersWithSpaces>1551</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 70.9pt 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-3-2-2-3.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:249654596;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1301734686;}
+@list l0:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l1
+	{mso-list-id:395397279;
+	mso-list-template-ids:1680635462;}
+@list l1:level1
+	{mso-level-number-format:decimal-full-width;
+	mso-level-text:%1;
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level2
+	{mso-level-number-format:decimal-full-width;
+	mso-level-text:%1-%2;
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level3
+	{mso-level-text:"%1-%2\.%3";
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level4
+	{mso-level-text:"%1-%2\.%3\.%4";
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level5
+	{mso-level-text:"%1-%2\.%3\.%4\.%5";
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level6
+	{mso-level-text:"%1-%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level7
+	{mso-level-text:"%1-%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level8
+	{mso-level-text:"%1-%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l1:level9
+	{mso-level-text:"%1-%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:35.25pt;
+	mso-level-number-position:left;
+	margin-left:35.25pt;
+	text-indent:-35.25pt;}
+@list l2
+	{mso-list-id:553810669;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1104941950;}
+@list l2:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l3
+	{mso-list-id:713965177;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-235230914;}
+@list l3:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l3:level2
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%2\)";
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l3:level3
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%3;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l4
+	{mso-list-id:970670319;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1858175188;}
+@list l4:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l4:level2
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%2\)";
+	mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l4:level3
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%3;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:84.0pt;
+	mso-level-number-position:left;
+	margin-left:84.0pt;
+	text-indent:-21.0pt;}
+@list l4:level5
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%5\)";
+	mso-level-tab-stop:105.0pt;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l4:level6
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%6;
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:147.0pt;
+	mso-level-number-position:left;
+	margin-left:147.0pt;
+	text-indent:-21.0pt;}
+@list l5
+	{mso-list-id:1356032447;
+	mso-list-template-ids:-1120268032;}
+@list l5:level1
+	{mso-level-suffix:none;
+	mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:48.2pt;
+	text-indent:-34.0pt;}
+@list l5:level2
+	{mso-level-suffix:none;
+	mso-level-text:%1-%2;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:99.25pt;
+	text-indent:-76.55pt;}
+@list l5:level3
+	{mso-level-number-format:decimal-full-width;
+	mso-level-suffix:none;
+	mso-level-text:%1-%2-%3;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l5:level4
+	{mso-level-number-format:decimal-full-width;
+	mso-level-suffix:none;
+	mso-level-text:%1-%2-%3-%4;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l5:level5
+	{mso-level-number-format:decimal-full-width;
+	mso-level-suffix:none;
+	mso-level-text:%1-%2-%3-%4-%5;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l5:level6
+	{mso-level-number-format:decimal-full-width;
+	mso-level-suffix:none;
+	mso-level-text:%1-%2-%3-%4-%5-%6;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l5:level7
+	{mso-level-number-format:decimal-full-width;
+	mso-level-suffix:none;
+	mso-level-text:%1-%2-%3-%4-%5-%6-%7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l5:level8
+	{mso-level-number-format:decimal-full-width;
+	mso-level-suffix:none;
+	mso-level-text:%1-%2-%3-%4-%5-%6-%7-%8;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l5:level9
+	{mso-level-number-format:decimal-full-width;
+	mso-level-suffix:none;
+	mso-level-text:%1-%2-%3-%4-%5-%6-%7-%8-%9;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0mm;
+	text-indent:0mm;}
+@list l6
+	{mso-list-id:1638729157;
+	mso-list-template-ids:-340853880;}
+@list l6:level1
+	{mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:14.2pt;
+	text-indent:-14.2pt;}
+@list l6:level2
+	{mso-level-text:"\(%2\)";
+	mso-level-tab-stop:34.0pt;
+	mso-level-number-position:left;
+	margin-left:34.0pt;
+	text-indent:-19.8pt;}
+@list l6:level3
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%3;
+	mso-level-tab-stop:30.0mm;
+	mso-level-number-position:left;
+	margin-left:30.0mm;
+	text-indent:-10.0mm;}
+@list l6:level4
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%4\)";
+	mso-level-tab-stop:96.4pt;
+	mso-level-number-position:left;
+	margin-left:96.4pt;
+	text-indent:-25.5pt;}
+@list l6:level5
+	{mso-level-number-format:aiueo;
+	mso-level-text:"%5\)";
+	mso-level-tab-stop:127.6pt;
+	mso-level-number-position:left;
+	margin-left:127.6pt;
+	text-indent:-25.55pt;}
+@list l6:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:20.0mm;
+	mso-level-number-position:left;
+	margin-left:20.0mm;
+	text-indent:-20.0mm;}
+@list l6:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:63.8pt;
+	mso-level-number-position:left;
+	margin-left:63.8pt;
+	text-indent:-63.8pt;}
+@list l6:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:70.9pt;
+	mso-level-number-position:left;
+	margin-left:70.9pt;
+	text-indent:-70.9pt;}
+@list l6:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:77.95pt;
+	mso-level-number-position:left;
+	margin-left:77.95pt;
+	text-indent:-77.95pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050" fill="f" fillcolor="white"
+  stroke="f">
+  <v:fill color="white" on="f"/>
+  <v:stroke on="f"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+  <o:rules v:ext="edit">
+   <o:r id="V:Rule1" type="callout" idref="#_x0000_s1030"/>
+   <o:r id="V:Rule2" type="callout" idref="#_x0000_s1031"/>
+   <o:r id="V:Rule3" type="callout" idref="#_x0000_s1032"/>
+   <o:r id="V:Rule4" type="callout" idref="#_x0000_s1033"/>
+   <o:r id="V:Rule5" type="callout" idref="#_x0000_s1036"/>
+   <o:r id="V:Rule6" type="callout" idref="#_x0000_s1037"/>
+   <o:r id="V:Rule7" type="callout" idref="#_x0000_s1038"/>
+   <o:r id="V:Rule8" type="callout" idref="#_x0000_s1039"/>
+   <o:r id="V:Rule9" type="callout" idref="#_x0000_s1040"/>
+   <o:r id="V:Rule10" type="callout" idref="#_x0000_s1043"/>
+   <o:r id="V:Rule11" type="callout" idref="#_x0000_s1044"/>
+   <o:r id="V:Rule12" type="callout" idref="#_x0000_s1045"/>
+   <o:r id="V:Rule13" type="callout" idref="#_x0000_s1046"/>
+   <o:r id="V:Rule14" type="callout" idref="#_x0000_s1049"/>
+   <o:r id="V:Rule15" type="callout" idref="#_x0000_s1050"/>
+   <o:r id="V:Rule16" type="callout" idref="#_x0000_s1051"/>
+   <o:r id="V:Rule17" type="callout" idref="#_x0000_s1052"/>
+   <o:r id="V:Rule18" type="callout" idref="#_x0000_s1053"/>
+   <o:r id="V:Rule19" type="callout" idref="#_x0000_s1056"/>
+   <o:r id="V:Rule20" type="callout" idref="#_x0000_s1057"/>
+   <o:r id="V:Rule21" type="callout" idref="#_x0000_s1058"/>
+   <o:r id="V:Rule22" type="callout" idref="#_x0000_s1059"/>
+   <o:r id="V:Rule23" type="callout" idref="#_x0000_s1062"/>
+   <o:r id="V:Rule24" type="callout" idref="#_x0000_s1063"/>
+   <o:r id="V:Rule25" type="callout" idref="#_x0000_s1064"/>
+   <o:r id="V:Rule26" type="callout" idref="#_x0000_s1065"/>
+   <o:r id="V:Rule27" type="callout" idref="#_x0000_s1066"/>
+   <o:r id="V:Rule28" type="callout" idref="#_x0000_s1068"/>
+   <o:r id="V:Rule29" type="callout" idref="#_x0000_s1069"/>
+   <o:r id="V:Rule30" type="callout" idref="#_x0000_s1070"/>
+   <o:r id="V:Rule31" type="callout" idref="#_x0000_s1093"/>
+   <o:r id="V:Rule32" type="callout" idref="#_x0000_s1094"/>
+   <o:r id="V:Rule33" type="callout" idref="#_x0000_s1095"/>
+  </o:rules>
+  <o:regrouptable v:ext="edit">
+   <o:entry new="1" old="0"/>
+  </o:regrouptable>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:42.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-3-2-2-3　一般集団をコントロール集団として用いることについて<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>　ケースは疾患という<span
+lang=EN-US>phenotypeを所有する集団からランダムにサンプリングされている。コントロールはphenotypeに関して通常とられる方法として2つのサンプリング方法がある。１つは疾患phenotypeを所有していないことが確認された集団（非ケース集団）からのサンプリング、もう一つは疾患phenotypeについて不明な集団（一般集団）からのサンプリングである。この外に家系内コントロールを採用する方法や、高齢になっても当該疾患を発病していない集団を採用する方法などもあるが、RIKEN
+SRCプロジェクトでは少なくともこの方法が実現することはないと思われる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>　上記の特別なコントロール集団の場合を除けば、ケース集団とコントロール集団との間の差が大きいのは非ケース集団をコントロール集団として用いる場合である。しかしながら<span
+lang=EN-US>RIKEN SRCのケース・コントロール比較はケース集団 対 一般集団となっている。しかも一般集団は真の一般集団ではなく、ある別の疾患phenotypeを持った集団の混成である(擬似一般集団)。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>コントロール集団として非ケース集団を用いずに擬似一般集団を用いることによる検定力の低下を決める要素は以下の通りである。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:24.7pt;mso-para-margin-left:1.0gd;
+text-indent:-14.2pt;mso-list:l6 level1 lfo7;tab-stops:list 18.0pt'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>コントロール集団にケースもしくは将来的にケースになってしまう個体が多いほど検定力は低下する<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:40.85pt;mso-para-margin-left:2.0gd;
+text-indent:-19.85pt;mso-list:l6 level2 lfo7;tab-stops:list 34.0pt'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>罹患率（高ければ高いほど検定力は低下する）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:40.85pt;mso-para-margin-left:2.0gd;
+text-indent:-19.85pt;mso-list:l6 level2 lfo7;tab-stops:list 34.0pt'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>若年者の割合（高ければ高いほど検定力は低下する。特に加齢とともに罹患率の上昇する疾患の場合）<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:40.85pt;mso-para-margin-left:2.0gd;
+text-indent:-19.85pt;mso-list:l6 level2 lfo7;tab-stops:list 34.0pt'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>擬似一般集団を構成するその他の疾患<span
+lang=EN-US>phenotypeと当該疾患phenotypeとのオーバーラップの高さ<o:p></o:p></span></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>　この検定力の低下をケース・コントロール アレル頻度
+χ<sup>２</sup>検定でシミュレートする。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>非ケース集団をコントロール集団とした場合に得られるχ<sup>２</sup>値に対する、コントロール集団にケースが混入している場合に得られるχ<sup><span
+lang=EN-US>2</span></sup>値の比をグラフ化したものである<span lang=EN-US>(図1〜図4)。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:18.0pt'><span style='font-family:"ＭＳ 明朝"'>γ<sup>２</sup>型<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:18.0pt'><span style='font-family:"ＭＳ 明朝"'>優性遺伝型<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:18.0pt'><span style='font-family:"ＭＳ 明朝"'>劣性遺伝型<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>の<span lang=EN-US>3つの型について描図する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>(擬似)一般集団内に混入するケース個体の割合がもたらす検定力の低下の程度を独自にシミュレーションしたい場合には、エクセル“コントロール群へのケースの混入シミュレーション”を用いてその程度についてイメージをつかむことができる。このエクセルファイルは罹患率によるケースの混入のみをシミュレートするが、その他の原因による混入も割合の点のみが問題なので適宜読み換えてシミュレートすることができる。<br
+clear=all style='page-break-before:always'>
+図1．一般集団をコントロールとして用いるときの罹患率によるχ<sup>２</sup>値の減衰曲線<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>(γ<sup>２</sup>型ローカスの場合)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1189" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:23.55pt;margin-top:281.35pt;width:21pt;
+ height:28.5pt;z-index:43;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1189'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:43;left:0px;margin-left:31px;margin-top:375px;width:32px;
+height:42px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=32 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:43'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1189" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US>0</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:group id="_x0000_s1029" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:126pt;width:219.75pt;height:105pt;
+ z-index:5;mso-position-horizontal:left' coordorigin="4588,3962" coordsize="4395,2100"
+ o:allowincell="f">
+ <v:shapetype id="_x0000_t41" coordsize="21600,21600" o:spt="41" adj="-8280,24300,-1800,4050"
+  path="m@0@1l@2@3nfem,l21600,r,21600l,21600nsxe">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="val #0"/>
+   <v:f eqn="val #1"/>
+   <v:f eqn="val #2"/>
+   <v:f eqn="val #3"/>
+  </v:formulas>
+  <v:path arrowok="t" o:extrusionok="f" gradientshapeok="t" o:connecttype="custom"
+   o:connectlocs="@0,@1;10800,0;10800,21600;0,10800;21600,10800"/>
+  <v:handles>
+   <v:h position="#0,#1"/>
+   <v:h position="#2,#3"/>
+  </v:handles>
+  <o:callout v:ext="edit" type="oneSegment" on="t" textborder="f"/>
+ </v:shapetype><v:shape id="_x0000_s1030" type="#_x0000_t41" style='position:absolute;
+  left:4588;top:3962;width:1440;height:570' adj="-22725,43768,,6821,-24720,40396,-22725,43768"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1030'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.01<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1031" type="#_x0000_t41" style='position:absolute;
+  left:5338;top:4427;width:1440;height:480' adj="-22725,55350,,8100,-24720,51345,-22725,55350"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1031'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.1<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1032" type="#_x0000_t41" style='position:absolute;
+  left:6313;top:4982;width:1440;height:570' adj="-22050,43200,,6821,-24720,40396,-22725,43768"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1032'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.25<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1033" type="#_x0000_t41" style='position:absolute;
+  left:7543;top:5567;width:1440;height:495' adj="-17100,39273,,7855,-22020,34735,-20025,38618"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1033'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.5<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><w:wrap type="square" side="right"/>
+</v:group><![endif]--><![if !vml]><img width=390 height=166
+src="3-3-2-2-3.files/image001.gif" align=left v:shapes="_x0000_s1029 _x0000_s1030 _x0000_s1031 _x0000_s1032 _x0000_s1033"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1073" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:22.8pt;margin-top:307.05pt;width:439.5pt;height:24pt;
+ z-index:21;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1073'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:21;left:0px;margin-left:30px;margin-top:409px;width:590px;
+height:36px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=590 height=36 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:21'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1073" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>d</span><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>　罹患率</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1071" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:-1.95pt;
+ margin-top:-.9pt;width:115.5pt;height:36.25pt;z-index:-35;mso-wrap-edited:f'
+ wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0" o:allowincell="f" filled="f"
+ stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1071' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:-35'><span style='left:0px;position:absolute;left:-3px;
+top:-1px;width:158px;height:53px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=53 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-35'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1071" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span></span><![endif]><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1028" type="#_x0000_t75" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:34.8pt;width:440.1pt;height:272.75pt;
+ z-index:4;mso-position-horizontal:left' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image002.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=587 height=364
+src="3-3-2-2-3.files/image003.gif" align=left hspace=12 v:shapes="_x0000_s1028"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1072" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:325.8pt;margin-top:60.1pt;width:115.5pt;height:28.5pt;
+ z-index:20;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1072'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:20;left:0px;margin-left:434px;margin-top:80px;width:158px;
+height:42px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:20'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1072" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US>p</span><span style='font-family:"ＭＳ 明朝";
+    mso-ascii-font-family:Century;mso-hansi-font-family:Century'>：疾患アレル頻度</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>4の場合<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1074" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:.3pt;margin-top:2.25pt;
+ width:115.5pt;height:38.25pt;z-index:-32;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1074' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-32;left:0px;margin-left:0px;margin-top:3px;width:158px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-32'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1074" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1034" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:0;margin-top:19.55pt;width:439.15pt;height:272pt;
+ z-index:-48;mso-position-horizontal:left' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image004.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=586 height=363
+src="3-3-2-2-3.files/image005.gif" align=left hspace=12 v:shapes="_x0000_s1034"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.25の場合<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1190" type="#_x0000_t202" style='position:absolute;left:0;
+  text-align:left;margin-left:22.05pt;margin-top:248.3pt;width:21pt;height:28.5pt;
+  z-index:44;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+  filled="f" stroked="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1190'/>
+  <o:callout v:ext="edit" minusy="t"/>
+  <w:wrap side="right"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=29 height=331></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td width=32 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+   style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:44'>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div v:shape="_x0000_s1190" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+     class=shape>
+     <p class=MsoNormal><span lang=EN-US>0</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><!--[if gte vml 1]><v:shape
+ id="_x0000_s1039" type="#_x0000_t41" style='position:absolute;left:0;
+ text-align:left;margin-left:0;margin-top:109.2pt;width:53.95pt;height:19.7pt;
+ z-index:10;mso-position-horizontal:left' o:regroupid="1" adj="-13072,116662,-2402,9868,58514,162822,60996,166331">
+ <v:textbox style='mso-next-textbox:#_x0000_s1039' inset=",0,,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>16<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=120 height=147
+src="3-3-2-2-3.files/image006.gif" align=left hspace=12 alt="線吹き出し 2: γ＝16"
+v:shapes="_x0000_s1039"><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1037"
+ type="#_x0000_t41" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:189.5pt;width:46.25pt;height:20.7pt;z-index:8;
+ mso-position-horizontal:left' o:regroupid="1" o:allowincell="f" adj="-31618,52017,-2802,9391,-159653,128504,-156758,131843">
+ <v:textbox style='mso-next-textbox:#_x0000_s1037' inset=",0,,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>2<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=157 height=72
+src="3-3-2-2-3.files/image007.gif" align=left hspace=12 alt="線吹き出し 2: γ＝2"
+v:shapes="_x0000_s1037"><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1040"
+ type="#_x0000_t41" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:142pt;width:50.4pt;height:22.7pt;z-index:11;
+ mso-position-horizontal:left' o:regroupid="1" o:allowincell="f" adj="-14614,98532,-2571,8564,7371,103052,10029,106049">
+ <v:textbox style='mso-next-textbox:#_x0000_s1040' inset=",0,,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>8<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=118 height=143
+src="3-3-2-2-3.files/image008.gif" align=left hspace=12 alt="線吹き出し 2: γ＝8"
+v:shapes="_x0000_s1040"><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1036"
+ type="#_x0000_t41" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:209.4pt;width:59.45pt;height:23.55pt;z-index:7;
+ mso-position-horizontal:left' o:regroupid="1" o:allowincell="f" adj="-8647,45080,-2180,8255,-99698,50721,-97427,53656">
+ <v:textbox style='mso-next-textbox:#_x0000_s1036' inset=",0,,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>1.5</span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=115 height=71
+src="3-3-2-2-3.files/image009.gif" align=left hspace=12 alt="線吹き出し 2: γ＝1.5"
+v:shapes="_x0000_s1036"><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1038"
+ type="#_x0000_t41" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:182.2pt;width:54.65pt;height:19.7pt;z-index:9;
+ mso-position-horizontal:left' o:regroupid="1" o:allowincell="f" adj="-11166,74613,-2371,9868,-120312,155805,-117842,159259">
+ <v:textbox style='mso-next-textbox:#_x0000_s1038' inset=",0,,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>4<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=115 height=97
+src="3-3-2-2-3.files/image010.gif" align=left hspace=12 alt="線吹き出し 2: γ＝4"
+v:shapes="_x0000_s1038"><![endif]><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1075" type="#_x0000_t202" style='position:absolute;left:0;
+  text-align:left;margin-left:22.8pt;margin-top:278.45pt;width:439.5pt;
+  height:24pt;z-index:23;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+  o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1075'/>
+  <o:callout v:ext="edit" minusy="t"/>
+  <w:wrap side="right"/>
+ </v:shape><v:shape id="_x0000_s1076" type="#_x0000_t202" style='position:absolute;
+  left:0;text-align:left;margin-left:297.3pt;margin-top:41.85pt;width:138pt;
+  height:28.5pt;z-index:24;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+  o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1076'/>
+  <o:callout v:ext="edit" minusy="t"/>
+  <w:wrap side="right"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=30 height=56></td>
+   <td width=366></td>
+   <td width=188></td>
+   <td width=36></td>
+  </tr>
+  <tr>
+   <td height=42></td>
+   <td></td>
+   <td width=188 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+   style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:24'>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div v:shape="_x0000_s1076" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+     class=shape>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ：<span lang=EN-US>genotypic
+     risk ratio<o:p></o:p></span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+  </tr>
+  <tr>
+   <td height=273></td>
+  </tr>
+  <tr>
+   <td height=36></td>
+   <td colspan=3 width=590 height=36 style='vertical-align:top'><![endif]><![if !mso]><span
+   style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:23'>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div v:shape="_x0000_s1075" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+     class=shape>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>d</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>　罹患率</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><br clear=all style='page-break-before:
+always'>
+図2．一般集団をコントロールとして用いるときの罹患率によるχ<sup>２</sup>値比の減衰曲線<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>(優性遺伝型ローカスの場合)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1077" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:.3pt;margin-top:6.6pt;width:115.5pt;height:38.25pt;
+ z-index:-29;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1077' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-29;left:0px;margin-left:0px;margin-top:9px;width:158px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-29'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1077" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>4の場合<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:group
+ id="_x0000_s1185" style='position:absolute;left:0;text-align:left;
+ margin-left:152.45pt;margin-top:93.2pt;width:298.3pt;height:154.1pt;z-index:13'
+ coordorigin="4183,4002" coordsize="5966,3082" o:allowincell="f">
+ <v:shape id="_x0000_s1043" type="#_x0000_t41" style='position:absolute;left:4183;
+  top:4002;width:1300;height:576' o:regroupid="2" adj="-20250,30941,,7005,-22245,27477,-20250,30941"
+  filled="f" strokecolor="#333">
+  <v:textbox inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.01<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1044" type="#_x0000_t41" style='position:absolute;
+  left:4901;top:4702;width:1300;height:576' o:regroupid="2" adj="-20250,30941,,7005,-22245,27477,-20250,30941"
+  filled="f" strokecolor="#333">
+  <v:textbox inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0. 1</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1045" type="#_x0000_t41" style='position:absolute;
+  left:6168;top:5620;width:1287;height:436' o:regroupid="2" adj="-20392,50185,-2014,8917,-19636,47857,-17622,52415"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1045' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.25</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1046" type="#_x0000_t41" style='position:absolute;
+  left:8849;top:6508;width:1300;height:576' o:regroupid="2" adj="-17662,46838,-1994,6750,-18825,41213,-16831,44700"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1046' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.5</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape></v:group><v:shape id="_x0000_s1080" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:34.8pt;margin-top:293.45pt;width:439.5pt;
+ height:24pt;z-index:28;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1080'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>d</span><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>　罹患率</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><v:shape id="_x0000_s1191" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:23.55pt;margin-top:270.85pt;width:21pt;
+ height:28.5pt;z-index:45;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1191'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US>0</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=31 height=125></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=605 height=302 src="3-3-2-2-3.files/image011.gif" v:shapes="_x0000_s1185 _x0000_s1043 _x0000_s1044 _x0000_s1045 _x0000_s1046 _x0000_s1080 _x0000_s1191"></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1078" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:325.05pt;
+ margin-top:73.75pt;width:115.5pt;height:28.5pt;z-index:-28;mso-wrap-edited:f'
+ wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0" filled="f" stroked="f"
+ strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1078'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-28;left:0px;margin-left:433px;margin-top:98px;width:158px;
+height:42px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-28'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1078" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US>p</span><span style='font-family:"ＭＳ 明朝";
+    mso-ascii-font-family:Century;mso-hansi-font-family:Century'>：疾患アレル頻度</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1041" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:25.8pt;
+ width:439.5pt;height:272.35pt;z-index:-42;mso-position-horizontal:left'
+ o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image012.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=586 height=363
+src="3-3-2-2-3.files/image013.gif" align=left hspace=12 v:shapes="_x0000_s1041"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1082" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:4.05pt;margin-top:.55pt;width:115.5pt;height:38.25pt;
+ z-index:-24;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1082' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-24;left:0px;margin-left:5px;margin-top:1px;width:158px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-24'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1082" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.25の場合<o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1079" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:309.3pt;
+ margin-top:88.75pt;width:138pt;height:28.5pt;z-index:27;mso-wrap-edited:f'
+ wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0" o:allowincell="f" filled="f"
+ stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1079'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=412 height=118></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=188 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:27'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1079" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ：<span lang=EN-US>genotypic
+    risk ratio<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1047" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:20.4pt;
+ width:440.55pt;height:273.25pt;z-index:-40;mso-position-horizontal:left'
+ o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image014.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=587 height=364
+src="3-3-2-2-3.files/image015.gif" align=left hspace=12 v:shapes="_x0000_s1047"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><o:wrapblock><v:shape
+  id="_x0000_s1081" type="#_x0000_t202" style='position:absolute;left:0;
+  text-align:left;margin-left:29.55pt;margin-top:273.95pt;width:439.5pt;
+  height:24pt;z-index:29;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+  o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1081'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>d</span><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>　罹患率</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+  <w:wrap side="right"/>
+ </v:shape><v:shape id="_x0000_s1192" type="#_x0000_t202" style='position:absolute;
+  left:0;text-align:left;margin-left:22.05pt;margin-top:248.7pt;width:21pt;
+  height:28.5pt;z-index:46;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+  filled="f" stroked="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1192'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US>0</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+  <w:wrap side="right"/>
+ </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <table cellpadding=0 cellspacing=0 align=left>
+  <tr>
+   <td width=29 height=332></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td><img width=600 height=69 src="3-3-2-2-3.files/image016.gif" v:shapes="_x0000_s1081 _x0000_s1192"></td>
+  </tr>
+ </table>
+ </span><![endif]><!--[if gte vml 1]></o:wrapblock><![endif]--><!--[if gte vml 1]><v:group
+ id="_x0000_s1181" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:106pt;width:220.5pt;height:114.05pt;z-index:15;
+ mso-position-horizontal:left' coordorigin="4277,11668" coordsize="4410,2281"
+ o:allowincell="f">
+ <v:shape id="_x0000_s1049" type="#_x0000_t41" style='position:absolute;left:6671;
+  top:11908;width:1233;height:515' o:regroupid="2" adj="-22458,81786,-2102,7550,-24438,76795,-22178,80528">
+  <v:textbox style='mso-next-textbox:#_x0000_s1049' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>16</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1050" type="#_x0000_t41" style='position:absolute;
+  left:7077;top:12724;width:1233;height:435' o:regroupid="2" adj="-20689,70014,-2102,8938,-18079,58146,-15819,62566">
+  <v:textbox style='mso-next-textbox:#_x0000_s1050' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>8</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1051" type="#_x0000_t41" style='position:absolute;
+  left:7454;top:13474;width:1233;height:475' o:regroupid="2" adj="-21775,33423,-2102,8185,-35,53932,2225,57979">
+  <v:textbox style='mso-next-textbox:#_x0000_s1051' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>4</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1052" type="#_x0000_t41" style='position:absolute;
+  left:4277;top:11668;width:1233;height:435' o:regroupid="2" adj="-14803,55117,-2102,8938,-10966,54422,-8707,58841">
+  <v:textbox style='mso-next-textbox:#_x0000_s1052' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>1.5</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1053" type="#_x0000_t41" style='position:absolute;
+  left:5104;top:12334;width:870;height:550' o:regroupid="2" adj="-19713,35345,-2979,7069,-16610,34207,-13432,37702">
+  <v:textbox style='mso-next-textbox:#_x0000_s1053' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>2<o:p></o:p></span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><w:wrap type="square" side="right"/>
+</v:group><![endif]--><![if !vml]><img width=355 height=175
+src="3-3-2-2-3.files/image017.gif" align=left v:shapes="_x0000_s1181 _x0000_s1049 _x0000_s1050 _x0000_s1051 _x0000_s1052 _x0000_s1053"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><br clear=all style='page-break-before:
+always'>
+図3．一般集団をコントロールとして用いるときの罹患率によるχ<sup>２</sup>値比の減衰曲線<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>(劣性遺伝型ローカスの場合)<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1084" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:8.55pt;margin-top:9.55pt;width:115.5pt;height:38.25pt;
+ z-index:-22;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1084' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-22;left:0px;margin-left:11px;margin-top:13px;width:158px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-22'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1084" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>4の場合<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1194" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:308.55pt;margin-top:68.5pt;width:115.5pt;height:28.5pt;
+ z-index:-6;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1194'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-6;left:0px;margin-left:411px;margin-top:91px;width:158px;
+height:42px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-6'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1194" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US>p</span><span style='font-family:"ＭＳ 明朝";
+    mso-ascii-font-family:Century;mso-hansi-font-family:Century'>：疾患アレル頻度</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:group id="_x0000_s1055" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:144.15pt;width:257.25pt;
+ height:84.8pt;z-index:16;mso-position-horizontal:left' coordorigin="4798,4394"
+ coordsize="5415,1696" o:allowincell="f">
+ <v:shape id="_x0000_s1056" type="#_x0000_t41" style='position:absolute;left:4798;
+  top:4394;width:1440;height:465' adj="-45225,96155,,8361,-47220,92021,-45225,96155"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1056'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.01<o:p></o:p></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1057" type="#_x0000_t41" style='position:absolute;
+  left:5998;top:4724;width:1440;height:465' adj="-37350,80826,,8361,-39345,76692,-37350,80826"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1057'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0. 1</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1058" type="#_x0000_t41" style='position:absolute;
+  left:7798;top:5130;width:1440;height:465' adj="-35775,62710,,8361,-37770,58575,-35775,62710"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1058'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.25</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1059" type="#_x0000_t41" style='position:absolute;
+  left:9073;top:5625;width:1140;height:465' adj="-41211,54348,-2274,8361,-43731,50214,-41211,54348"
+  filled="f" strokecolor="#333">
+  <v:textbox style='mso-next-textbox:#_x0000_s1059'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>p＝0.5</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><w:wrap type="square" side="right"/>
+</v:group><![endif]--><![if !vml]><img width=530 height=159
+src="3-3-2-2-3.files/image018.gif" align=left v:shapes="_x0000_s1055 _x0000_s1056 _x0000_s1057 _x0000_s1058 _x0000_s1059"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1054" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:0;margin-top:27.9pt;width:440.2pt;height:272.35pt;
+ z-index:-53;mso-position-horizontal:left' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image019.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=587 height=363
+src="3-3-2-2-3.files/image020.gif" align=left hspace=12 v:shapes="_x0000_s1054"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1086" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:34.25pt;margin-top:278.7pt;width:439.5pt;height:24pt;
+ z-index:34;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1086'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>d</span><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>　罹患率</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><v:shape id="_x0000_s1193" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:22.05pt;margin-top:255.1pt;width:21pt;
+ height:28.5pt;z-index:47;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1193'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US>0</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=29 height=340></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=607 height=68 src="3-3-2-2-3.files/image021.gif" v:shapes="_x0000_s1086 _x0000_s1193"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1083" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:5.55pt;margin-top:9.3pt;width:115.5pt;height:38.25pt;
+ z-index:-23;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1083' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-23;left:0px;margin-left:7px;margin-top:12px;width:158px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-23'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1083" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>p＝0.25の場合<o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="_x0000_s1085" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:43.8pt;
+ margin-top:285.35pt;width:419.25pt;height:24pt;z-index:33;mso-wrap-edited:f'
+ wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0" o:allowincell="f" filled="f"
+ stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1085'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>d</span><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>　罹患率</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><v:shape id="_x0000_s1277" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:22.8pt;margin-top:260.1pt;width:21pt;
+ height:28.5pt;z-index:50;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1277'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US>0</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><v:shape id="_x0000_s1278" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:297.3pt;margin-top:66.4pt;width:138pt;
+ height:28.5pt;z-index:51;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1278'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=30 height=89></td>
+  <td width=366></td>
+  <td width=188></td>
+  <td width=37></td>
+ </tr>
+ <tr>
+  <td height=42></td>
+  <td></td>
+  <td width=188 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:51'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1278" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ：<span lang=EN-US>genotypic
+    risk ratio<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+ <tr>
+  <td height=216></td>
+ </tr>
+ <tr>
+  <td height=69></td>
+  <td colspan=3 align=left valign=top><img width=591 height=69
+  src="3-3-2-2-3.files/image022.gif" v:shapes="_x0000_s1085 _x0000_s1277"></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:group id="_x0000_s1061" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:120pt;width:273pt;height:106.55pt;
+ z-index:17;mso-position-horizontal:left' coordorigin="4783,10620" coordsize="5460,2131"
+ o:allowincell="f">
+ <v:shape id="_x0000_s1062" type="#_x0000_t41" style='position:absolute;left:4783;
+  top:10620;width:1260;height:465' adj="-27771,94761,-2057,8361,-30051,90627,-27771,94761">
+  <v:textbox style='mso-next-textbox:#_x0000_s1062' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>1.5</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1063" type="#_x0000_t41" style='position:absolute;
+  left:5473;top:10965;width:1260;height:465' adj="-27000,78735,-2057,8361,-29023,70421,-26743,74555">
+  <v:textbox style='mso-next-textbox:#_x0000_s1063' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>2</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1064" type="#_x0000_t41" style='position:absolute;
+  left:8983;top:12286;width:1260;height:465' adj="-18000,57135,-2057,8361,-22337,52305,-20057,56439">
+  <v:textbox style='mso-next-textbox:#_x0000_s1064' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>4</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1065" type="#_x0000_t41" style='position:absolute;
+  left:6448;top:11461;width:1260;height:465' adj="-15943,76645,-2057,8361,-13337,72511,-11057,76645">
+  <v:textbox style='mso-next-textbox:#_x0000_s1065' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>16</span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1066" type="#_x0000_t41" style='position:absolute;
+  left:7588;top:11911;width:1050;height:390' adj="-15120,85569,-2469,9969,-13845,81471,-11109,86400">
+  <v:textbox style='mso-next-textbox:#_x0000_s1066' inset=",0,,0">
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>γ＝<span lang=EN-US>8<o:p></o:p></span></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><w:wrap type="square" side="right"/>
+</v:group><![endif]--><![if !vml]><img width=477 height=198
+src="3-3-2-2-3.files/image023.gif" align=left v:shapes="_x0000_s1061 _x0000_s1062 _x0000_s1063 _x0000_s1064 _x0000_s1065 _x0000_s1066"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1060" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:0;margin-top:14.95pt;width:440.25pt;height:272.85pt;
+ z-index:-5;mso-position-horizontal:left' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image024.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=587 height=364
+src="3-3-2-2-3.files/image025.gif" align=left hspace=12 v:shapes="_x0000_s1060"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:"ＭＳ 明朝"'>図<span lang=EN-US>4．一般集団をコントロールとして用いるときの罹患率によるχ<sup>２</sup>値比の減衰曲線<o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1087" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:-7.75pt;margin-top:4.2pt;width:115.5pt;height:38.25pt;
+ z-index:-16;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1087' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-16;left:0px;margin-left:-10px;margin-top:6px;width:158px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-16'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1087" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>genotypic
+relative risk 3型の比較　p＝0.1，γ＝4の場合<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1279" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:22.8pt;margin-top:260.35pt;width:21pt;height:28.5pt;
+ z-index:52;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1279'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=30 height=347></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=32 height=42 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:52'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1279" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span lang=EN-US>0</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:group id="_x0000_s1092" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:98.45pt;width:160.1pt;
+ height:133.25pt;z-index:37;mso-position-horizontal:left' coordorigin="4565,3932"
+ coordsize="3202,2665" o:allowincell="f">
+ <v:shape id="_x0000_s1093" type="#_x0000_t41" style='position:absolute;left:4565;
+  top:3932;width:1260;height:454' adj="-15874,103242,-2057,8564,-16423,65466,-14143,69748">
+  <v:textbox style='mso-next-textbox:#_x0000_s1093'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>γ<sup>２</sup>型</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1094" type="#_x0000_t41" style='position:absolute;
+  left:5471;top:5083;width:1560;height:455' adj="-17155,74437,-1662,8545,1869,32804,3711,37076">
+  <v:textbox style='mso-next-textbox:#_x0000_s1094'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>優性遺伝型</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1095" type="#_x0000_t41" style='position:absolute;
+  left:6207;top:6142;width:1560;height:455' adj="-11922,57394,-1662,8545,388,-18419,2229,-14147">
+  <v:textbox style='mso-next-textbox:#_x0000_s1095'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>劣性遺伝型</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><w:wrap type="square" side="right"/>
+</v:group><![endif]--><![if !vml]><img width=280 height=233
+src="3-3-2-2-3.files/image026.gif" align=left v:shapes="_x0000_s1092 _x0000_s1093 _x0000_s1094 _x0000_s1095"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1089" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:28.2pt;margin-top:284.05pt;width:435.2pt;height:24pt;
+ z-index:36;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1089'/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=38 height=379></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=584 height=36 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:36'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1089" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>d</span><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>　罹患率</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1091" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:21.4pt;
+ width:434.5pt;height:269.15pt;z-index:2;mso-position-horizontal:left'
+ o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image027.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=579 height=359
+src="3-3-2-2-3.files/image028.gif" align=left hspace=12 v:shapes="_x0000_s1091"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1090" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:-9.65pt;margin-top:15.15pt;width:115.5pt;height:38.25pt;
+ z-index:-15;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1090' inset=",0,,0"/>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:-15;left:0px;margin-left:-13px;margin-top:20px;width:158px;
+height:55px'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=158 height=55 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:-15'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1090" style='padding:0pt 7.2pt 0pt 7.2pt'
+    class=shape>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>χ</span><sup><span lang=EN-US>2</span></sup><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>値比</span></p>
+    <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+    Century;mso-hansi-font-family:Century'>（対</span> <span style='font-family:
+    "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>非ケース集団検定）</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1027" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:0;margin-top:34.15pt;width:440.6pt;height:272.3pt;
+ z-index:-51;mso-position-horizontal:left' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image029.wmz" o:title=""/>
+ <w:wrap type="square" side="right"/>
+</v:shape><![endif]--><![if !vml]><img width=587 height=363
+src="3-3-2-2-3.files/image030.gif" align=left hspace=12 v:shapes="_x0000_s1027"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>genotypic relative risk 3型の比較　p＝0.25，γ＝4<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1088" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:24pt;margin-top:287.3pt;width:435.2pt;height:24pt;
+ z-index:35;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ o:allowincell="f" filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1088'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>d</span><span
+    style='font-family:"ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:
+    Century'>　罹患率</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><v:shape id="_x0000_s1280" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:21.3pt;margin-top:260.05pt;width:21pt;
+ height:28.5pt;z-index:53;mso-wrap-edited:f' wrapcoords="0 0 21600 0 21600 21600 0 21600 0 0"
+ filled="f" stroked="f" strokecolor="#333">
+ <v:textbox style='mso-next-textbox:#_x0000_s1280'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><span lang=EN-US>0</span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <o:callout v:ext="edit" minusy="t"/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=28 height=347></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=588 height=72 src="3-3-2-2-3.files/image031.gif" v:shapes="_x0000_s1088 _x0000_s1280"></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:group id="_x0000_s1067" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:157.25pt;width:194.4pt;
+ height:74.05pt;z-index:18;mso-position-horizontal:left' coordorigin="6536,5217"
+ coordsize="3888,1481" o:allowincell="f">
+ <v:shape id="_x0000_s1068" type="#_x0000_t41" style='position:absolute;left:6536;
+  top:5573;width:1260;height:454' adj="-14143,69840,-2057,8640,-16423,65568,-14143,69840">
+  <v:textbox style='mso-next-textbox:#_x0000_s1068'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>γ<sup>２</sup>型</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1069" type="#_x0000_t41" style='position:absolute;
+  left:8430;top:5217;width:1560;height:455' adj="-9969,108720,-1662,8640,-11811,104448,-9969,108720">
+  <v:textbox style='mso-next-textbox:#_x0000_s1069'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>優性遺伝型</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1070" type="#_x0000_t41" style='position:absolute;
+  left:8864;top:6243;width:1560;height:455' adj="-7269,59040,-1662,8640,-9111,54768,-7269,59040">
+  <v:textbox style='mso-next-textbox:#_x0000_s1070'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>劣性遺伝型</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><w:wrap type="square" side="right"/>
+</v:group><![endif]--><![if !vml]><img width=319 height=158
+src="3-3-2-2-3.files/image032.gif" align=left v:shapes="_x0000_s1067 _x0000_s1068 _x0000_s1069 _x0000_s1070"><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>グラフ描写のための数式を以下に示す。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>γ<sup>２</sup>型<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:10.5pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1182" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:59.25pt;margin-top:.1pt;width:418.8pt;height:85pt;
+ z-index:40' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image033.png" o:title=""/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:40;left:0px;margin-left:79px;margin-top:0px;width:558px;
+height:113px'><img width=558 height=113 src="3-3-2-2-3.files/image034.jpg"
+v:shapes="_x0000_s1182"></span><![endif]><span style='font-family:"ＭＳ 明朝"'>χ<sup>２</sup>値比＝<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>優性遺伝型<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:10.0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1183" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:60.25pt;margin-top:1pt;width:419pt;height:124.45pt;
+ z-index:41' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image035.png" o:title=""/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:41;left:0px;margin-left:80px;margin-top:1px;width:559px;
+height:166px'><img width=559 height=166 src="3-3-2-2-3.files/image036.jpg"
+v:shapes="_x0000_s1183"></span><![endif]><span style='font-family:"ＭＳ 明朝"'>χ<sup>２</sup>値比＝<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝"'>劣性遺伝型<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:10.0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_s1184" type="#_x0000_t75" style='position:absolute;left:0;
+ text-align:left;margin-left:59.25pt;margin-top:3.15pt;width:423.95pt;height:89pt;
+ z-index:42' o:allowincell="f">
+ <v:imagedata src="3-3-2-2-3.files/image037.png" o:title=""/>
+ <w:wrap side="right"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:42;left:0px;margin-left:79px;margin-top:4px;width:565px;
+height:119px'><img width=565 height=119 src="3-3-2-2-3.files/image038.jpg"
+v:shapes="_x0000_s1184"></span><![endif]><span style='font-family:"ＭＳ 明朝"'>χ<sup>２</sup>値比＝　<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+</div>
+
+<hr size = "30" color = "#000060" noshade><p>
+カウンタ
+<script type="text/javascript"><!--
+    hatena_counter_name = "ryamada22";
+    hatena_counter_id = "12";
+    hatena_counter_ref = document.referrer+"";
+    hatena_counter_screen = screen.width + "x" + screen.height+","+screen.colorDepth;
+//--></script>
+<script type="text/javascript" src="http://counter.hatena.ne.jp/js/counter.js"></script>
+<noscript><img src="http://counter.hatena.ne.jp/ryamada22/12" border="0" alt="counter"></noscript>
+</body>
+
+</html>

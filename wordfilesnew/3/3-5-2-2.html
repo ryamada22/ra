@@ -1,0 +1,246 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<img src="../../img/kame_tukimi.gif" width="100" height="60">
+
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-5-2-2.files/filelist.xml">
+<title>EM-algorithmによるhaplotype頻度の推定</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>19</o:TotalTime>
+  <o:LastPrinted>2001-03-28T07:24:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:15:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:15:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>210</o:Words>
+  <o:Characters>1199</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Lines>9</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1407</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-5-2-2.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:42.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal style='mso-line-height-alt:0pt'><span lang=EN-US
+style='font-size:8.0pt;mso-bidi-font-size:12.0pt;font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-5-2-2 参考
+EM-algorithmによるhaplotype頻度の推定<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>2 SNPの観測データからは9 genotypeの観測値が得られる。そのような観測値を最も得やすい4
+haplotype頻度の分布を求めるのに用いる標準的アルゴリズムがExpectation-Maximization algorithm
+(EM-algorithm)と呼ばれるものである。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>2 SNPの9 genotype観測値から4 haplotype本数を推定するにあたり、genotypeは2種類に分けられる。片方の種類に分類されるgenotypeは特定のhaplotypeの本数を一意的に決定する(確定的haplotype数)。もう片方に分類されるgenotypeは特定のhaplotypeの本数を確率的に決定する(非確定的haplotype数)。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>EM-algorithmでは非確定的haplotype数を4 haplotypeに均等に分配し、確定的haplotype数と合算し、その値を基にhaplotype頻度の初期推定値を算出する。ついで、そのhaplotype
+頻度推定値を基に、非確定的haplotype数を分配し、新たなhaplotype頻度の推定値を得る。ついで、新たなhaplotype頻度推定値を基に非確定的haplotype数の再分配を行う。この作業を繰り返すとhaplotype頻度は収束することが知られ、しかもその収束推定値は現実のデータとの整合性が高いことが知られている。エクセルファイル“2
+SNP Haplotype頻度推定”でもEM-algorithmを使用している。<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:42.0pt;layout-grid-mode:both'><span
+style='font-family:"ＭＳ 明朝"'>参考のため、その具体的な数式を以下に掲載する。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>X/x、Y/yはそれぞれ１つのSNPの2つのアレルを表している。<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>a1…a9はX/x、Y/yの作る9
+genotypeの観測値を表している。<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>a1はXXYY、a2はXXYy、a3はXXyy、…
+a8はxxYy、a9はxxyyに相当する。<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>また、<span lang=EN-US>p<sub>ＸＹｎ</sub>はhaplotype
+XYの世代nにおける推定頻度を表す。ただし、下付き数字nは0の場合、haplotype推定初期値に対応し、1以上の場合は上記で説明した非確定的haplotype数の分配作業の回数に相当する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>S＝a1+a2+…+a9である。<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>ＸＹ０</sub>＝(a1+1/2×a2+1/2×a4+1/4×a5)/S<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>Ｘｙ０</sub>＝(a3+1/2×a2+1/2×a6+1/4×a5)/S<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>ｘＹ０</sub>＝(a7+1/2×a4+1/2×a8+1/4×a5)/S<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>ｘｙ０</sub>＝(a9+1/2×a6+1/2×a8+1/4×a5)/S<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>ＸＹｎ</sub>＝(a1+1/2×a2+1/2×a4+(p<sub>ＸＹｎ-１</sub>×p<sub>ｘｙｎ-１</sub>/(p<sub>ＸＹｎ-１</sub>×p<sub>ｘｙｎ-１</sub>+p<sub>Ｘｙｎ-１</sub>×p<sub>ｘＹｎ-１</sub>))×a5)/S<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>Ｘｙｎ</sub>＝(a3+1/2×a2+1/2×a6+(p<sub>Ｘｙｎ-１</sub>×p<sub>ｘＹｎ-１</sub>/(p<sub>ＸＹｎ-１</sub>×p<sub>ｘｙｎ-１</sub>+p<sub>Ｘｙｎ-１</sub>×p<sub>ｘＹｎ-１</sub>))×a5)/S<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>ｘＹｎ</sub>＝(a7+1/2×a4+1/2×a8+(p<sub>Ｘｙｎ-１</sub>×p<sub>ｘＹｎ-１</sub>/(p<sub>ＸＹｎ-１</sub>×p<sub>ｘｙｎ-１</sub>+p<sub>Ｘｙｎ-１</sub>×p<sub>ｘＹｎ-１</sub>))×a5)/S<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>p<sub>ｘｙｎ</sub>＝(a9+1/2×a6+1/2×a8+(p<sub>ＸＹｎ-１</sub>×p<sub>ｘｙｎ-１</sub>/(p<sub>ＸＹｎ-１</sub>×p<sub>ｘｙｎ-１</sub>+p<sub>Ｘｙｎ-１</sub>×p<sub>ｘＹｎ-１</sub>))×a5)/S<o:p></o:p></span></p>
+
+</div>
+
+<hr size = "30" color = "#000060" noshade><p>
+カウンタ
+<script type="text/javascript"><!--
+    hatena_counter_name = "ryamada22";
+    hatena_counter_id = "12";
+    hatena_counter_ref = document.referrer+"";
+    hatena_counter_screen = screen.width + "x" + screen.height+","+screen.colorDepth;
+//--></script>
+<script type="text/javascript" src="http://counter.hatena.ne.jp/js/counter.js"></script>
+<noscript><img src="http://counter.hatena.ne.jp/ryamada22/12" border="0" alt="counter"></noscript>
+</body>
+
+</html>

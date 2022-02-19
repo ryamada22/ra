@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<title>表紙</title>
+<link href="menseki.doc">
+<link href="../mokuji/mokuji.htm">
+<link href="zenbunPDF/zenbun.pdf">
+<style type="text/css">
+<!--
+a:hover {  color: #9999CC}
+a {  color: #990000}
+-->
+</style>
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body lang=JA class="Normal" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('../img/Button_02b.jpg','../img/Button_05b.jpg','../img/Button_06b.jpg','../img/Button_07b.jpg')">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr> 
+    <td height="80" bgcolor="822828"> 
+      <div align="right"><a href="../index.html"><img src="../img/title_01red.jpg" width="300" height="80" border="0"></a><a href="../index.html"><img src="../img/home02-01.gif" width="15" height="17" border="0"></a></div>
+    </td>
+  </tr>
+  <tr> 
+    <td background="../img/Button_00.jpg" height="43"><img src="../img/title_03.jpg" width="28" height="43"><img src="../img/Button_01b.jpg" width="150" height="43"><a href="../haplotype/haplotype-anal-menu.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('but02','','../img/Button_02b.jpg',1)"><img src="../img/Button_02a.jpg" width="150" height="43" name="but02" border="0"></a><a href="../rmeta/menu.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('but06','','../img/Button_06b.jpg',1)"><img src="../img/Button_06a.jpg" width="150" height="43" name="but06" border="0"></a><a href="../poster/menu.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('but07','','../img/Button_07b.jpg',1)"><img src="../img/Button_07a.jpg" width="150" height="43" name="but07" border="0"></a><a href="../link.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('but05','','../img/Button_05b.jpg',1)"><img src="../img/Button_05a.jpg" width="150" height="43" name="but05" border="0"></a></td>
+  </tr>
+  <tr> 
+    <td bgcolor="DCD3C6" valign="top"> 
+      <div style='layout-grid:18.0pt' align="center"> 
+        <p align="center">　</p>
+        <p align="center"><font size="5"><font face="ＭＳ Ｐゴシック, Osaka" color="#000000"><b><img src="title_01.jpg" width="750" height="43"></b></font></font></p>
+        <p align="center">　</p>
+        <p align=center style='text-align:center;'><font face="ＭＳ Ｐゴシック, Osaka" color="#000000"><span style='font-family:"ＭＳ Ｐゴシック, Osaka"'> 
+          <a href="menseki.htm">「使用する前に必ずお読みください」</a></span></font></p>
+      </div>
+      <p align=center style='text-align:center;'><font face="ＭＳ Ｐゴシック, Osaka" color="#000000"><span style='font-family:"ＭＳ Ｐゴシック, Osaka"'> 
+        <a href="../mokuji/mokuji.htm" target="_blank">エクセルファイルにリンクされたWeb-site版を使う(まず目次へ)</a></span></font> 
+      <p align=center style='text-align:center;'><font face="ＭＳ Ｐゴシック, Osaka" color="#000000"><span lang=EN-US style='font-size:11.0pt;'> 
+        <a href="zenbunPDF/zenbun.pdf" target="_blank">文書のみのPDF fileを開く</a></span></font> 
+      <p align=center style='text-align:center;'><br>
+        <img src="../img/kame_tukimi.gif" width="100" height="60"></p>
+      <p align="center"> 
+        <script language="JavaScript">
+<!--
+document.fgColor="blue";
+myWeek  = new Array("日","月","火","水","木","金","土");
+myD     = new Date();
+myYear  = (myD.getYear() < 2000) ? 1900+myD.getYear() : myD.getYear();
+myMonth = myD.getMonth() + 1;
+myDate  = myYear + "年" + myMonth + "月" + myD.getDate() + "日";
+myDay   = myWeek[myD.getDay()] + "曜日";
+myTime  = myD.getHours() + "時" + myD.getMinutes() + "分" + myD.getSeconds() + "秒";
+myColTbl = new Array("#FF0000");
+document.write(myDate , " " , myDay);
+document.write("<BR>");
+document.write(myTime);
+// -->
+</script>
+      <p align=center><font size="+1" color="#000000">理化学研究所 遺伝子多型研究センター</font></p>
+      <p align="center"><font size="+1" color="#000000"><b>山田 亮 ■ 山本 一彦 ■ 中村 祐輔</b></font></p>
+      <p align="center">　</p>
+      <p align="center"><font color="#006666">監修･執筆･文責</font></p>
+      <p align="center"><font size="+1" color="#000000">理化学研究所 遺伝子多型研究センター</font></p>
+      <p align="center"><font size="+1" color="#000000">慢性関節リウマチ関連遺伝子研究チーム</font></p>
+      <p align="center"><font size="+1" color="#000000"><b>山田　亮</b></font></p>
+      <p align="center"><font color="#006666">分担執筆</font></p>
+      <p align="center"><font size="+1" color="#000000">東京大学医科学研究所 ヒトゲノム解析センター</font></p>
+      <p align="center"><font size="+1" color="#000000">ゲノムシークエンス解析分野</font></p>
+      <p align="center"><font size="+1" color="#000000"><b>芳賀　久典</b></font></p>
+      <p align="center"><font color="#006666">協　力</font></p>
+      <p align="center"><font size="+1" color="#000000">理化学研究所 遺伝子多型研究センター 心筋梗塞関連遺伝子研究チーム</font></p>
+      <p align="center"><font size="+1" color="#000000"><b>田中 敏博</b></font></p>
+      <p align="center"><font color="#000000"><b><font size="+1">大西 洋三</font></b></font></p>
+      <p align="center"><font size="+1" color="#000000">理化学研究所 遺伝子多型研究センター 遺伝子多型情報解析研究チーム</font></p>
+      <p align="center"><font size="+1" color="#000000"><b>角田 達彦</b></font></p>
+      <p align="center"><font size="+1" color="#000000">平成12年度 東京大学医科学研究所/JST 
+        SNPミーティング</font></p>
+      <p align="center"><font size="+1" color="#000000"><b>構成員一同</b></font></p>
+      
+    </td>
+  </tr>
+</table>  
+</body>
+</html>

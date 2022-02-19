@@ -1,0 +1,61 @@
+<html lang="ja">
+
+<head>
+<title>NJ</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+</head>
+
+
+<body bgcolor="ccffff">
+
+<h1>Neighbor-JoiningメソッドによるDiploid型ジェノタイプデータから個人間距離行列を作成しその行列をもとにNewick書式の作成<hr></h1>
+
+
+<blockquote>
+
+
+
+<form method=post action="../../../cgi-bin/ra/haplotype/NJruiji-sort-entropy_genotype2.cgi">
+１ローカス１ジェノタイプ、タブ区切り<br>
+１個人１行で個人の入れ替えは改行区切り<br>
+ハプロタイプ型の長さはそろえてください。<br>
+ボックス内のサンプルは、ローカス数が４個で個人が３人記入された例です。<br>
+頻度のボックスはブランクのままでも<br>
+頻度のボックスがブランクの場合はentropyの値は正しくありません。<br>
+頻度を入力する場合は、必ず、ハプロタイプの数だけ入力してください。<br>
+ハプロタイプ型・頻度に空白は使用できません。<br>
+<br>
+<input type=submit value="ＮＪ法実行">
+
+<br>
+ハプロタイプ型<br>
+
+<textarea name="haplotype" cols=100 rows=20>
+0	5	3	8
+1	5	3	1
+0	0	1	56
+</textarea>
+
+
+
+<textarea name="frequency" cols=12 rows=15>
+
+</textarea>
+
+<br>
+</form>
+</blockquote>
+<p>
+<hr>
+<p>
+
+<ADDRESS>
+	理化学研究所横浜研究所　SRC関節リウマチ関連遺伝子研究チーム　山田　亮<p>
+	e-mail to 
+	<A HREF = "mailto:ryamada@src.riken.go.jp">ryamada@src.riken.go.jp</A>
+</ADDRESS>
+
+<p>
+</body>
+
+</html>

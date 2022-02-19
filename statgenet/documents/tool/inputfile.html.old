@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta name="keywords" content="R">
+<meta http-equiv="Content-Type" content="text/html;CHARSET=EUC-JP">
+<title>tAvEnter_ver1.0 チュートリアル</title>
+</head>
+
+<body bgcolor="#ffffff">
+<img src="../../../img/cat2.gif"  alt="logo">　
+<font size="+2"><b>tAvEnter_ver1.0 チュートリアル</b></font>　　　　　<br />Last modified: Nov 28, 2005
+<div align="right"><a href="../../index.html"><img src="../../../img/home_y.gif" border="0"></a>
+<font size=-1>&nbsp;TopPage </font></div>
+<hr size = "30" color = "#ff9900" noshade><p>
+
+<font size="+1"><b>1. 入力するハプロタイプファイルを指定します。</b></font>
+
+<ol>
+<br />
+	&nbsp; &nbsp; *メニューバー -->「Start」--> 「Select input file」をクリック。<br />
+	&nbsp; &nbsp; *Select a haplotype fileダイアログが表示されます。<br />
+	&nbsp; &nbsp; *ハプロタイプファイルを選択します。<br />
+<br /><br />
+	<strong><入力ファイルフォーマット></strong><br /><br />
+	&nbsp; &nbsp; *ヘッダーなしのテキストファイルであること。<br />
+	&nbsp; &nbsp; *１ハプロタイプデータごとに改行すること。<br />
+	&nbsp; &nbsp; *数値の[0][1]のみで構成すること。<br />
+	&nbsp; &nbsp; *空白は含めないこと。<br />
+	<br />&nbsp; （例）
+	<ul>100110000100001000001</ul>
+	<ul>100110100000001000000</ul>
+	<ul>100110001000001101000</ul>
+	<ul>100110000000000000000</ul>
+	<ul>100110001000001101010</ul>
+	<ul>100000100000001000000</ul>
+	<ul>100000100000001000010</ul>
+	<ul>100000100000001000001</ul>
+	<ul>以下略</ul>
+</ol>
+<hr />
+<font size="+1"><b><a href="./selectdir.html">次へ</a></b></font>
+</body>
+</html>

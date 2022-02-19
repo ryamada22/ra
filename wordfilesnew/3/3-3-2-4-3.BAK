@@ -1,0 +1,1486 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-3-2-4-3.files/filelist.xml">
+<link rel=Edit-Time-Data href="3-3-2-4-3.files/editdata.mso">
+<link rel=OLE-Object-Data href="3-3-2-4-3.files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>複数マーカーデータによる所属クラスター推定法(筆者の(勝手な命名) (ref Jonathan K</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>533</o:TotalTime>
+  <o:LastPrinted>2001-08-20T06:26:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:17:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:17:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>587</o:Words>
+  <o:Characters>3347</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Lines>27</o:Lines>
+  <o:Paragraphs>7</o:Paragraphs>
+  <o:CharactersWithSpaces>3927</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>9.05 pt</w:DrawingGridHorizontalSpacing>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"MS Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	background:navy;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-3-2-4-3.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:104006613;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1726806076 -899412946 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l0:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:97.2pt;
+	mso-level-number-position:left;
+	margin-left:97.2pt;
+	text-indent:-19.2pt;}
+@list l1
+	{mso-list-id:106387683;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1902112018 -899412946 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l1:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:97.2pt;
+	mso-level-number-position:left;
+	margin-left:97.2pt;
+	text-indent:-19.2pt;}
+@list l2
+	{mso-list-id:276566774;
+	mso-list-type:hybrid;
+	mso-list-template-ids:808066066 -1703765184 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l2:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:190.7pt;
+	mso-level-number-position:left;
+	margin-left:190.7pt;
+	text-indent:-22.7pt;}
+@list l3
+	{mso-list-id:548615191;
+	mso-list-type:hybrid;
+	mso-list-template-ids:502944364 -2111019032 -1943737138 67698705 67698703 67698689 67698689 67698689 67698689 67698705;}
+@list l3:level1
+	{mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;
+	font-family:"ＭＳ 明朝";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";}
+@list l3:level2
+	{mso-level-text:（%2）;
+	mso-level-tab-stop:57.0pt;
+	mso-level-number-position:left;
+	margin-left:46.8pt;
+	text-indent:-25.8pt;
+	font-family:"ＭＳ 明朝";
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";}
+@list l3:level3
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%3;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:105.0pt;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:105.0pt;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:126.0pt;
+	mso-level-number-position:left;
+	margin-left:126.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l3:level9
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%9;
+	mso-level-tab-stop:189.0pt;
+	mso-level-number-position:left;
+	margin-left:189.0pt;
+	text-indent:-21.0pt;}
+@list l4
+	{mso-list-id:594020507;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1643189196 -899412946 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l4:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:97.2pt;
+	mso-level-number-position:left;
+	margin-left:97.2pt;
+	text-indent:-19.2pt;}
+@list l5
+	{mso-list-id:605238982;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-206400330 -1703765184 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l5:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:190.7pt;
+	mso-level-number-position:left;
+	margin-left:190.7pt;
+	text-indent:-22.7pt;}
+@list l6
+	{mso-list-id:644317069;
+	mso-list-type:hybrid;
+	mso-list-template-ids:864872868 67698703 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l6:level1
+	{mso-level-tab-stop:42.0pt;
+	mso-level-number-position:left;
+	margin-left:42.0pt;
+	text-indent:-21.0pt;}
+@list l7
+	{mso-list-id:938686211;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1798351022 489986442 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l7:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:75.6pt;
+	mso-level-number-position:left;
+	margin-left:75.6pt;
+	text-indent:-21.6pt;}
+@list l8
+	{mso-list-id:1001274178;
+	mso-list-type:hybrid;
+	mso-list-template-ids:641873600 1606694516 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l8:level1
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%1;
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+@list l9
+	{mso-list-id:1121261401;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-490544684 -899412946 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l9:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:97.2pt;
+	mso-level-number-position:left;
+	margin-left:97.2pt;
+	text-indent:-19.2pt;}
+@list l10
+	{mso-list-id:1210653593;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1500306232 2018658102 67698699 67698701 67698689 67698699 67698701 67698689 67698699 67698701;}
+@list l10:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:○;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-family:"ＭＳ Ｐゴシック";
+	mso-bidi-font-family:Arial;}
+@list l10:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:105.0pt;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;
+	font-family:Wingdings;}
+@list l11
+	{mso-list-id:1224098301;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1762898896 -1479276876 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l11:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:102.0pt;
+	mso-level-number-position:left;
+	margin-left:102.0pt;
+	text-indent:-18.0pt;}
+@list l12
+	{mso-list-id:1396467676;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1507259284 -899412946 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l12:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:97.2pt;
+	mso-level-number-position:left;
+	margin-left:97.2pt;
+	text-indent:-19.2pt;}
+@list l13
+	{mso-list-id:1733193986;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1908824918 67698705 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l13:level1
+	{mso-level-number-format:decimal-enclosed-circle;
+	mso-level-text:%1;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l14
+	{mso-list-id:1910193211;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1039646776 489986442 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l14:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:75.6pt;
+	mso-level-number-position:left;
+	margin-left:75.6pt;
+	text-indent:-21.6pt;}
+@list l15
+	{mso-list-id:1911302473;
+	mso-list-type:hybrid;
+	mso-list-template-ids:111718818 67698703 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l15:level1
+	{mso-level-tab-stop:105.0pt;
+	mso-level-number-position:left;
+	margin-left:105.0pt;
+	text-indent:-21.0pt;}
+@list l16
+	{mso-list-id:2039045142;
+	mso-list-type:hybrid;
+	mso-list-template-ids:487214476 1219652190 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l16:level1
+	{mso-level-start-at:2;
+	mso-level-number-format:decimal-full-width;
+	mso-level-tab-stop:21.0pt;
+	mso-level-number-position:left;
+	margin-left:21.0pt;
+	text-indent:-21.0pt;}
+@list l17
+	{mso-list-id:2128161432;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1692125520 997084512 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l17:level1
+	{mso-level-start-at:5;
+	mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:45.35pt;
+	mso-level-number-position:left;
+	margin-left:45.35pt;
+	text-indent:-24.35pt;}
+@list l17:level2
+	{mso-level-number-format:aiueo-full-width;
+	mso-level-text:"\(%2\)";
+	mso-level-tab-stop:63.0pt;
+	mso-level-number-position:left;
+	margin-left:63.0pt;
+	text-indent:-21.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+  <o:rules v:ext="edit">
+   <o:r id="V:Rule2" type="callout" idref="#_x0000_s1083"/>
+   <o:r id="V:Rule3" type="callout" idref="#_x0000_s1084"/>
+  </o:rules>
+  <o:regrouptable v:ext="edit">
+   <o:entry new="1" old="0"/>
+  </o:regrouptable>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA link=blue vlink=purple style='tab-interval:0mm;text-justify-trim:
+punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal style='mso-outline-level:1'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>3-3-2-4-3マルコフ連鎖モンテカルロ法による民族学的差の解析について<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><span
+style='mso-spacerun:yes'>&nbsp;</span>(<a
+href="http://10.34.68.62/ra/wordfiles/3/Prichard-structure.pdf">ref Jonathan K.
+Prichard, Matthew Stephens and Peter Donnelly. Inference of population
+structure using multilocus genotype data. Genetics. 155: 945-959, 2000</a>)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l3 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>全体像<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1'><![if !supportLists]><span
+lang=EN-US style='font-family:"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span
+style='mso-list:Ignore'>（1）<span style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>扱うパラメタは以下のとおり。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>既知パラメタ<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:0mm;mso-list:l5 level1 lfo9;
+tab-stops:list 78.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>個人別・遺伝マーカー別<span lang=EN-US>genotype<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>②<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>未知<span lang=EN-US>(推定)パラメタ<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:0mm;mso-list:l2 level1 lfo11;
+tab-stops:list 78.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>クラスタ数<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:0mm;mso-list:l2 level1 lfo11;
+tab-stops:list 78.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>クラスタ別・遺伝マーカー別頻度<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:78.0pt;text-indent:0mm;mso-list:l2 level1 lfo11;
+tab-stops:list 78.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>c)<span
+style='font:7.0pt "Times New Roman"'> </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>個人別所属クラスタ<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（2）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>解決しようとしているのは<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>既知パラメタから、未知パラメタの期待値<span lang=EN-US>(その他信頼区間など)を求める。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（3）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>上記の問題は以下のような理由により、算術的に得られないことがしばしばである。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>複雑な積分を用いる必要がある。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>②<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>高次元の解である。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>③<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>そもそも解析解が得られえない分布である。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（4）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>したがって、算術的方法以外の解法が必要である。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l3 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>算術的方法以外の方法として採用される「マルコフ連鎖モンテカルロ法<span lang=EN-US>(MCMC)」の概説<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（1）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝";mso-bidi-font-family:Arial'>モンテカルロ法とマルコフ連鎖を組み合わせた推定法のことである</span><span
+style='font-family:"ＭＳ 明朝"'>。集団の遺伝的構造解析のように、多数の未知パラメタの推定をおこなう場合には､<span
+lang=EN-US>MCMC法を実践するにあたって、さらに工夫が必要で、Metropolis-Hastings(M-H)アルゴリズムを用いて定常分布(推定解)に近づく必要があり、さらに、M-Hアルゴリズムの実行時に使用する関数(分布)には、Gibbsサンプラと呼ばれる条件付き分布(関数)を用いるのが通例となっている。このGibbsサンプラからの乱数発生にはAdaptive
+Rejection samplingという方法を併用する必要がある。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（2）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝";mso-bidi-font-family:Arial'>モンテカルロ法とは</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝";mso-bidi-font-family:Arial'>統計学の実験的手法の１つである。乱数を発生させてシミュレーションを行い、確率的に解を得る方法である。適切な解を得るためには、乱数の発生に条件を設定する必要がある。その条件設定方法の一つがマルコフ連鎖である。</span><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（3）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>マルコフ連鎖とは<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>ある変数を順次、発生させるときに、現世代のパラメタの値<span lang=EN-US>(のセット)のみをもとに次世代のパラメタの値を発生させる方法のことである。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（4）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Metropolis-Hastingsアルゴリズムとは<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>マルコフ連鎖を用いて、世代を順次進めていくときに、次世代のパラメタの値を得るためには、次世代のパラメタ値をある分布<span
+lang=EN-US>(関数)(サンプラと呼ぶ)から作り出し､その作られた値を次世代のパラメタの値として妥当かどうかを判断する、という手続きを踏むと未知パラメタの値(のセット)が定常状態(推定値)に向かうことが知られている。このような新世代のパラメタ値の作り方をM-Hアルゴリズムと呼ぶ。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（5）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Gibbsサンプラとは<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>M-Hアルゴリズムを実行する(現世代パラメタ値(のセット)から次世代のパラメタ値(のセット)を得る)ときに用いるサンプラ(分布(関数))のタイプの一つである｡このサンプラの特徴は、<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:73.5pt;mso-para-margin-left:7.0gd'><span
+style='font-family:"ＭＳ 明朝"'>「複数のパラメタがあり、その個々のパラメタを推定するときに、自身を除くその他の既知・未知パラメタの現時点での値によって推定することができる、言い換えれば､その推定作業には現時点の自身の値は影響を与えない」<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;mso-para-margin-left:6.0gd'><span
+style='font-family:"ＭＳ 明朝"'>というものである。このような分布のことを「フル条件付き分布」という。このような条件は、個々のパラメタの新世代の値を１つ１つ作ればよいのでアルゴリズムとして簡単である｡しかしながら、アルゴリズムとして簡単であるがゆえに、乱数の発生が困難であることが多く､次の<span
+lang=EN-US>Adaptive Rejection samplingを導入することが必要である｡<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（6）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Adaptive Rejection samplingとは<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l8 level1 lfo6;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>フル条件付き分布から直接乱数を発生させることは容易ではないので<span lang=EN-US>(複雑な積分計算を伴うことが多いため)、乱数を発生させることが容易な代理の分布を作成し、その2分布の関係を用いて乱数を発生させるという方法である。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-indent:-21.0pt;mso-list:l3 level1 lfo1;
+tab-stops:list 21.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>SNPを用いたMCMC法による遺伝的構造解析の実際<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（1）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>パラメタ<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>既知パラメタ<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l4 level1 lfo12;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>個人別・遺伝マーカー別<span lang=EN-US>genotype　<b><i>X</i></b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><i><span lang=EN-US style='font-family:"ＭＳ 明朝"'>X</span></i></b><span
+style='font-family:"ＭＳ 明朝"'>は要素数＝<span lang=EN-US>(人数)×(SNP数)の行列である<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>②<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>未知パラメタ<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l9 level1 lfo15;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>クラスタ数（固定し、クラスタ数別にシミュレーションする）<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l9 level1 lfo15;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>クラスタ別・遺伝マーカー別頻度　<b><i><span lang=EN-US>P</span></i></b><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><i><span lang=EN-US style='font-family:"ＭＳ 明朝"'>P</span></i></b><span
+style='font-family:"ＭＳ 明朝"'>は要素数＝<span lang=EN-US>(クラスタ数)×(ＳＮＰ数)の行列である<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l9 level1 lfo15;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>個人別所属クラスタ　<b><i><span lang=EN-US>Z</span></i></b><span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><i><span lang=EN-US style='font-family:"ＭＳ 明朝"'>Z</span></i></b><span
+style='font-family:"ＭＳ 明朝"'>は要素数＝<span lang=EN-US>(人数)の1次元行列である<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（2）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>推定の流れ<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-family:"ＭＳ 明朝"'>Ｚ</span></i></b><span style='font-family:"ＭＳ 明朝"'>の初期値設定<span
+lang=EN-US>(以下の２方法で行える) <b><i>Z<sub>0</sub></i></b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>②<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>以下、マルコフ連鎖による推定の繰り返し<span lang=EN-US>(m=1,2,3,…は繰り返し回数)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l0 level1 lfo16;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>X</span></i></b><span style='font-family:
+"ＭＳ 明朝"'>及び<b><i>Ｚ<sub><span lang=EN-US>m-1</span></sub></i></b>より、<b><i><span
+lang=EN-US>P<sub>m</sub></span></i></b>を推定する<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l0 level1 lfo16;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>X</span></i></b><span style='font-family:
+"ＭＳ 明朝"'>及び<b><i><span lang=EN-US>P<sub>m</sub></span></i></b>より<b><i><span
+lang=EN-US>Z<sub>m</sub></span></i></b>を推定する<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>③<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Z</span></i></b><span style='font-family:
+"ＭＳ 明朝"'>の初期設定の影響がなくなった後の推定<b><i><span lang=EN-US>P<sub>m</sub></span></i></b>、<b><i><span
+lang=EN-US>Z<sub>m</sub></span></i></b>の分布が得られる｡これがある観測データ<b><i><span
+lang=EN-US>X</span></i></b>が与えられたときの<b><i><span lang=EN-US>P</span></i></b>及び<b><i><span
+lang=EN-US>Z</span></i></b>の推定値の分布である<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:46.8pt;text-indent:-25.8pt;mso-list:l3 level2 lfo1;
+tab-stops:list 57.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>（3）<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>推定の各段階の詳細<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>①<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+style='font-family:"ＭＳ 明朝"'>Ｚ</span></i></b><span style='font-family:"ＭＳ 明朝"'>の初期値設定<span
+lang=EN-US>(以下の２方法で行える) <b><i>Z<sub>0</sub></i></b><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l12 level1 lfo17;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>ランダムに設定<span lang=EN-US>(指定クラスタに均等な確率で割り当て)<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l12 level1 lfo17;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>サンプリング地域などにより個人別に特定<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt;mso-list:l3 level3 lfo1;
+tab-stops:list 63.0pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>②<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"ＭＳ 明朝"'>マルコフ連鎖<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l1 level1 lfo18;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>X</span></i></b><span style='font-family:
+"ＭＳ 明朝"'>及び<b><i>Ｚ<sub><span lang=EN-US>m-1</span></sub></i></b>より、<b><i><span
+lang=EN-US>P<sub>m</sub></span></i></b>を推定する<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>クラスタ<span
+lang=EN-US>c・SNP s のアレル頻度がt(0≦t≦1)の確率分布Pr(t)は<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:168.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>Pr(t)=t<sup>n1</sup>x(1-t)<sup>n2</sup>/(Constant)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;mso-para-margin-left:12.0gd'><span
+style='font-family:"ＭＳ 明朝"'>で与えられる｡但し<span lang=EN-US>Constant<span
+style='mso-spacerun:yes'>&nbsp; </span>= <sub><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:45pt;
+ height:18.75pt' o:ole="">
+ <v:imagedata src="3-3-2-4-3.files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=60 height=25
+src="3-3-2-4-3.files/image002.gif" v:shapes="_x0000_i1025"><![endif]></sub>を満たす。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;mso-para-margin-left:12.0gd'><span
+style='font-family:"ＭＳ 明朝"'>これはβ分布であり、<span lang=EN-US>Dirichlet分布の要素が２の場合に補正係数を(1,1)とした場合(Uniform
+distributionを仮定している)である。つまり、Prichardらのプログラム “structure”と同様の設定となっている。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>クラスタ別・<span
+lang=EN-US>SNP別にアレルの本数を数える。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>アレル１の本数を<span
+lang=EN-US>n1、アレル２の本数をn2とすると<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:168.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>n1=n2=0の場合と<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:168.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'>n1=1 またはn2=1の場合は<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:178.5pt;mso-para-margin-left:17.0gd'><span
+style='font-family:"ＭＳ 明朝"'>分布<span lang=EN-US>Pr(t)から直接乱数が発生できるので、その値をpの次世代の値として採用する<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:168.0pt;mso-para-margin-left:16.0gd'><span
+style='font-family:"ＭＳ 明朝"'>それ以外の場合は<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:178.5pt;mso-para-margin-left:17.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Adaptive Rejection samplingを行ってpの次世代の値を得る<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:189.0pt;mso-para-margin-left:18.0gd'><span
+style='font-family:"ＭＳ 明朝"'>このとき必要な<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>Π<span lang=EN-US>(t)≧Pr(t)を常に満たすような分布Π(t)は以下のようにして作成する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>&lt;Π(t)の作成&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Pr(t)は下図のように描かれて、それは1次導関数、2次導関数の正負によって４区分に分けられる。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><!--[if gte vml 1]><v:line
+ id="_x0000_s1028" style='position:absolute;left:0;text-align:left;flip:y;
+ z-index:4' from="326.45pt,19.75pt" to="326.45pt,127.75pt" strokeweight=".5pt">
+ <w:wrap side="right"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:4;left:0px;margin-left:434px;margin-top:25px;width:2px;
+height:146px'><img width=2 height=146 src="3-3-2-4-3.files/image003.gif"
+v:shapes="_x0000_s1028"></span><![endif]><!--[if gte vml 1]><v:line id="_x0000_s1027"
+ style='position:absolute;left:0;text-align:left;flip:y;z-index:3' from="361.7pt,64pt"
+ to="361.7pt,127.75pt" strokeweight=".5pt">
+ <w:wrap side="right"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:3;left:0px;margin-left:481px;margin-top:84px;width:2px;
+height:87px'><img width=2 height=87 src="3-3-2-4-3.files/image004.gif" v:shapes="_x0000_s1027"></span><![endif]><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:223.5pt;height:138.75pt'>
+ <v:imagedata src="3-3-2-4-3.files/image005.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=298 height=185
+src="3-3-2-4-3.files/image006.gif" v:shapes="_x0000_i1026"><![endif]></span><!--[if gte vml 1]><v:line
+ id="_x0000_s1026" style='position:absolute;left:0;text-align:left;flip:y;
+ z-index:2;mso-position-horizontal-relative:text;
+ mso-position-vertical-relative:text' from="291.45pt,55.25pt" to="291.45pt,128.75pt"
+ strokeweight=".5pt">
+ <w:wrap side="right"/>
+</v:line><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+absolute;z-index:2;left:0px;margin-left:388px;margin-top:73px;width:2px;
+height:100px'><img width=2 height=100 src="3-3-2-4-3.files/image007.gif"
+v:shapes="_x0000_s1026"></span><![endif]><span lang=EN-US style='font-family:
+"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>区分<span lang=EN-US>1：0－t<sub>1</sub>は下に凸の増加関数<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>区分<span lang=EN-US>2：t<sub>1</sub>－t<sub>2</sub>は上に凸の増加関数<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>区分<span lang=EN-US>3：t<sub>2</sub>－t<sub>3</sub>は上に凸の減少関数<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>区分<span lang=EN-US>4：t<sub>3</sub>－t<sub>4</sub>は下に凸の減少関数<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>例図は<span lang=EN-US>n1=3, n2=2の場合である。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>但し、<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:174pt;height:99.75pt' o:ole="">
+ <v:imagedata src="3-3-2-4-3.files/image008.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=232 height=133
+src="3-3-2-4-3.files/image009.gif" v:shapes="_x0000_i1027"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1027"
+  DrawAspect="Content" ObjectID="_1194278669">
+ </o:OLEObject>
+</xml><![endif]--><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>区分１と区分４とは下に凸なので、任意の点を結んだ直線がΠ<span lang=EN-US>(t)として採用できる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>一方、区分２と区分３とは、上に凸なので、<span lang=EN-US>Pr(t)上の2点(C<sub>0</sub>,C<sub>1</sub>…)を結ぶ直線は必ずPr(t)そのものよりも小さい値をとる。したがって下図で→で指し示したように、Pr(t)上の隣り合う2点同士を結ぶ直線の交点として得られる点(D<sub>0</sub>,D<sub>1</sub>…)
+をΠ(t)の点として採用し､これと、Pr(t)上の点(C<sub>0</sub>,C<sub>1</sub>…)とを交互に結んだ折れ線をΠ(t)とする。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><!--[if gte vml 1]><v:group
+ id="_x0000_s1094" style='position:absolute;left:0;text-align:left;
+ margin-left:174.95pt;margin-top:327.85pt;width:321.25pt;height:220.8pt;
+ z-index:1;mso-position-vertical-relative:page' coordorigin="4705,12285"
+ coordsize="6425,4416">
+ <v:line id="_x0000_s1064" style='position:absolute' from="4972,12967" to="10200,12967"
+  o:regroupid="1"/>
+ <v:shape id="_x0000_s1065" style='position:absolute;left:4905;top:12944;
+  width:3868;height:3387;mso-position-horizontal:absolute;
+  mso-position-vertical:absolute' coordsize="6060,5610" o:regroupid="1" path="m,5610c152,5393,692,4758,915,4305v223,-453,260,-960,420,-1410c1495,2445,1597,2008,1875,1605,2153,1202,2525,735,3000,480,3475,225,4215,,4725,75v510,75,1057,677,1335,855e"
+  filled="f" strokeweight=".5pt">
+  <v:path arrowok="t"/>
+ </v:shape><v:shape id="_x0000_s1066" style='position:absolute;left:5623;top:12858;
+  width:2687;height:783' coordsize="4209,1297" o:regroupid="1" path="m4209,l,1297e"
+  filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:shape id="_x0000_s1067" style='position:absolute;left:5298;top:13189;
+  width:1149;height:2426;mso-position-horizontal:absolute;
+  mso-position-vertical:absolute' coordsize="1800,4020" o:regroupid="1" path="m1800,l,4020e"
+  filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:shape id="_x0000_s1068" style='position:absolute;left:5326;top:13859;
+  width:642;height:2273;mso-position-horizontal:absolute;
+  mso-position-vertical:absolute' coordsize="1005,3765" o:regroupid="1" path="m1005,l,3765e"
+  filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:line id="_x0000_s1069" style='position:absolute' from="5495,14706"
+  to="5495,16245" o:regroupid="1"/>
+ <v:shape id="_x0000_s1070" style='position:absolute;left:5499;top:12750;
+  width:1738;height:1788;mso-position-horizontal:absolute;
+  mso-position-vertical:absolute' coordsize="2724,2962" o:regroupid="1" path="m2724,l,2962e"
+  filled="f">
+  <v:path arrowok="t"/>
+ </v:shape><v:line id="_x0000_s1071" style='position:absolute' from="7908,12967"
+  to="7908,16118" o:regroupid="1">
+  <v:stroke dashstyle="dash"/>
+ </v:line><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+  path="m,l,21600r21600,l21600,xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s1072" type="#_x0000_t202" style='position:absolute;
+  left:7480;top:16118;width:876;height:466' o:regroupid="1" filled="f"
+  stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1072'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>t<sub>2</sub></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1073" type="#_x0000_t202" style='position:absolute;
+  left:5227;top:16245;width:536;height:456' o:regroupid="1" filled="f"
+  stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1073'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>t<sub>1</sub></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1074" type="#_x0000_t202" style='position:absolute;
+  left:5495;top:15901;width:1090;height:506' o:regroupid="1" filled="f"
+  stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1074'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>←垂直</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1075" type="#_x0000_t202" style='position:absolute;
+  left:5495;top:12431;width:1360;height:536' o:regroupid="1" filled="f"
+  stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1075'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>↓水平</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shapetype id="_x0000_t120" coordsize="21600,21600" o:spt="120"
+  path="m10800,qx,10800,10800,21600,21600,10800,10800,xe">
+  <v:path gradientshapeok="t" o:connecttype="custom" o:connectlocs="10800,0;3163,3163;0,10800;3163,18437;10800,21600;18437,18437;21600,10800;18437,3163"
+   textboxrect="3163,3163,18437,18437"/>
+ </v:shapetype><v:shape id="_x0000_s1076" type="#_x0000_t120" style='position:absolute;
+  left:6299;top:13405;width:64;height:60' o:regroupid="1" fillcolor="#333"/>
+ <v:shape id="_x0000_s1077" type="#_x0000_t120" style='position:absolute;
+  left:5859;top:14102;width:64;height:60' o:regroupid="1" fillcolor="#333"/>
+ <v:shape id="_x0000_s1078" type="#_x0000_t120" style='position:absolute;
+  left:5466;top:15143;width:64;height:61' o:regroupid="1" fillcolor="#333"/>
+ <v:shape id="_x0000_s1079" type="#_x0000_t120" style='position:absolute;
+  left:6998;top:12934;width:64;height:60' o:regroupid="1" fillcolor="#333"/>
+ <v:shape id="_x0000_s1081" style='position:absolute;left:5498;top:12960;
+  width:2407;height:2565;mso-position-horizontal:absolute;
+  mso-position-vertical:absolute' coordsize="2407,2565" path="m,2565l,2220,232,1755,382,1170,592,960,840,458r322,-83l1522,r885,8e"
+  filled="f" strokeweight="1.75pt">
+  <v:path arrowok="t"/>
+ </v:shape><v:shapetype id="_x0000_t41" coordsize="21600,21600" o:spt="41"
+  adj="-8280,24300,-1800,4050" path="m@0@1l@2@3nfem,l21600,r,21600l,21600nsxe">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="val #0"/>
+   <v:f eqn="val #1"/>
+   <v:f eqn="val #2"/>
+   <v:f eqn="val #3"/>
+  </v:formulas>
+  <v:path arrowok="t" o:extrusionok="f" gradientshapeok="t" o:connecttype="custom"
+   o:connectlocs="@0,@1;10800,0;10800,21600;0,10800;21600,10800"/>
+  <v:handles>
+   <v:h position="#0,#1"/>
+   <v:h position="#2,#3"/>
+  </v:handles>
+  <o:callout v:ext="edit" type="oneSegment" on="t" textborder="f"/>
+ </v:shapetype><v:shape id="_x0000_s1083" type="#_x0000_t41" style='position:absolute;
+  left:9690;top:13350;width:1440;height:510' adj="-16425,-635,,7624,-18420,-4405,-16425,-635">
+  <v:textbox>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>曲線</span><span lang=EN-US> Pr(t)</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1084" type="#_x0000_t41" style='position:absolute;
+  left:8805;top:12285;width:1605;height:510' adj="-20187,28588,-1615,7624,-16123,-16475,-14333,-12706">
+  <v:textbox>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal><span style='font-family:"ＭＳ 明朝";mso-ascii-font-family:
+     Century;mso-hansi-font-family:Century'>折れ線</span> <span style='font-family:
+     "ＭＳ 明朝";mso-ascii-font-family:Century;mso-hansi-font-family:Century'>Π</span><span
+     lang=EN-US>(t)</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+  <o:callout v:ext="edit" minusy="t"/>
+ </v:shape><v:shape id="_x0000_s1085" type="#_x0000_t202" style='position:absolute;
+  left:5245;top:15338;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1085'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>C<sub>0</sub></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1086" type="#_x0000_t202" style='position:absolute;
+  left:5545;top:14453;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1086'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>C<sub>1</sub></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1087" type="#_x0000_t202" style='position:absolute;
+  left:5905;top:13703;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1087'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>C<sub>2</sub></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1088" type="#_x0000_t202" style='position:absolute;
+  left:6415;top:13223;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1088'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>C<sub>3</sub></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1089" type="#_x0000_t202" style='position:absolute;
+  left:7630;top:12968;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1089'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>C<sub>4</sub></span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1090" type="#_x0000_t202" style='position:absolute;
+  left:4705;top:14933;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1090'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>D<sub>0</sub></span><span style='font-family:"ＭＳ 明朝";
+     mso-ascii-font-family:Century;mso-hansi-font-family:Century'>→</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1091" type="#_x0000_t202" style='position:absolute;
+  left:5170;top:13868;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1091'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>D<sub>1</sub></span><span style='font-family:"ＭＳ 明朝";
+     mso-ascii-font-family:Century;mso-hansi-font-family:Century'>→</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1092" type="#_x0000_t202" style='position:absolute;
+  left:5755;top:13028;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1092'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>D<sub>2</sub></span><span style='font-family:"ＭＳ 明朝";
+     mso-ascii-font-family:Century;mso-hansi-font-family:Century'>↓</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><v:shape id="_x0000_s1093" type="#_x0000_t202" style='position:absolute;
+  left:6475;top:12563;width:876;height:466' filled="f" stroked="f">
+  <v:textbox style='mso-next-textbox:#_x0000_s1093'>
+   <![if !mso]>
+   <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+     <td><![endif]>
+     <div>
+     <p class=MsoNormal align=center style='text-align:center'><span
+     lang=EN-US>D<sub>3</sub></span><span style='font-family:"ＭＳ 明朝";
+     mso-ascii-font-family:Century;mso-hansi-font-family:Century'>↓</span></p>
+     </div>
+     <![if !mso]></td>
+    </tr>
+   </table>
+   <![endif]></v:textbox>
+ </v:shape><w:wrap side="right" anchory="page"/>
+</v:group><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=233 height=437></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=432 height=299 src="3-3-2-4-3.files/image010.gif" v:shapes="_x0000_s1094 _x0000_s1064 _x0000_s1065 _x0000_s1066 _x0000_s1067 _x0000_s1068 _x0000_s1069 _x0000_s1070 _x0000_s1071 _x0000_s1072 _x0000_s1073 _x0000_s1074 _x0000_s1075 _x0000_s1076 _x0000_s1077 _x0000_s1078 _x0000_s1079 _x0000_s1081 _x0000_s1083 _x0000_s1084 _x0000_s1085 _x0000_s1086 _x0000_s1087 _x0000_s1088 _x0000_s1089 _x0000_s1090 _x0000_s1091 _x0000_s1092 _x0000_s1093"></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>このようにして作成されたΠ<span lang=EN-US>(t)を用いて、乱数を発生させる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>Π<span lang=EN-US>(t)は有限個の点を結んだ折れ線なので、その積分は容易であり、したがって、このΠ(t)に比例する確率密度関数からは、乱数を発生させることは容易である｡<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>今､Π<span lang=EN-US>(t)から発生させた乱数をｒとする。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>これとは別に<span lang=EN-US>[0-1]の一様乱数qを発生させ､<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>q&lt;Π(r)/Pr(r)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>を満たした場合のみ<span lang=EN-US>rを採用すると<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>rはPr(t)に比例する確率密度関数から発生させた乱数に一致する.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>この採用された乱数が<span lang=EN-US>pの次世代の値である。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>もし、<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>q&lt;Π(r)/Pr(r)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:199.5pt;mso-para-margin-left:19.0gd'><span
+style='font-family:"ＭＳ 明朝"'>が満たされなまった場合には､Π<span lang=EN-US>(t)の再作成をして、乱数を発生しなおす。そのときに、Pr(t)上の点(t,Pr(t))を新たに加えて、より細かい折れ線Π(t)を作成する｡この新しいΠ(t)は必ず、それよりも前の段階のΠ(t)よりもPr(t)に近く､乱数が採用される確率は高くなる｡<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:97.2pt;text-indent:-19.2pt;mso-list:l1 level1 lfo18;
+tab-stops:list 97.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><b><i><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>X</span></i></b><span style='font-family:
+"ＭＳ 明朝"'>及び<b><i><span lang=EN-US>P<sub>m</sub></span></i></b>より<b><i><span
+lang=EN-US>Z<sub>m</sub></span></i></b>を推定する<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>個人<span
+lang=EN-US>iのgenotype dataから1,…ncのそれぞれのクラスタの事後確率を求め､その比率に応じて、iの出身クラスタを推定する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;text-indent:-21.0pt;mso-list:
+l3 level6 lfo1;tab-stops:list 126.0pt'><![if !supportLists]><span lang=EN-US
+style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings'><span style='mso-list:Ignore'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>前の段階において、クラスタ別・<span
+lang=EN-US>SNP別のアレル頻度は得られているからそれをp<!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1194278662">
+ </o:OLEObject>
+</xml><![endif]--><sub>(c,s)</sub>と表すと、個人iがクラスタcの出身である尤度Pr(i from c)は<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:136.5pt;mso-para-margin-left:13.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:122.25pt;height:26.25pt' o:ole="">
+ <v:imagedata src="3-3-2-4-3.files/image011.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=163 height=35
+src="3-3-2-4-3.files/image012.gif" v:shapes="_x0000_i1028"><![endif]></sub><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1028"
+  DrawAspect="Content" ObjectID="_1194278694">
+ </o:OLEObject>
+</xml><![endif]-->　とする。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;mso-para-margin-left:12.0gd'><span
+style='font-family:"ＭＳ 明朝"'>ただし、<span lang=EN-US>g(c,s)はクラスタ別・SNP別のgenotype頻度であり、<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:136.5pt;mso-para-margin-left:13.0gd'><span
+style='font-family:"ＭＳ 明朝"'>個人<span lang=EN-US>iのSNP sのgenotypeがアレル1のホモの場合は<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:147.0pt;mso-para-margin-left:14.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>g<sub>(c,s)</sub> = p<sub>(c,s)</sub><sup>2</sup><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:136.5pt;mso-para-margin-left:13.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>genotypeがヘテロの場合は<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:147.0pt;mso-para-margin-left:14.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>g<sub>(c,s)</sub> = 2 x p<sub>(c,s)</sub>
+x (1 - p<sub>(c,s)</sub>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:136.5pt;mso-para-margin-left:13.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>genotypeがアレル２のホモの場合は<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:147.0pt;mso-para-margin-left:14.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>g(c,s)=(1-p(c,s))<sup>2<o:p></o:p></sup></span></p>
+
+<p class=MsoNormal style='margin-left:136.5pt;mso-para-margin-left:13.0gd'><span
+style='font-family:"ＭＳ 明朝"'>で与えられる。<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>上記アルゴリズムを実行する上での詳細は、プログラムソース内の説明文を参照のこと。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:178.5pt;mso-para-margin-left:17.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:126.0pt;mso-para-margin-left:12.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:147.0pt'><span lang=EN-US
+style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

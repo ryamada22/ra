@@ -1,0 +1,2206 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<img src="../../img/kame_tukimi.gif" width="100" height="60">
+
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-3-2-3-3.files/filelist.xml">
+<link rel=Edit-Time-Data href="3-3-2-3-3.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>未</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>97</o:TotalTime>
+  <o:LastPrinted>2001-04-18T01:37:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:25:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:25:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>82</o:Words>
+  <o:Characters>472</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Bytes>50688</o:Bytes>
+  <o:Lines>3</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>553</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ActiveWritingStyle Lang="JA" VendorID="64" DLLVersion="131077" NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="JA" VendorID="64" DLLVersion="131078" NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131078"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"MS Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+h1
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h2
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h3
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h4
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+h5
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:normal;}
+h6
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:12.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:12.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:1.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex4, li.MsoIndex4, div.MsoIndex4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:15.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:3.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex5, li.MsoIndex5, div.MsoIndex5
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex6, li.MsoIndex6, div.MsoIndex6
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:25.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:5.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex7, li.MsoIndex7, div.MsoIndex7
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:30.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex8, li.MsoIndex8, div.MsoIndex8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:35.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:7.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndex9, li.MsoIndex9, div.MsoIndex9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:1.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:31.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:3.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:52.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:5.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:63.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:73.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:7.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
+	{mso-style-noshow:yes;
+	mso-style-next:"索引 1";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:6.0pt;
+	margin-right:0mm;
+	margin-bottom:12.0pt;
+	margin-left:0mm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;
+	font-weight:bold;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.5pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoEnvelopeAddress, li.MsoEnvelopeAddress, div.MsoEnvelopeAddress
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:14.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	mso-element:frame;
+	mso-element-frame-width:120.0mm;
+	mso-element-frame-height:40.0mm;
+	mso-element-frame-hspace:7.1pt;
+	mso-element-wrap:auto;
+	mso-element-anchor-horizontal:page;
+	mso-element-left:center;
+	mso-element-top:bottom;
+	mso-height-rule:exactly;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoEnvelopeReturn, li.MsoEnvelopeReturn, div.MsoEnvelopeReturn
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoToa, li.MsoToa, div.MsoToa
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.5pt;
+	mso-char-indent-count:-1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoMacroText, li.MsoMacroText, div.MsoMacroText
+	{mso-style-noshow:yes;
+	mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	mso-pagination:none;
+	tab-stops:21.25pt 42.55pt 63.8pt 30.0mm 106.3pt 127.55pt 148.8pt 60.0mm 191.35pt 212.6pt 233.85pt 255.1pt;
+	layout-grid-mode:char;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	mso-line-break-override:restrictions;
+	font-size:9.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoToaHeading, li.MsoToaHeading, div.MsoToaHeading
+	{mso-style-noshow:yes;
+	mso-style-next:標準;
+	margin-top:9.0pt;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-font-kerning:1.0pt;}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l9 level1 lfo1;
+	tab-stops:list 18.0pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l8 level1 lfo6;
+	tab-stops:list 18.0pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList3, li.MsoList3, div.MsoList3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList4, li.MsoList4, div.MsoList4
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoList5, li.MsoList5, div.MsoList5
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:39.25pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l7 level1 lfo2;
+	tab-stops:list 39.25pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet3, li.MsoListBullet3, div.MsoListBullet3
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l6 level1 lfo3;
+	tab-stops:list 60.55pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet4, li.MsoListBullet4, div.MsoListBullet4
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:81.8pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l5 level1 lfo4;
+	tab-stops:list 81.8pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListBullet5, li.MsoListBullet5, div.MsoListBullet5
+	{mso-style-update:auto;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:103.05pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l4 level1 lfo5;
+	tab-stops:list 103.05pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber2, li.MsoListNumber2, div.MsoListNumber2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:39.25pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:2.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l3 level1 lfo7;
+	tab-stops:list 39.25pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber3, li.MsoListNumber3, div.MsoListNumber3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:60.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l2 level1 lfo8;
+	tab-stops:list 60.55pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber4, li.MsoListNumber4, div.MsoListNumber4
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:81.8pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:6.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l1 level1 lfo9;
+	tab-stops:list 81.8pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListNumber5, li.MsoListNumber5, div.MsoListNumber5
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:103.05pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:8.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	mso-pagination:none;
+	mso-list:l0 level1 lfo10;
+	tab-stops:list 103.05pt;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0mm;
+	margin-bottom:6.0pt;
+	margin-left:0mm;
+	text-align:center;
+	mso-pagination:none;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-font-kerning:1.0pt;}
+p.MsoClosing, li.MsoClosing, div.MsoClosing
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoSignature, li.MsoSignature, div.MsoSignature
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue, li.MsoListContinue, div.MsoListContinue
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:21.25pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:2.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue2, li.MsoListContinue2, div.MsoListContinue2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:42.5pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:4.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue3, li.MsoListContinue3, div.MsoListContinue3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:63.75pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:6.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue4, li.MsoListContinue4, div.MsoListContinue4
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:85.0pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:8.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoListContinue5, li.MsoListContinue5, div.MsoListContinue5
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:9.0pt;
+	margin-left:106.25pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:9.0pt;
+	mso-para-margin-left:10.0gd;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoMessageHeader, li.MsoMessageHeader, div.MsoMessageHeader
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-48.0pt;
+	mso-char-indent-count:-4.0;
+	mso-pagination:none;
+	background:#CCCCCC;
+	mso-shading:windowtext;
+	mso-pattern:gray-20 auto;
+	border:none;
+	mso-border-alt:solid windowtext .75pt;
+	padding:0mm;
+	mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-font-kerning:1.0pt;}
+p.MsoSalutation, li.MsoSalutation, div.MsoSalutation
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{mso-style-parent:本文;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	mso-char-indent-count:1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{mso-style-parent:本文インデント;
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	mso-char-indent-count:1.0;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoNoteHeading, li.MsoNoteHeading, div.MsoNoteHeading
+	{mso-style-next:標準;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:200%;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:8.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:200%;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:0mm;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:4.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:8.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0mm;
+	margin-right:72.0pt;
+	margin-bottom:0mm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	mso-para-margin-top:0mm;
+	mso-para-margin-right:7.0gd;
+	mso-para-margin-bottom:0mm;
+	mso-para-margin-left:7.0gd;
+	mso-para-margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	background:navy;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"ＭＳ ゴシック";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	font-family:"ＭＳ 明朝";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";
+	mso-font-kerning:1.0pt;}
+p.MsoAutoSig, li.MsoAutoSig, div.MsoAutoSig
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+address
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-font-kerning:1.0pt;
+	font-style:italic;}
+pre
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:41.95pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-3-2-3-3.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:-1391946814;}
+@list l0:level1
+	{mso-level-style-link:"段落番号 5";
+	mso-level-tab-stop:103.05pt;
+	mso-level-number-position:left;
+	margin-left:103.05pt;
+	mso-para-margin-left:8.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:-1109107494;}
+@list l1:level1
+	{mso-level-style-link:"段落番号 4";
+	mso-level-tab-stop:81.8pt;
+	mso-level-number-position:left;
+	margin-left:81.8pt;
+	mso-para-margin-left:6.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:-1605174972;}
+@list l2:level1
+	{mso-level-style-link:"段落番号 3";
+	mso-level-tab-stop:60.55pt;
+	mso-level-number-position:left;
+	margin-left:60.55pt;
+	mso-para-margin-left:4.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:-1963022470;}
+@list l3:level1
+	{mso-level-style-link:"段落番号 2";
+	mso-level-tab-stop:39.25pt;
+	mso-level-number-position:left;
+	margin-left:39.25pt;
+	mso-para-margin-left:2.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:-1245547390;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 5";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:103.05pt;
+	mso-level-number-position:left;
+	margin-left:103.05pt;
+	mso-para-margin-left:8.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:973742920;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 4";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:81.8pt;
+	mso-level-number-position:left;
+	margin-left:81.8pt;
+	mso-para-margin-left:6.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:134151432;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 3";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:60.55pt;
+	mso-level-number-position:left;
+	margin-left:60.55pt;
+	mso-para-margin-left:4.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:547663792;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"箇条書き 2";
+	mso-level-text:\F06C;
+	mso-level-tab-stop:39.25pt;
+	mso-level-number-position:left;
+	margin-left:39.25pt;
+	mso-para-margin-left:2.0gd;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:908498912;}
+@list l8:level1
+	{mso-level-style-link:段落番号;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:55454672;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:箇条書き;
+	mso-level-text:\F06C;
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-char-indent-count:-2.0;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:41.95pt;text-justify-trim:punct-and-kana'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-3-2-3-3 真のローカスに近接す<span
+style='letter-spacing:-1.1pt'>る</span>SN<span style='letter-spacing:-1.1pt'>P</span>の､L<span
+style='letter-spacing:-1.1pt'>D</span>の強さとアレル頻度の乖離が検定力に及ぼす影響について<o:p></o:p></span></p>
+
+<p class=MsoHeader style='tab-stops:41.95pt;layout-grid-mode:both'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>真の疾患関連<span lang=EN-US>SNP におけるχ<sup>２</sup>値とそのSNPと連鎖不平衡関係にあるSNPにおけるχ<sup>２</sup>値との関係をグラフで示す。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>第１のグラフは、真の関連<span lang=EN-US>SNPの疾患アレル頻度p2を0.3とした時に、近傍SNPのアレル頻度p1と2
+SNP間の連鎖不平衡係数とによって近傍SNPのχ<sup>２</sup>値がどのように減衰するかを示したグラフである。2 SNPのアレル頻度が等しく、完全連鎖をしている場合に相当する点にピークがあり、そこから全方向に減衰している様子がわかる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>第<span lang=EN-US>2のグラフは、固定した連鎖不平衡係数の下で、2 SNPのアレル頻度が変化する場合、どのように減衰するかを示したグラフである。真の関連SNPの疾患アレル頻度と近傍SNPの連鎖しているアレル頻度とが一致している時にχ<sup>２</sup>値のピークが認められる。また、同時に、同じ連鎖不平衡係数の場合で2
+SNPのアレル頻度が等しい場合でも、疾患アレル頻度が中程度の場合をピークに、得られるχ<sup>２</sup>値が減少することも読み取れる。さらに、疾患アレル頻度が中程度の場合は、2
+SNP間のアレル頻度の差が開いても、χ<sup>２</sup>値の減衰の程度が緩やかであることも読み取れる。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:line id="_x0000_s1031" style='position:absolute;
+ left:0;text-align:left;z-index:3;mso-position-vertical-relative:page' from="299.25pt,382.85pt"
+ to="308.25pt,400.9pt">
+ <v:stroke endarrow="open" endarrowwidth="narrow" endarrowlength="short"/>
+ <w:wrap anchory="page"/>
+</v:line><v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202"
+ path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1037" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:281.25pt;margin-top:361.5pt;width:84.75pt;
+ height:18pt;z-index:7' stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1037' inset="0,0,0,0"/>
+</v:shape><v:shape id="_x0000_s1039" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:351.75pt;margin-top:307.5pt;width:113.25pt;
+ height:37.5pt;z-index:8' stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1039' inset="0,0,0,0">
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-family:"ＭＳ 明朝"'>近傍<span lang=EN-US>SNPのχ<sup>２</sup>値/<o:p></o:p></span></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-family:"ＭＳ 明朝"'>真の関連<span lang=EN-US>SNPのχ<sup>２</sup>値<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><v:shape id="_x0000_s1045" style='position:absolute;left:0;
+ text-align:left;margin-left:348.3pt;margin-top:310.7pt;width:8.25pt;height:5.45pt;
+ z-index:11;mso-position-horizontal:absolute;mso-position-vertical:absolute'
+ coordsize="165,109" path="m15,hdc105,30,45,,15,30,4,41,5,60,,75v17,6,73,34,90,c97,61,80,45,75,30,70,45,49,64,60,75,71,86,92,69,105,60,123,48,135,30,150,15v,,10,30,15,45c145,65,126,75,105,75,89,75,60,76,60,60v,-18,64,-15,75,-15hae"
+ filled="f" strokecolor="white" strokeweight="1.25pt">
+ <v:path arrowok="t"/>
+ <w:wrap side="right"/>
+</v:shape><v:shape id="_x0000_s1038" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:69pt;margin-top:324.75pt;width:81.75pt;
+ height:18pt;z-index:9' stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1038' inset="0,0,0,0"/>
+</v:shape><v:shape id="_x0000_s1033" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:277.5pt;margin-top:159pt;width:87pt;
+ height:18pt;z-index:5' stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1033' inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=92 height=212></td>
+  <td width=113></td>
+  <td width=165></td>
+  <td width=5></td>
+  <td width=25></td>
+  <td width=20></td>
+  <td width=44></td>
+  <td width=26></td>
+  <td width=2></td>
+  <td width=132></td>
+ </tr>
+ <tr>
+  <td height=28></td>
+  <td colspan=2></td>
+  <td colspan=5 width=120 height=28 bgcolor=white style='vertical-align:top;
+  background:white'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;left:0pt;z-index:5'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1033" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-family:"ＭＳ 明朝"'>アレル頻度<span lang=EN-US>p1<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+ <tr>
+  <td height=170></td>
+ </tr>
+ <tr>
+  <td height=23></td>
+  <td colspan=6></td>
+  <td colspan=3 rowspan=3 align=left valign=top><img width=160 height=54
+  src="3-3-2-3-3.files/image001.gif" v:shapes="_x0000_s1039 _x0000_s1045"></td>
+ </tr>
+ <tr>
+  <td height=28></td>
+  <td width=113 height=28 bgcolor=white style='vertical-align:top;background:
+  white'><![endif]><![if !mso]><span style='position:absolute;mso-ignore:vglayout;
+  left:0pt;z-index:9'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1038" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-family:"ＭＳ 明朝"'>アレル頻度<span lang=EN-US>p2<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+ <tr>
+  <td height=3></td>
+ </tr>
+ <tr>
+  <td height=18></td>
+ </tr>
+ <tr>
+  <td height=28></td>
+  <td colspan=3></td>
+  <td colspan=5 width=117 height=28 bgcolor=white style='vertical-align:top;
+  background:white'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;left:0pt;z-index:7'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1037" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-family:"ＭＳ 明朝"'>アレル頻度<span lang=EN-US>p1<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+ <tr>
+  <td height=1></td>
+ </tr>
+ <tr>
+  <td height=30></td>
+  <td colspan=4></td>
+  <td align=left valign=top><img width=20 height=30
+  src="3-3-2-3-3.files/image002.gif" v:shapes="_x0000_s1031"></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1032" type="#_x0000_t75" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:219.7pt;width:279pt;height:211.1pt;
+ z-index:-10;mso-position-horizontal:left'>
+ <v:imagedata src="3-3-2-3-3.files/image003.wmz" o:title=""/>
+ <w:wrap type="square"/>
+</v:shape><![endif]--><![if !vml]><img width=372 height=281
+src="3-3-2-3-3.files/image004.gif" align=left hspace=12 v:shapes="_x0000_s1032"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1036" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:59.25pt;margin-top:117.75pt;width:92.25pt;
+ height:18pt;z-index:10' stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1036' inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=79 height=157></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td width=127 height=28 bgcolor=white style='vertical-align:top;background:
+  white'><![endif]><![if !mso]><span style='position:absolute;mso-ignore:vglayout;
+  left:0pt;z-index:10'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1036" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"ＭＳ 明朝"'>連鎖不平衡係数<span
+    lang=EN-US><o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><!--[if gte vml 1]><v:shape id="_x0000_s1026" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:0;margin-top:334.9pt;
+ width:279pt;height:3in;z-index:-11;mso-position-horizontal:left;
+ mso-position-vertical-relative:page'>
+ <v:imagedata src="3-3-2-3-3.files/image005.wmz" o:title=""/>
+ <w:wrap type="square" anchory="page"/>
+</v:shape><![endif]--><![if !vml]><img width=372 height=288
+src="3-3-2-3-3.files/image006.gif" align=left hspace=12 v:shapes="_x0000_s1026"><![endif]><!--[if gte vml 1]><v:shape
+ id="_x0000_s1028" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:211.5pt;margin-top:35.25pt;width:165pt;height:18pt;
+ z-index:4' filled="f" stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1028' inset="0,0,0,0"/>
+</v:shape><v:shape id="_x0000_s1034" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:351.75pt;margin-top:95.25pt;width:116.25pt;
+ height:37.5pt;z-index:6' stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1034' inset="0,0,0,0"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=282 height=47></td>
+  <td width=187></td>
+  <td width=37></td>
+  <td width=122></td>
+ </tr>
+ <tr>
+  <td height=28></td>
+  <td colspan=2 width=224 height=28 style='vertical-align:top'><![endif]><![if !mso]><span
+  style='position:absolute;mso-ignore:vglayout;left:0pt;z-index:4'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1028" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+    style='font-family:"ＭＳ 明朝"'>(p2＝0.3，D<span style='letter-spacing:-2.0pt'>’</span>＝1，χ<sup>２</sup>値比＝1)<o:p></o:p></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+ <tr>
+  <td height=52></td>
+ </tr>
+ <tr>
+  <td height=54></td>
+  <td></td>
+  <td colspan=2 width=159 height=54 bgcolor=white style='vertical-align:top;
+  background:white'><![endif]><![if !mso]><span style='position:absolute;
+  mso-ignore:vglayout;left:0pt;z-index:6'>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div v:shape="_x0000_s1034" style='padding:0pt 0pt 0pt 0pt' class=shape>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-family:"ＭＳ 明朝"'>近傍<span lang=EN-US>SNPのχ<sup>２</sup>値/<o:p></o:p></span></span></p>
+    <p class=MsoNormal align=center style='text-align:center'><span
+    style='font-family:"ＭＳ 明朝"'>真の関連<span lang=EN-US>SNPのχ<sup>２</sup>値<o:p></o:p></span></span></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
+ </tr>
+</table>
+
+</span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p></o:p></span></p>
+
+</div>
+
+<hr size = "30" color = "#000060" noshade><p>
+カウンタ
+<script type="text/javascript"><!--
+    hatena_counter_name = "ryamada22";
+    hatena_counter_id = "12";
+    hatena_counter_ref = document.referrer+"";
+    hatena_counter_screen = screen.width + "x" + screen.height+","+screen.colorDepth;
+//--></script>
+<script type="text/javascript" src="http://counter.hatena.ne.jp/js/counter.js"></script>
+<noscript><img src="http://counter.hatena.ne.jp/ryamada22/12" border="0" alt="counter"></noscript>
+</body>
+
+</html>

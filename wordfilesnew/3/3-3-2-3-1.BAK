@@ -1,0 +1,235 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-3-2-3-1.files/filelist.xml">
+<title>連鎖不平衡(Linkage disequilibrium: LD; allelic associationとも言う)とは</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>30</o:TotalTime>
+  <o:LastPrinted>2001-03-28T04:15:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T10:26:00Z</o:Created>
+  <o:LastSaved>2005-11-23T10:26:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>235</o:Words>
+  <o:Characters>1340</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Lines>11</o:Lines>
+  <o:Paragraphs>3</o:Paragraphs>
+  <o:CharactersWithSpaces>1572</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:ActiveWritingStyle Lang="JA" VendorID="64" DLLVersion="131077" NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="JA" VendorID="64" DLLVersion="131078" NLCheck="1">1</w:ActiveWritingStyle>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131078"
+   NLCheck="1">1</w:ActiveWritingStyle>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"ＭＳ 明朝";
+	mso-hansi-font-family:Century;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"ＭＳ 明朝";
+	mso-hansi-font-family:Century;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"ＭＳ 明朝";
+	mso-hansi-font-family:Century;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-3-2-3-1.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:42.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal><span lang=EN-US>3-3-2-3　連鎖不平衡</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>3-3-2-3-1連鎖不平衡とは</span></p>
+
+<p class=MsoNormal>　連鎖不平衡<span lang=EN-US>(Linkage Disequilibrium(LD))は、allelic
+associationとも呼ばれる。その説明を以下に行う。</span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'>ある集団において、<span
+lang=EN-US>2つのローカスに多型が存在するとする。片方の多型がどのアレルを持つかということと、もう一方の多型がどのアレルを持つかということが、完全にランダム（独立）な場合、その2つの多型の間には連鎖不平衡は無いという。一方、片方の多型のあるアレルを持つときに、もう一方の多型の特定のアレルを持つ傾向がある場合に、この2つのアレルは連鎖不平衡にあるという。この連鎖不平衡は世代を経るごとに失われていくのだが、その理由は減数分裂のときに発生する組み換えのためである。この組み換えの結果生じた親と異なるアレルの組み合わせを持つ染色体を組み換え体(recombinant)と呼ぶ。従って、多型間の組み換えが起こりやすいほど速やかに失われる。組み換えの頻度はゲノム上の場所によって異なるが、ある特定の領域に注目する限り距離が遠いほど組み換え頻度は高くなる。</span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'>今、ある集団（例えば日本人）の中で、互いに遺伝的に無関係な<span
+lang=EN-US>2人の2多型を比べたとする。本当に無関係であれば、その2多型はどんなに近接していようとも連鎖していない。しかしながら、ヒトはその祖先において、ごく限られた個体数であったために、互いに親族関係が無いと考えられている者同士であっても、共通の祖先を有するとみなせる。そうすると、染色体のある限られた範囲に関してはその共通の祖先が持っていたアレルの組み合わせを持っていることがわかっている。この特定のアレルの組み合わせが、ある集団内で多いことを連鎖不平衡が存在すると呼ぶ。</span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'>この連鎖不平衡の程度を説明するのは<span
+lang=EN-US>Linkage disequilibrium (LD) indicesである。この複数の指標はそれぞれ異なる数式にて表されるが、それらが表現しようとしている内容は同一である。その内容とは、世代が十分若い時期には完全に連鎖していた多型同士が、世代を経るに従ってその間に発生した組み換えの結果、組み換え体(recombinant)を生じる。この組み換え体が占める程度がLD
+の程度である。LDの程度を表す指標として複数の定義式が提案されており、それぞれに特徴があるが、ここでは比較的論文などによく登場するD</span><span
+lang=EN-US style='font-family:Century;mso-ascii-font-family:"ＭＳ 明朝"'>’</span>の定義式をあげ、その他の指標に関しては“参考
+いろいろな<span lang=EN-US>Linkage Disequilibrium指標とその挙動”を参照してほしい。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>D</span><span lang=EN-US style='font-family:
+Century;mso-ascii-font-family:"ＭＳ 明朝"'>’</span>の定義式</p>
+
+<p class=MsoNormal style='text-indent:17.95pt;mso-char-indent-count:1.71'>今、<span
+lang=EN-US>SNP A と SNP Bとがあり、それぞれのアレルをA,a,B,bとする。SNP A とSNP Bとが作る</span></p>
+
+<p class=MsoNormal style='text-indent:17.95pt;mso-char-indent-count:1.71'><span
+lang=EN-US>4 haplotypesをAB, Ab, <span class=SpellE>aB</span>, <span
+class=SpellE>ab</span>とし、それぞれのhaplotype頻度をP<sub>AB</sub>, <span class=SpellE>P<sub>Ab</sub></span>,
+<span class=SpellE>P<sub>aB</sub></span>, <span class=SpellE>P<sub>ab</sub></span>とすると、</span></p>
+
+<p class=MsoNormal style='margin-top:9.0pt;margin-right:0mm;margin-bottom:9.0pt;
+margin-left:0mm;mso-para-margin-top:.5gd;mso-para-margin-right:0mm;mso-para-margin-bottom:
+.5gd;mso-para-margin-left:0mm;text-indent:17.95pt;mso-char-indent-count:1.71'><span
+lang=EN-US>D</span><span lang=EN-US style='font-family:Century;mso-ascii-font-family:
+"ＭＳ 明朝"'>’</span>＝<span lang=EN-US>(P<sub>AB</sub>×<span class=SpellE>P<sub>ab</sub></span></span><span
+lang=EN-US style='font-family:Century;mso-ascii-font-family:"ＭＳ 明朝"'>&#8211;</span><span
+class=SpellE><span lang=EN-US>P<sub>Ab</sub></span></span>×<span class=SpellE><span
+lang=EN-US>P<sub>aB</sub></span></span><span lang=EN-US>)/Minimum(((<span
+class=SpellE>P<sub>AB</sub>+P<sub>aB</sub></span>)×(<span class=SpellE>P<sub>aB</sub>+P<sub>ab</sub></span>)),((<span
+class=SpellE>P<sub>AB</sub>+P<sub>Ab</sub></span>)×(<span class=SpellE>P<sub>Ab</sub>+P<sub>ab</sub></span>)))</span></p>
+
+<p class=MsoNormal style='text-indent:17.95pt;mso-char-indent-count:1.71'>但し、<span
+lang=EN-US>Minimum(((<span class=SpellE>P<sub>AB</sub>+P<sub>aB</sub></span>)×(<span
+class=SpellE>P<sub>aB</sub>+P<sub>ab</sub></span>)),((<span class=SpellE>P<sub>AB</sub>+P<sub>Ab</sub></span>)×(<span
+class=SpellE>P<sub>Ab</sub>+P<sub>ab</sub></span>)))は、</span></p>
+
+<p class=MsoNormal style='text-indent:17.95pt;mso-char-indent-count:1.71'><span
+lang=EN-US>(P<sub>AB</sub>+P<sub>aB</sub>)×(P<sub>aB</sub>+P<sub>ab</sub>)と(P<sub>AB</sub>+P<sub>Ab</sub>)×(P<sub>Ab</sub>+P<sub>ab</sub>)との内、値の小さい方をとることを意味する。</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+lang=EN-US>2 SNPが作る9 genotype別の観測データから、2 SNPが作る4 haplotype頻度を計算することはエクセルファイル“2SNPsHaplotype頻度推定”により可能である。また、4
+haplotype頻度のデータからD</span><span lang=EN-US style='font-family:Century;
+mso-ascii-font-family:"ＭＳ 明朝"'>’</span>を算出することは、上の式を利用してもよいが、エクセルファイル“<span
+lang=EN-US>D</span><span lang=EN-US style='font-family:Century;mso-ascii-font-family:
+"ＭＳ 明朝"'>’</span>計算”でも可能である。</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 10">
+<link id=Main-File rel=Main-File href="../news050921E.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>統計遺伝学　集中講義日程 医学研究科付属ゲノム医学センター 平成17年9月26日-28日</title>
+<meta name=Description
+content="2005/9/21: Statistical Genetics Center for Genomic Medicine Sep. 26-28, 2005 Sep.26(Mon.):seminar room A (room no.232)                Sep.27(Tue.),28(Wed.):seminar room B (room no.239)">
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:103% !important;}
+-->
+</style>
+<script><!--
+function LoadSld()
+{
+	var sld=GetObj("SlideObj")
+	if( !g_supportsPPTHTML ) {
+		sld.style.visibility="visible"
+		return
+	}
+	if( MakeNotesVis() ) return
+	runAnimations = _InitAnimations();
+	if( IsWin("PPTSld") )
+		parent.SldUpdated(GetSldId())
+	g_origSz=parseInt(SlideObj.style.fontSize)
+	g_origH=sld.style.posHeight
+	g_origW=sld.style.posWidth
+	g_scaleHyperlinks=(document.all.tags("AREA").length>0)
+	if( g_scaleHyperlinks )
+		InitHLinkArray()
+	if( g_scaleInFrame||(IsWin("PPTSld") && parent.IsFullScrMode() ) )
+		document.body.scroll="no"
+	_RSW()
+	if( IsWin("PPTSld") && parent.IsFullScrMode() )
+		FullScrInit();
+	
+	MakeSldVis();
+	
+	if( runAnimations )
+	{
+		if( document.all("NSPlay") )
+			document.all("NSPlay").autoStart = false;
+		if( sld.filters && sld.filters.revealtrans )
+			setTimeout( "document.body.start()", sld.filters.revealtrans.duration * 1000 );
+		else
+			document.body.start();
+	}
+}
+function MakeSldVis()
+{
+	var fTrans=g_showAnimation && SldHasTrans()
+	if( fTrans )
+	{
+		if( g_bgSound ) {
+			idx=g_bgSound.indexOf(",");
+			pptSound.src=g_bgSound.substr( 0, idx );
+			pptSound.loop= -(parseInt(g_bgSound.substr(idx+1)));
+		}
+		SlideObj.filters.revealtrans.Apply()
+    }
+	SlideObj.style.visibility="visible"
+	if( fTrans )
+		SlideObj.filters.revealtrans.Play()
+}
+function MakeNotesVis()
+{
+	if( !IsNts() ) return false
+	SlideObj.style.display="none"
+	nObj = document.all.item("NotesObj")
+	parent.SetHasNts(0)
+	if( nObj ) {
+		nObj.style.display=""
+		parent.SetHasNts(1)
+	}
+	return 1
+}
+function ChkAutoAdv()
+{
+	if(SldHasTrans())
+		SlideObj.onfilterchange=AutoAdv
+	else
+		AutoAdv()
+}
+function AutoAdv()
+{
+	if(!IsWin("PPTSld") || !gUseSldTimings )return
+	var sld=GetCurSld()
+	if( (sld.mAdvDelay>0) && !parent.IsFramesMode() )
+		setTimeout("parent.GoToNextSld()",sld.mAdvDelay)
+}
+function GetObj(id)
+{
+	if(g_supportsPPTHTML) return document.all(id);
+	else return document.getElementById(id);
+}
+function SldHasTrans() { return SlideObj.style.getAttribute("filter")!="" }
+function GetSldId() { return sId=location.href.substring(location.href.lastIndexOf('/')+1) }
+function HideMenu() { if( frames["PPTSld"] && PPTSld.document.all.item("ctxtmenu") && PPTSld.ctxtmenu.style.display!="none" ) { PPTSld.ctxtmenu.style.display='none'; return true } return false }
+function IsWin( name ) { return window.name == name }
+function IsNts() { return IsWin("PPTNts") }
+function IsSldOrNts() { return( IsWin("PPTSld")||IsWin("PPTNts") ) }
+function SupportsPPTAnimation() { return( navigator.platform == "Win32" && navigator.appVersion.indexOf("Windows")>0 ) }
+function SupportsPPTHTML()
+{
+	var appVer=navigator.appVersion, msie=appVer.indexOf("MSIE "), ver=0
+	if( msie >= 0 )
+		ver=parseFloat( appVer.substring( msie+5, appVer.indexOf(";",msie) ) )
+	else
+		ver=parseInt(appVer)
+	return( ver >= 4 && msie >= 0 )
+}
+function _RSW()
+{
+	if( !g_supportsPPTHTML || IsNts() ||
+	  ( !g_scaleInFrame && (!IsWin("PPTSld") || !parent.IsFullScrMode()) ) )
+		return
+        var padding=0;
+        if( IsWin("PPTSld") && parent.IsFramesMode() ) padding=6
+	cltWidth=document.body.clientWidth-padding
+	cltHeight=document.body.clientHeight-padding
+	factor=(1.0*cltWidth)/g_origW
+	if( cltHeight < g_origH*factor )
+		factor=(1.0*cltHeight)/g_origH
+	newSize = g_origSz * factor
+	if( newSize < 1 ) newSize=1
+	s=SlideObj.style
+	s.fontSize=newSize+"px"
+	s.posWidth=g_origW*factor
+	s.posHeight=g_origH*factor
+	s.posLeft=(cltWidth-s.posWidth+padding)/2
+	s.posTop=(cltHeight-s.posHeight+padding)/2
+	if( g_scaleHyperlinks )
+		ScaleHyperlinks( factor )
+}
+function _InitAnimations()
+{
+	animRuntimeInstalled = ''+document.body.localTime != 'undefined';
+	isFullScreen = (window.name == "PPTSld") && !parent.IsFramesMode();
+	g_animUseRuntime = g_showAnimation && animRuntimeInstalled && !(isFullScreen && parent.IsSldVisited());
+	if( g_animUseRuntime ) {
+		collSeq = document.all.tags("seq");
+		if( collSeq != null ) {
+			for(ii=0;ii<collSeq.length;ii++) {
+				if( collSeq[ii].getAttribute( "p:nodeType" ) == "mainSeq" ) {
+					g_animMainSequence = collSeq[ii];
+					break;
+				}
+			}
+		}
+		if( g_animItemsToHide ) {
+			for(jj = 0; jj < g_animItemsToHide.length; jj++) {
+				if( hideObj = GetObj(g_animItemsToHide[jj]) )
+					hideObj.runtimeStyle.visibility="hidden";
+			}
+		}
+		if( g_animInteractiveItems ){
+			for(jj = 0; jj < g_animInteractiveItems.length; jj++) {
+				if( triggerObj = GetObj(g_animInteractiveItems[jj]) )
+					triggerObj.runtimeStyle.cursor="hand";
+			}
+		}
+		if( gUseSldTimings && ''+g_animSlideTime != 'undefined' ) {
+			adjustedTime = document.body.calculateAutoAdvanceTimes( g_animSlideTime, g_animEffectTimings );
+			if( IsWin("PPTSld") && adjustedTime != g_animSlideTime ) {
+			   var sld = GetCurSld();
+			   sld.mAdvDelay = adjustedTime * 1000;
+			}
+		}
+	}
+	return g_animUseRuntime;
+}
+
+var g_supportsPPTHTML = SupportsPPTHTML(), g_scaleInFrame = 1, gId="", g_bgSound="",
+    g_scaleHyperlinks = false, g_allowAdvOnClick = 1, g_showInBrowser = 0, gLoopCont = 0, gUseSldTimings = 1;
+var g_showAnimation = g_supportsPPTHTML && SupportsPPTAnimation() && g_showInBrowser;
+var g_animManager = null;
+var g_animUseRuntime = false;
+var g_animItemsToHide, g_animInteractiveItems, g_animSlideTime;
+var g_animMainSequence = null;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="6"/>
+</o:shapelayout>
+</head>
+
+<body lang=JA style='margin:0px;background-color:white' onresize="_RSW()"
+onload="LoadSld()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:554px;height:415px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#BBE0E3,#333399,#009999,#99CC00"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1025"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><v:shapetype id="_x0000_t75"
+  coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+  filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s6146" type="#_x0000_t75" style='position:absolute;
+  left:36.875pt;top:116.875pt;width:708.625pt;height:396.875pt'>
+  <v:imagedata src="slide0003_image001.png" o:title="logo" blacklevel="27525f"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s6146"
+ src="slide0003_image002.jpg" style='position:absolute;top:21.68%;left:5.05%;
+ width:98.37%;height:73.49%'><![endif]><p:shaperange
+  href="master03.xml#_x0000_m1026"/><v:shape id="_x0000_s6147" type="#_x0000_m1026"
+  style='position:absolute;left:36pt;top:21.625pt;width:9in;height:90pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="title"/></v:shape><p:shaperange
+  href="master03.xml#_x0000_m1027"/><v:shape id="_x0000_s6148" type="#_x0000_m1027"
+  style='position:absolute;left:19.75pt;top:168pt;width:674.75pt;height:328.75pt'>
+  <v:fill o:detectmouseclick="f"/>
+  <v:stroke o:forcedash="f"/>
+  <o:lock v:ext="edit" text="f"/>
+  <p:placeholder type="body" position="1"/></v:shape>
+ <div v:shape="_x0000_s6147" class=T><span style='position:absolute;top:-1.44%;
+ left:5.95%;width:88.08%;height:8.43%'><span lang=EN-US style='font-size:91%;
+ mso-fareast-language:JA'>Statistical Genetics<br>
+  </span></span><span style='position:absolute;top:7.22%;left:5.95%;width:88.08%;
+ height:6.02%'><span lang=EN-US style='font-size:64%;mso-fareast-language:JA'>Center
+ for Genomic Medicine<br>
+  </span></span><span style='position:absolute;top:13.49%;left:5.95%;
+ width:88.08%;height:6.02%'><span lang=EN-US style='font-size:64%;mso-fareast-language:
+ JA'>Sep. 26-28, 2005<br>
+  </span></span><span style='position:absolute;top:19.75%;left:5.95%;
+ width:88.08%;height:3.61%'><span lang=EN-US style='font-size:36%;color:#FF5050;
+ mso-fareast-language:JA'>Sep.26(Mon.):seminar room A (room no.232)<br>
+  </span></span><span style='position:absolute;top:23.13%;left:5.95%;
+ width:88.08%;height:3.61%'><span lang=EN-US style='font-size:36%;color:#FF5050;
+ mso-fareast-language:JA'><span
+ style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ </span>Sep.27(Tue.),28(Wed.):seminar room B (room no.239)</span><span
+ lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:64%;mso-fareast-hint:yes;color:#FF5050;mso-fareast-language:JA;
+ mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ <div v:shape="_x0000_s6148">
+ <div class=B1 style='mso-margin-left-alt:624'></div>
+ <div class=B2 style='mso-margin-left-alt:864'></div>
+ <div class=B3 style='mso-margin-left-alt:1104'></div>
+ <div class=B4 style='mso-margin-left-alt:1392'></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:31.56%;left:3.79%;width:106.31%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'>Sep 26 (Mon)14:00-16:00</span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 38%;mso-fareast-hint:yes'>　</span><span lang=EN-US style='font-size:38%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'>Overview of this lecture series
+ in Japanese with basics on population genetics.</span><span style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:
+ yes'>　</span><span lang=EN-US style='font-size:38%;mso-fareast-language:JA'>Ryo
+ Yamada&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:34.21%;left:3.79%;width:109.74%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.07%'> </span>(a) What does statistical genetics handle besides
+ disease-gene mapping? (b) Introduction to “Jurg’s introduction” to </span></span><span
+ style='position:absolute;top:36.38%;left:10.46%;width:100.54%;height:2.65%'><span
+ lang=EN-US style='font-size:38%;mso-fareast-language:JA'>statistical thinking
+ in Japanese. (c) Disease-gene study. Mapping and others. (d)
+ Japanese-to-English glossary for </span></span><span style='position:absolute;
+ top:38.31%;left:10.46%;width:85.19%;height:2.65%'><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'>statistical genetics. (e) Topics
+ in population genetics.&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:41.2%;left:3.79%;width:91.87%;height:2.4%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 38%;mso-fareast-language:JA;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:43.85%;left:3.79%;width:91.87%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><b>Sep 27 (Tue) 13:00-15:00</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 38%;mso-fareast-hint:yes'><b>　</b></span><span lang=EN-US style='font-size:
+ 38%;mso-fareast-language:JA'><b>Basics of Statistical Gentics</b></span><span
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 38%;mso-fareast-hint:yes'><b>　</b></span><span lang=EN-US style='font-size:
+ 38%;mso-fareast-language:JA'><b>Jurg Ott</b></span><span lang=EN-US
+ style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:
+ 38%;mso-fareast-hint:yes;mso-fareast-language:JA;display:none'><b>&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:46.5%;left:3.79%;width:106.13%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.28%'> </span></span><span lang=EN-US style='font-size:38%;mso-fareast-hint:
+ yes;mso-fareast-language:JA'> </span><span lang=EN-US style='font-size:38%;
+ mso-fareast-language:JA'>(a) Statistical thinking. Random variables. The
+ concept of a statistic. Statistical estimation and test procedures. </span></span><span
+ style='position:absolute;top:48.43%;left:10.46%;width:101.8%;height:2.65%'><span
+ lang=EN-US style='font-size:38%;mso-fareast-language:JA'>Likelihood and
+ Bayesian approaches. Multiple testing. Bonferroni correction. False discovery
+ rate. Independent and </span></span><span style='position:absolute;top:50.6%;
+ left:10.46%;width:99.45%;height:2.65%'><span lang=EN-US style='font-size:38%;
+ mso-fareast-language:JA'>dependent tests. </span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><i>Note</i></span><span
+ lang=EN-US style='font-size:38%;mso-fareast-language:JA'>: This is all very
+ basic, so don’t get frightened! (b) Mendel Ian inheritance. Quantitative and </span></span><span
+ style='position:absolute;top:52.77%;left:10.46%;width:85.19%;height:2.65%'><span
+ lang=EN-US style='font-size:38%;mso-fareast-language:JA'>qualitative
+ phenotypes. Genetic determinism, heritability, Risch’s Is static.&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:55.42%;left:3.79%;width:91.87%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;color:#FF5050;mso-fareast-language:JA'><span
+ style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ </span></span><span lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:38%;mso-fareast-language:JA;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:58.07%;left:3.79%;width:91.87%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><b>Sep 27 (Tue)</b></span><span
+ lang=EN-US style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b> 15:00-17:00</b></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:yes'><b>　</b></span><span
+ style='font-size:38%;mso-fareast-hint:yes'><b> </b></span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'>Genetic variations </span><span
+ lang=EN-US style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b>(1)</b></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:yes'><b>　</b></span><span
+ lang=EN-US style='font-size:38%;mso-fareast-language:JA'><b>Jurg Ott&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:60.72%;left:3.79%;width:107.4%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.2%'> </span>Genetic linkage analysis. Pedigree analysis. Allele
+ sharing statistics. Sibpair analysis, concordant and discordant </span></span><span
+ style='position:absolute;top:62.89%;left:10.46%;width:100.36%;height:2.65%'><span
+ lang=EN-US style='font-size:38%;mso-fareast-language:JA'>sibpairs. Multiple
+ affected offspring. Equivalence with recessive inheritance. Whittemore
+ statistic. Binary traits and </span></span><span style='position:absolute;
+ top:65.06%;left:10.46%;width:85.19%;height:2.65%'><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'>QTLs. The Haseman and Elston
+ approach. Age at disease onset.</span><span lang=EN-US style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:
+ yes;mso-fareast-language:JA;display:none'>&#13;</span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:67.71%;left:3.79%;width:91.87%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><b>Sep 28 (Wed)</b></span><span
+ lang=EN-US style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b> 13:00-15:00</b></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:yes'><b>　</b></span><span
+ style='font-size:38%;mso-fareast-hint:yes'><b> </b></span><span lang=EN-US
+ style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:JA'>Genetic
+ variations (2)</span><span lang=EN-US style='font-size:38%;mso-fareast-language:
+ JA'> </span><span lang=EN-US style='font-size:38%;mso-fareast-language:JA'><b>Jurg
+ Ott</b></span><span lang=EN-US style='font-size:38%;mso-fareast-hint:yes;
+ mso-fareast-language:JA'><b> </b></span><span lang=EN-US style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:38%;mso-fareast-language:
+ JA;display:none'><b>&#13;</b></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:70.36%;left:3.79%;width:109.02%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.11%'> </span></span><span lang=EN-US style='font-size:38%;mso-fareast-hint:
+ yes;mso-fareast-language:JA'>Genetic association analysis (linkage
+ disequilibrium). Case-control and family-based control (TDT, FBAT) designs. </span></span><span
+ style='position:absolute;top:72.53%;left:10.46%;width:97.29%;height:2.65%'><span
+ lang=EN-US style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>Genetic variants causing phenotypic variations. Haplotype (= allele
+ pattern) and genotype pattern frequencies. </span></span><span
+ style='position:absolute;top:74.69%;left:10.46%;width:85.19%;height:2.65%'><span
+ lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:38%;mso-fareast-hint:yes;mso-fareast-language:JA'>“</span><span
+ lang=EN-US style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'>Common trait, common variant</span><span lang=EN-US style='font-family:
+ "ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:
+ yes;mso-fareast-language:JA'>”</span><span lang=EN-US style='font-size:38%;
+ mso-fareast-hint:yes;mso-fareast-language:JA'> hypothesis. Phylogeny of
+ haplotypes (just briefly).</span><span lang=EN-US style='font-family:"ＭＳ Ｐゴシック";
+ mso-fareast-font-family:"ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:yes;
+ mso-fareast-language:JA;display:none'><b>&#13;</b></span></span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384;
+ position:absolute;top:77.34%;left:3.79%;width:94.58%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><b>Sep 28 (Wed)</b></span><span
+ lang=EN-US style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:
+ JA'><b> 15:00-17:00</b></span><span style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:
+ "ＭＳ Ｐゴシック";font-size:38%;mso-fareast-hint:yes'><b>　</b></span><span
+ style='font-size:38%;mso-fareast-hint:yes'><b> </b></span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'>New methods and ideas to dissect
+ genetic variations and their roles. </span><span lang=EN-US style='font-size:
+ 38%;mso-fareast-language:JA'><b>Jurg Ott</b></span><span lang=EN-US
+ style='font-size:38%;mso-fareast-hint:yes;mso-fareast-language:JA'> </span><span
+ lang=EN-US style='font-family:"ＭＳ Ｐゴシック";mso-fareast-font-family:"ＭＳ Ｐゴシック";
+ font-size:38%;mso-fareast-language:JA;display:none'>&#13;</span></div>
+ <div class=B style='mso-line-spacing:"80 20 0";mso-margin-left-alt:384'><span
+ style='position:absolute;top:80.0%;left:3.79%;width:103.61%;height:2.65%'><span
+ style='mso-special-format:nobullet;display:none'>&#8226;</span><span lang=EN-US
+ style='font-size:38%;mso-fareast-language:JA'><span style='mso-tab-count:1;
+ width:6.43%'> </span>Effect of environment. Replication. Proportion of true
+ results in published disease gene associations. Role of </span></span><span
+ style='position:absolute;top:82.16%;left:10.46%;width:85.19%;height:2.65%'><span
+ lang=EN-US style='font-size:38%;mso-fareast-language:JA'>scientist vis-&agrave;-vis
+ public health.</span></span></div>
+ </div>
+ <v:shape id="_x0000_s6149" type="#_x0000_t75" style='position:absolute;left:8.5pt;
+  top:14.875pt;width:109.375pt;height:139.625pt'>
+  <v:imagedata src="slide0003_image001.png" o:title="logo"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s6149"
+ src="slide0003_image003.jpg" style='position:absolute;top:2.65%;left:1.26%;
+ width:15.16%;height:25.78%'><![endif]><v:shape id="_x0000_s6150" type="#_x0000_t75"
+  style='position:absolute;left:626.5pt;top:14.875pt;width:81pt;height:78pt'>
+  <v:imagedata src="slide0003_image004.wmz" o:althref="slide0003_image005.pcz"
+   o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s6150"
+ src="slide0003_image006.gif" style='position:absolute;top:2.65%;left:87.0%;
+ width:11.19%;height:14.45%'><![endif]></p:slide></div>
+
+</body>
+
+</html>
