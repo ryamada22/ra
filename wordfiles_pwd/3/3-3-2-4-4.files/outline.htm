@@ -1,0 +1,1159 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../3-3-2-4-4.htm">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = document.all.item("Main-File")
+	parent.location.href=obj.href
+}
+
+var gOtlHiliteClr="#FFFFFF",gOtlNormalClr="#000000",gOtlActiveClr="#FFFF00",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+	if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+}
+function LoadOtl()
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	OtlObj.style.display="block"
+	OtlObj.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr  
+
+	InitArray()
+
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		} 
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	for(ii=0; ii<document.all.tags("DIV").length; ii++) {
+		obj=document.all.tags("DIV").item(ii)
+		if( obj.id == null ) continue
+
+		if( obj.id.indexOf("PPTC") >= 0 ) {   
+			gChildEntryTable[count++]=obj
+			obj.children.tags("TABLE").item(0).style.borderColor=gOtlNormalClr
+		}
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=document.all.item("PPTL"+idx)
+	obj.style.color=fgColor
+
+	obj=document.all.item("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+
+	obj=document.all.item("PPTB"+idx)
+	if( obj )
+		obj.style.borderLeftColor=obj.style.borderBottomColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( obj ){ ChgClr(obj,gOtlActiveClr) }
+function Out( obj ){ ChgClr(obj,gOtlHiliteClr) }
+function ObjExists( ii ) { obj=document.all("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "スライド" + parent.GetCurSldNum() + " / " + parent.GetNumSlds()
+	else
+		txt += "非表示スライド"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].SetEnabled()
+	gBtnArr["nb_nts"].SetFlag( parent.gHasNts )
+
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+
+
+//-->
+</script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:5px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	padding-left:10px;}
+.CBorder
+	{position:relative;
+	width:100%;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	padding-bottom:5px;}
+a
+	{color:white;
+	text-decoration:none;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()">
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:absolute;width:70px;visibility:hidden' align=left
+ cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" align=center style='position:relative;padding:3px;
+ font-family:"ＭＳ 明朝";color:buttontext;font-size:9pt'><img src="notes_flag.gif"
+ border=0 id="notes_flag" style='display:none'><span style="mso-spacerun:
+ yes">&nbsp; </span>ノート</div>
+ <div title="ノートの表示/非表示" id="nb_nts" style='position:absolute;top:0%;
+ left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=right cellpadding=0 cellspacing=0>
+ <td>
+ <div id="nb_sldshwBorder" style='position:absolute;left:-20px;width:20px;
+ height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_sldshw" title="フル スクリーン スライド ショー" style='position:relative;
+ left:-254px'></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;left:-40px;
+ width:20px;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src=buttons.gif id="nb_voice" title="ナレーションの再生/一時停止" style='position:relative;
+ left:-290px'></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_prev" title=前のスライド style='position:relative;left:0px'></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ "ＭＳ 明朝";color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src=buttons.gif id="nb_next" title=次のスライド style='position:relative;left:-90px'></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="_KPH()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;
+ font-family:"ＭＳ 明朝";color:buttontext;font-size:9pt'>アウトライン</div>
+ <div title="アウトラインの表示/非表示" id="nb_otl" style='position:absolute;top:0%;
+ left:0%;width:100%;height:100%'></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="アウトラインの展開/折りたたみ" style='position:relative;
+ left:-157px'></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden'>
+
+<table width="100%" style='font-family:"ＭＳ 明朝";font-size:9pt'>
+ <tr>
+  <td>
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0017.htm');" onmouseover="Over(this)"
+  id=PPTL1 onmouseout="Out(this)">Ryo Yamada <sup>1</sup><span
+  style="mso-spacerun: yes">&nbsp; </span>Hiroto Kawakami <sup>2</sup><span
+  style="mso-spacerun: yes">&nbsp; </span>Masao Yamaguchi <sup>3</sup><span
+  style="mso-spacerun: yes">&nbsp; </span><br>
+  Eri Tatsu <sup>1</sup><span
+  style="mso-spacerun: yes">&nbsp; </span>Akihiro Sekine <sup>4</sup><span
+  style="mso-spacerun: yes">&nbsp; </span>Kazuhiko Yamamoto <sup>1</sup><span
+  style="mso-spacerun: yes">&nbsp; </span><br>
+  Yusuke Nakamura <sup>4</sup><span
+  style="mso-spacerun: yes">&nbsp; </span>Tatsuhiko Tsunoda <sup>3</sup></a></font></div>
+  <div id=PPTC1 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB1 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2><sup>1</sup> Laboratory for Rheumatic Diseases,
+    SNP Research Center, RIKEN, Tokyo, JAPAN</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2><sup>2 </sup>Laboratory of Molecular Medicine,
+    Human Genome Center, Institute of Medical Science, University of Tokyo,
+    Tokyo, JAPAN</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2><sup>3</sup> Laboratory for Medical Informatics,
+    SNP Research Center, RIKEN, Tokyo, JAPAN</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2><sup>4</sup> Laboratory for Genotyping, SNP
+    Research Center, RIKEN, Tokyo, JAPAN</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Correspondence to Ryo Yamada, ryamada-tky@umin.ac.jp</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Acknowlegments</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>We Thank Hisanori Haga <sup>2 </sup>for
+    discussing on presentation materials in detail.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0025.htm');" onmouseover="Over(this)"
+  id=PPTL2 onmouseout="Out(this)">Key Words</a></font></div>
+  <div id=PPTC2 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB2 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Population Structure</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Multiple Genetic Markers</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>SNP</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Spurious Association</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Genomewide Association Study</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Markov Chain Monte Carlo Simulation</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Japanese</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0003.htm');" onmouseover="Over(this)"
+  id=PPTL3 onmouseout="Out(this)">Abstract</a></font></div>
+  <div id=PPTC3 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB3 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>	Linkage disequilibrium (LD) mapping, using a
+    dense map of single nucleotide polymorphisms (SNPs), has been advocated as
+    the method of choice to locate loci of complex genetic diseases. However it
+    has also been suggested that genetic population structure could lead to
+    many spurious associations between genetic markers and a disease phenotype
+    when LD mapping was performed, especially in case of studies using samples
+    from ethnically structured populations.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>	Japanese population has been considered to be
+    less structured, and, therefore, more appropriate for LD mapping than many
+    other populations in the world, because of its ethnic isolation from both
+    historical and geographical standpoints. However no analysis on their
+    genetic homogeneity based on assayed genotype data has been reported. We
+    evaluated homogeneity of two sub-populations, each of which were from one
+    of the two largest Japanese metropolises by analyzing genotype data of 188
+    individuals for 303 unlinked SNPs on autosomal chromosomes. We adopted two
+    analytical methods to evaluate structure. One method was to assess
+    existence of difference in population structure between two
+    sub-populations, by analyzing chi square statistics computed for multiple
+    contingency tables constructed for allele distribution of each SNP between
+    sampling sub-populations. The other was to infer population structure by
+    model-based clustering method using Markov Chain Monte Carlo algorithm. We
+    found that, if any, only subtle difference in population structure between
+    two sub-populations existed. The possible allele difference between two
+    sub-populations seemed small enough not to severely interfere case-control
+    association studies for complex genetic traits.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0002.htm');" onmouseover="Over(this)"
+  id=PPTL4 onmouseout="Out(this)">Organization of This Presentation</a></font></div>
+  <div id=PPTC4 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB4 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Six sets of simulated genotype data of two
+    sub-populations with various degree of difference in allele frequencies of
+    SNPs were analyzed with two methods for genetic structure.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Real genotype data of two sub-populations in
+    Japan were<span style="mso-spacerun: yes">&nbsp; </span>analyzed in the
+    same way.</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>The results of real data were compared with the
+    results of simulated data.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0046.htm');" onmouseover="Over(this)"
+  id=PPTL5 onmouseout="Out(this)">Methods<br>
+  Construction of genotype data
+  for the structural analysis of <br>
+  simulated data</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0047.htm');" onmouseover="Over(this)"
+  id=PPTL6 onmouseout="Out(this)">Methods<br>
+  Allele frequencies of SNPs in
+  two sub-populations <br>
+  for 6 sets of simulated data (1)</a></font></div>
+  <div id=PPTC6 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB6 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Table 1 Number of SNPs and their allele
+    frequencies in 2 sub-populations.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0048.htm');" onmouseover="Over(this)"
+  id=PPTL7 onmouseout="Out(this)">Methods<br>
+  Allele frequencies of SNPs in
+  two sub-populations <br>
+  for 6 sets of simulated data (2)</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0052.htm');" onmouseover="Over(this)"
+  id=PPTL8 onmouseout="Out(this)">Methods<br>
+  Analytical Methods of
+  Structure (1)</a></font></div>
+  <div id=PPTC8 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB8 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Analytical Method 1</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>	Evaluation of sum of multiple chi statistics
+    calculated for individual SNP<sup>1</sup></font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Analytical Method 2</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>	Inference of structure by Markov Chain Monte
+    Carlo simulation method<sup>2</sup></font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2><sup>1</sup> Jonathan K. Prichard and Noah A.
+    Rosenberg. Use of unlinked genetic markers to detect population
+    stratification in association studies. Am J Hum Genet. 65: 220-228,1999</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2><sup>2</sup> Jonathan K. Prichard, Matthew
+    Stephens and Peter Donnelly. Inference of population structure using
+    multilocus genotype data. Genetics. 155: 945-959, 2000</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0053.htm');" onmouseover="Over(this)"
+  id=PPTL9 onmouseout="Out(this)">Methods<br>
+  Analytical Method 1</a></font></div>
+  <div id=PPTC9 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB9 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3><font size=2>　・　Principles of sum of multiple chi statistics
+    calculated for individual SNP</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Null hypothesis and alternative hypothesis</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>・Null Hypothesis: All the samples are from an
+    identical population.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>・Alternative hypothesis: Samples are from two
+    distinct sub-populations.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Chi square value for each SNP genotype data</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>・ 　<span style="mso-spacerun: yes">&nbsp;
+    </span>(i=1,2,…N; N:Number of SNPs analysed) represents chi square value
+    calculated for 2×2 contingency table of the observed number of alleles from
+    two sub-populations.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>Sum of multiple chi square value(S) and degree
+    of freedom(df)</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>・S =</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>・df = N</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1><font size=2>・S is statistically evaluated as chi square
+    value with degree of freedom being df.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0054.htm');" onmouseover="Over(this)"
+  id=PPTL10 onmouseout="Out(this)">Methods<br>
+  Analytical Method 2</a></font></div>
+  <div id=PPTC10 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB10 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=4><font size=2>Inference of structure by Markov Chain Monte
+    Carlo (MCMC) simulation method*</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Parameter matrices were set as below:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>X: Genotypes of the sampled individuals</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Z: Belonging sub-populations of the individuals</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Number of sub-populations : Two</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>P: Allele frequencies of SNPs in all
+    sub-populations</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Belonging sub-population was assigned to each
+    individual at random at the beginning.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>MCMC algorithm was applied and converged result
+    was obtained.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Sample P<sup>(m)</sup> from Pr(P|X,Z<sup>(m-1)</sup>)<sup>#</sup>.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Beta distribution was used for allele frequency
+    distribution of biallelic markers.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Gibbs sampler with adaptive rejection sampling
+    was adopted.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Sample Z<sup>(m)</sup> from Pr(Z|X,P<sup>(m)</sup>).</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Results of multiple runs were summed,
+    considering phenomenon to converge into symmetrical modes.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>* Program source will be available in near
+    future on request by the author.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2># m denotes number of iterations and Pr(Y|W)
+    denotes conditional probability distribution of Y when W.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0049.htm');" onmouseover="Over(this)"
+  id=PPTL11 onmouseout="Out(this)">Results<br>
+  Results of analysis 1(Sum of
+  Chi Square Statistics) of simulated data</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0050.htm');" onmouseover="Over(this)"
+  id=PPTL12 onmouseout="Out(this)">スライド12</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP13 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0018.htm');" onmouseover="Over(this)"
+  id=PPTL13 onmouseout="Out(this)">Methods<br>
+  Samples(1) <br>
+  Construction
+  of genotype data for the structural analysis of real data</a></font></div>
+  <div id=PPTC13 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB13 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Tokyo: Sampling Metropolis 1</font></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>Osaka: Sampling Metropolis 2</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP14 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0019.htm');" onmouseover="Over(this)"
+  id=PPTL14 onmouseout="Out(this)">Methods<br>
+  Samples(2) <br>
+  Construction
+  of genotype data for the structural analysis of real data</a></font></div>
+  <div id=PPTC14 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB14 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=4><font size=2>・Historical, geographical and ethnical
+    information of sampling sub-populations</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>The land of Japan consists of 4 major islands
+    and many small islands, locating at the rim of northwestern Pacific ocean.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Japanese ancestry is considered to be formed by
+    migration of at least a few ethnic groups from the Eurasian continent
+    before the end of the last glacial epoch, admixed by the Pacific islanders.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>No major migration or admixture happened for the
+    last few thousands years, forming a strongly culturally distinct population
+    with a limited degree of ethnic diversity.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Tokyo and Osaka metropolitan areas are
+    characterized by high-degree of influxes of people from diverse areas of
+    Japan, followed by random mating, which is believed to have canceled
+    genetic structure present in the past.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Major differences between Tokyo and Osaka areas:</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Population of Tokyo area has been formed by
+    influx of people from almost all the areas of Japan for the last 4 hundreds
+    years without a core ancestral population.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>Population of Osaka area has been formed by
+    admixture of many people from many areas of Japan, especially of
+    south-western area, to the core ancestral population, which had been formed
+    before early middle ages.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP15 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0006.htm');" onmouseover="Over(this)"
+  id=PPTL15 onmouseout="Out(this)">Methods<br>
+  SNPs(1) <br>
+  Construction
+  of genotype data for the structural analysis of real data</a></font></div>
+  <div id=PPTC15 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB15 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3><font size=2>Source of SNPs:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>SNPs on autosomal chromosomes from IMS-JST SNPs
+    database, discovered by direct-sequencing method of multiple Japanese
+    individuals’genomic DNAs targeting mainly on and around known and expected
+    genes throughout the human genome.<span style="mso-spacerun: yes">&nbsp;
+    </span>(http://snp.ims.u-tokyo.ac.jp/)</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=1></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=3><font size=2>Number of SNPs:</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>4373 SNPs were genotyped initially.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=2><font size=2>303 of 4373 SNPs were adopted for structure
+    analyses by criteria described on the following sheet of paper.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP16 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0021.htm');" onmouseover="Over(this)"
+  id=PPTL16 onmouseout="Out(this)">Methods<br>
+  SNPs(2) <br>
+  Construction
+  of genotype data for the structural analysis of real data</a></font></div>
+  <div id=PPTC16 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB16 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=4><font size=2>SNPs were selected for analyses of population
+    structure by the criteria as below:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=3><font size=2>Each SNP should:</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=2><font size=2>Be assayed with appropriate call for more than
+    170 individuals.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=2><font size=2>Be biallelic.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=2><font size=2>Have minor allele frequency more than 0.1.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=2><font size=2>Be unlinked each other:</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>Two SNPs on an identical chromosome were
+    considered to be unlinked each other when</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>	linkage disequilibrium (LD) index D’* were less
+    than 0.3</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2><span style="mso-spacerun:
+    yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*D’: Index of LD was
+    calculated as below:</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>		1. Haplotype frequencies were estimated by
+    EM-algorithm</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>		2. D’＝|(P<sub>AB</sub><sup>**</sup>×P<sub>ab</sub>−P<sub>ab</sub>×P<sub>aB</sub>
+    )|/Minimum((P<sub>AB</sub>＋P<sub>aB</sub>)×(P<sub>aB</sub>＋P<sub>ab</sub>),((P<sub>AB</sub>＋P<sub>Ab</sub>)×(P<sub>Ab</sub>＋P<sub>ab</sub>))
+    ,</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>			AB, Ab, aB, and ab represent 4 haplotypes
+    created by 2 SNPs.</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>	 		<sup>**</sup> P<sub>cd</sub> represents
+    frequency of haplotype.</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=2><font size=2>Be successfully assayed. Our internal criteria <sup>#</sup>
+    was adopted for judgment of success of assays:</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2><sup>#</sup> It based on the data in SRC, RIKEN,
+    TOKYO, JAPAN (unpublished):</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>Intensity of fluorescence signals should be more
+    than a threshold.</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>More than 90 % of samples should be called.</font></td>
+   </tr>
+   <tr>
+    <td colspan=5></td>
+    <td colspan=1><font size=2>Chi square statistic for Hardy-Weinberg
+    Equilibrium should give p-value of larger than 1.0×10<sup>-3</sup>.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP17 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0007.htm');" onmouseover="Over(this)"
+  id=PPTL17 onmouseout="Out(this)">Methods<br>
+  Genotyping Assay <br>
+  Construction
+  of genotype data for the structural analysis of real data</a></font></div>
+  <div id=PPTC17 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB17 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>Invader assay with multiplex polymerase chain
+    reaction (PCR),</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3><font size=2>	characterized as below:</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Multiplex PCR was performed against 100 genomic
+    regions simultaneously</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>	in a single reaction tube.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Each amplified fragment contained at least one
+    SNP.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>A specialized 384-well card system was adopted
+    for the ultra high-throughput genotyping system.</font></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>Very small amount of genomic DNA was required
+    for genotyping:</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>40 ng of genomic DNA was used as a template for
+    each multiplex PCR,</font></td>
+   </tr>
+   <tr>
+    <td colspan=4></td>
+    <td colspan=1><font size=2>	 meaning only 0.4 ng of genomic DNA per
+    genotyping of one SNP.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=3></td>
+   </tr>
+   <tr>
+    <td colspan=3></td>
+    <td colspan=2><font size=2>A high-throughput SNP typing system for
+    genome-wide association studies.<br>
+    J Hum Genet. 2001;46(8):471-7.<br>
+    Ohnishi
+    Y, Tanaka T, Ozaki K, Yamada R, Suzuki H, Nakamura Y.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP18 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0008.htm');" onmouseover="Over(this)"
+  id=PPTL18 onmouseout="Out(this)">Results<br>
+  Characterization of selected
+  SNPs of real data</a></font></div>
+  <div id=PPTC18 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB18 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width=20 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=2><font size=2>Characterization of SNPs included for analyses
+    of population structure</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>303 SNPs out of 4373 were selected.</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Average rate of successful call of genotyping of
+    303 SNPs was 0.99</font></td>
+   </tr>
+   <tr>
+    <td colspan=2></td>
+    <td colspan=1><font size=2>Minor allele frequency of each SNP was
+    distributed as below:</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP19 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0009.htm');" onmouseover="Over(this)"
+  id=PPTL19 onmouseout="Out(this)">Results<br>
+  Result of analysis 1(Sum of
+  Chi Square Statistics) of<span style="mso-spacerun: yes">&nbsp; </span>real
+  data</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP20 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0010.htm');" onmouseover="Over(this)"
+  id=PPTL20 onmouseout="Out(this)">Results<br>
+  Result of analysis 2(MCMC)
+  of<span style="mso-spacerun: yes">&nbsp; </span>real data</a></font></div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <div id=PPTP21 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0016.htm');" onmouseover="Over(this)"
+  id=PPTL21 onmouseout="Out(this)">Discussion</a></font></div>
+  <div id=PPTC21 class=CTxt style='display:none'>
+  <table style='color:white' id=PPTB21 class=CBorder>
+   <tr>
+    <td width=5 nowrap></td>
+    <td width="100%"></td>
+   </tr>
+   <tr>
+    <td colspan=1></td>
+    <td colspan=1><font size=2>The two analytical methods were applied to
+    simulated genotype data and real data, both of which represented subtly
+    heterogeneous two sub-populations. Result of analyses of simulated data
+    revealed both analytical methods could dissect two populations when SNPs
+    with allele frequency difference between populations more than 0.1 existed.
+    Analysis 1 (sum-of-chi square values) showed statistical significance, even
+    when SNPs with allele frequency difference of 0.05 dominated, if such SNPs
+    existed frequently, although analysis 2 (MCMC) did not show visible
+    discrimination in the distributions. In a situation, where population-based
+    sampling association studies were carried out, difference of allele
+    frequencies among subtly stratified populations would be negligible, as far
+    as the difference between ethnic sub-populations was smaller than the
+    difference between phenotypic sub-groups. The comparison between results of
+    simulated data and real data gave an idea that the genetic structure
+    between Tokyo and Osaka was somewhere between a simulated data with maximum
+    allele frequency difference of 0.025 and another set with maximum allele
+    frequency difference of 0.05. When complex genetic traits are analyzed with
+    LD mapping, allele frequency difference between phenotypically distinct
+    groups distributes most likely more than 0.05. From this standpoint,
+    samples from Japanese metropolises should be treated as homogeneous.</font></td>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+</body>
+
+</html>
