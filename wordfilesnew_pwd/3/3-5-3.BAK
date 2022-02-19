@@ -1,0 +1,235 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="3-5-3.files/filelist.xml">
+<title>3-5-3連鎖していない複数SNPの組合せ解析</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="date"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>理化学研究所</o:Author>
+  <o:LastAuthor>Ryo Yamada  </o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>27</o:TotalTime>
+  <o:LastPrinted>2001-04-09T10:51:00Z</o:LastPrinted>
+  <o:Created>2005-11-23T11:04:00Z</o:Created>
+  <o:LastSaved>2005-11-23T11:04:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>147</o:Words>
+  <o:Characters>838</o:Characters>
+  <o:Company>遺伝子多型研究センター慢性関節リウマチ関連遺伝子研究チーム</o:Company>
+  <o:Lines>6</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>984</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"MS Mincho";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-pitch:fixed;
+	mso-font-signature:-1610612033 1757936891 16 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:none;
+	tab-stops:center 212.6pt right 425.2pt;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Century;
+	mso-fareast-font-family:"ＭＳ 明朝";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:1.0pt;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 20.0mm 20.0mm 20.0mm;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-header:url("3-5-3.files/header.html") h1;
+	mso-paper-source:0;
+	layout-grid:18.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1798908518;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1774445582 -124605568 67698711 67698705 67698703 67698711 67698705 67698703 67698711 67698705;}
+@list l0:level1
+	{mso-level-text:%1;
+	mso-level-tab-stop:32.2pt;
+	mso-level-number-position:left;
+	margin-left:31.2pt;
+	text-indent:-17.0pt;}
+ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:標準の表;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0mm 5.4pt 0mm 5.4pt;
+	mso-para-margin:0mm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Century;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050">
+  <v:textbox inset="5.85pt,.7pt,5.85pt,.7pt"/>
+ </o:shapedefaults></xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=JA style='tab-interval:42.0pt;text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:18.0pt'>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'>3-5-3連鎖していない複数SNPの組合せ解析<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:10.5pt;mso-char-indent-count:1.0'><span
+style='font-family:"ＭＳ 明朝"'>複数の、互いに連鎖していない遺伝子が相互に影響し合って疾患<span lang=EN-US>susceptibilityを決定しているという予想は、複合遺伝性疾患のモデルとしておそらく外れてはいないと思われる。しかしながら、そのような状況をどのようにして実際のデータに当てはめるかは未解決のままである。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Association between an SNP in the
+promoter of the human interleukin-3 gene and rheumatoid arthritis (RA) in
+Japanese patients, and maximum-likelihood estimation of combinatorial effect of
+two genetic loci on susceptibility to the disease.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:10.5pt;mso-para-margin-left:1.0gd'><span
+lang=EN-US style='font-family:"ＭＳ 明朝"'>Am J Hum Genet 68：674-685，(2001)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>に提案した<span lang=EN-US>2
+SNP間の関係をモデル化する試みも、ゲノムワイドスクリーニングにおいて候補遺伝子を効率よく拾い上げることを意図したものであり、まだまだ発展途上であると考えるべきである。しかし、その限界を知った上で利用する分には利用価値がないわけではないので、その限界と使用法を簡単に説明する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>プログラムの概要<span lang=EN-US><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:31.2pt;text-indent:-17.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 32.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-family:"ＭＳ 明朝"'>連鎖していない<span
+lang=EN-US>2 SNPに対して使用する。<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:31.2pt;text-indent:-17.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 32.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>2つのSNPが相互に独立に疾患susceptibilityを上昇させている場合に、この2つのSNPは互いに独立であると考える(実際には2つのSNPは相乗効果を発揮している場合に相当する)。<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:31.2pt;text-indent:-17.0pt;mso-list:l0 level1 lfo1;
+tab-stops:list 32.2pt'><![if !supportLists]><span lang=EN-US style='font-family:
+"ＭＳ 明朝";mso-bidi-font-family:"ＭＳ 明朝"'><span style='mso-list:Ignore'>3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-family:"ＭＳ 明朝"'>2つのSNPが相互に影響を与えながら疾患susceptibilityを決めているという仮説が、どのくらい確からしいかを推定する。この2つのSNPが相互に影響を与え合っているという状況は、2
+SNPの疾患アレルの両方を持っていると、その相乗効果以上に疾患susceptibilityが上昇する場合、2 SNPの疾患アレルの片方を持っていれば、両方持っている場合と同程度に疾患susceptibilityが上昇する場合、片方の疾患アレルを持っていることがもう片方の疾患アレルの働きの前提条件となっている場合、などである。<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"ＭＳ 明朝"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"ＭＳ 明朝"'>詳細は、筆者山田まで問い合わせのこと。<span
+lang=EN-US><o:p></o:p></span></span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+AuthUserFile     /var/www/user_list/.kyoka_pass
+AuthGroupFile    /dev/null
+AuthName         "ユーザー名とパスワードを入力して下さい！"
+AuthType         Basic
+<Limit POST GET PUT>
+require valid-user
+</Limit>
